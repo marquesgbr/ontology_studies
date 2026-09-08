@@ -61,6 +61,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#odeiaTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#odeiaTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Transporte"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ofereceFacilidade -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ofereceFacilidade">
@@ -71,13 +80,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#possuiRotaMilhas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#possuiRotaMilhas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Viagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#realizaViagem -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#realizaViagem">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#realizadoPorCliente"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Cliente"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Viagem"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#realizadoPorCliente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#realizadoPorCliente"/>
     
 
 
@@ -186,6 +212,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#descricaoHotel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -195,6 +223,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#distanciaCampoSki">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#distanciaMilhasCidades -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#distanciaMilhasCidades">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
@@ -214,6 +251,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#enderecoHotel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -222,6 +261,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#hotelURL">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -240,6 +281,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#numeroQuarto">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoDeHotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -308,6 +351,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#telefoneHotel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -532,6 +577,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota"/>
+    
+
+
     <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Taxi -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Taxi">
@@ -654,16 +705,41 @@
     
 
 
-    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HotelA -->
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_NY -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HotelA">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_NY">
         <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
-        <trip_agency:localizadoEmCidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Madrid"/>
-        <trip_agency:temQuarto rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HotelA"/>
+        <trip_agency:localizadoEmCidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#NY"/>
+        <trip_agency:temQuarto rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_NY"/>
         <trip_agency:capacidadeQuartos rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</trip_agency:capacidadeQuartos>
         <trip_agency:categoriaEstrelas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</trip_agency:categoriaEstrelas>
+        <trip_agency:descricaoHotel>HolidayInn franchise. Placed in NY</trip_agency:descricaoHotel>
+        <trip_agency:distanciaPraia rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</trip_agency:distanciaPraia>
+        <trip_agency:hotelURL>https://www.holydayinn.com.us</trip_agency:hotelURL>
         <trip_agency:permiteCaes rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</trip_agency:permiteCaes>
         <trip_agency:quartosDisponiveis rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</trip_agency:quartosDisponiveis>
+        <trip_agency:telefoneHotel>+1 (444) 444-5555</trip_agency:telefoneHotel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_Washington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_Washington">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Hotel"/>
+        <trip_agency:localizadoEmCidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Washington"/>
+        <trip_agency:temQuarto rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_Washington"/>
+        <trip_agency:categoriaEstrelas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</trip_agency:categoriaEstrelas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Joao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Joao">
+        <trip_agency:realizaViagem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Madrid_NY"/>
+        <trip_agency:realizaViagem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_NY_Washington"/>
+        <trip_agency:realizaViagem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Washington_Madrid"/>
     </owl:NamedIndividual>
     
 
@@ -673,6 +749,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Madrid">
         <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Cidade"/>
         <trip_agency:localizadoEmPaís rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Espanha"/>
+        <trip_agency:dataHoraPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-15T00:00:00</trip_agency:dataHoraPartida>
     </owl:NamedIndividual>
     
 
@@ -694,9 +771,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HotelA -->
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_NY -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HotelA">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_NY">
         <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoDeHotel"/>
         <trip_agency:ofereceFacilidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#CamaSolteiro"/>
         <trip_agency:ofereceFacilidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ConexaoInternet"/>
@@ -708,10 +785,67 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_Washington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoSimples_HolidayInn_Washington">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#QuartoDeHotel"/>
+        <trip_agency:ofereceFacilidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#CamaSolteiro"/>
+        <trip_agency:ofereceFacilidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ConexaoInternet"/>
+        <trip_agency:ofereceFacilidade rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#TV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota_Madrid-NY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota_Madrid-NY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota"/>
+        <trip_agency:temDestino rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#NY"/>
+        <trip_agency:temOrigem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Madrid"/>
+        <trip_agency:distanciaMilhasCidades rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3600</trip_agency:distanciaMilhasCidades>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#TV -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#TV">
         <rdf:type rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Facilidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Madrid_NY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Madrid_NY">
+        <trip_agency:possuiRotaMilhas rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Rota_Madrid-NY"/>
+        <trip_agency:seHospedaEm rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_NY"/>
+        <trip_agency:temDestino rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#NY"/>
+        <trip_agency:temOrigem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Madrid"/>
+        <trip_agency:dataHoraPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T00:00:00</trip_agency:dataHoraPartida>
+        <trip_agency:precoClasseEconomica rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</trip_agency:precoClasseEconomica>
+        <trip_agency:precoPrimeiraClasse rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15700</trip_agency:precoPrimeiraClasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_NY_Washington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_NY_Washington">
+        <trip_agency:seHospedaEm rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#HolidayInn_Washington"/>
+        <trip_agency:temDestino rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Washington"/>
+        <trip_agency:temOrigem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#NY"/>
+        <trip_agency:dataHoraPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-11T00:00:00</trip_agency:dataHoraPartida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Washington_Madrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#ViagemJoao_Washington_Madrid">
+        <trip_agency:temDestino rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Madrid"/>
+        <trip_agency:temOrigem rdf:resource="http://www.semanticweb.org/gabriel/ontologies/2026/8/trip_agency#Washington"/>
+        <trip_agency:dataHoraPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-15T00:00:00</trip_agency:dataHoraPartida>
     </owl:NamedIndividual>
     
 
