@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia/"
+     xml:base="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/gma5/ontologies/2026/7/untitled-ontology-2#"
+     xmlns:aula_pratica_ontologia="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#dirigeCentro -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#dirigeCentro">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#dirigidoPor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#dirigidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#dirigidoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temDiretor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Professor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#ehParteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#ehParteDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temParte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#oferecidoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#oferecidoEm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#parteDaUniversidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#parteDaUniversidade">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#ehParteDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Universidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#parteDeCurso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#parteDeCurso">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#ehParteDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temDiretor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temDiretor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temParte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#temParte"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#capacidadeDaSala -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#capacidadeDaSala">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#SalaDeAula"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Aluno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Aluno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Diretor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Diretor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Professor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Disciplina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Disciplina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Professor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#SalaDeAula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#SalaDeAula"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Universidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Universidade"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#CentroDeInformatica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#CentroDeInformatica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+        <aula_pratica_ontologia:parteDaUniversidade rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#UFPE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso"/>
+        <aula_pratica_ontologia:oferecidoEm rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#CentroDeInformatica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Jaelson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Jaelson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Diretor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa"/>
+        <aula_pratica_ontologia:dirigeCentro rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#CentroDeInformatica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#LabHard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#LabHard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#SalaDeAula"/>
+        <aula_pratica_ontologia:capacidadeDaSala rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger"></aula_pratica_ontologia:capacidadeDaSala>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#RedesNeurais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#RedesNeurais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#UFPE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#UFPE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Universidade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Centro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Curso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Disciplina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Pessoa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#SalaDeAula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gma5/ontologies/2026/7/aula_pratica_ontologia#Universidade"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
