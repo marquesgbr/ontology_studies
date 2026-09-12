@@ -1,0 +1,1742 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/"
+     xml:base="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Exercicio="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#comTransporteCidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#comTransporteCidade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#escolheAcomodacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#escolheAcomodacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Acomodacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#escolheTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#escolheTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#viagemUsaTransporte"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#localizadoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#localizadoEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ocorreNaCidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ocorreNaCidade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#odeiaTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#odeiaTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#prefereTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#prefereTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#realizaLocomocao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#realizaLocomocao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#recomendaHotel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#recomendaHotel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#AgenciaViagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#localizadoEm"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temHotel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temHotel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#localizadoEm"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temQuarto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temQuarto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temVoo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temVoo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#usaAviao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#usaAviao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#viagemUsaTransporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#viagemUsaTransporte">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temVoo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#usaAviao"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaCampoSki -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaCampoSki">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaDaPraia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaDaPraia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmKm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmKm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmMilhas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmMilhas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#numeroDeCamas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#numeroDeCamas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#numeroDeQuartos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#numeroDeQuartos">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#permiteCaes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#permiteCaes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoClasseEconomica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoClasseEconomica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoClasseNegocio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoClasseNegocio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoDoQuarto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoDoQuarto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoPrimeiraClasse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#precoPrimeiraClasse">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#quartosDisponiveis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#quartosDisponiveis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temCapacidade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temCapacidade">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temConexaoInternet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temConexaoInternet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDataChegada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDataChegada">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDataPartida -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDataPartida">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDescricao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDescricao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temEndereco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temEndereco">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temTelefone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temTelefone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temTvDisponivel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temTvDisponivel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Acomodacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Acomodacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#AgenciaViagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#AgenciaViagem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Balsa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Balsa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Bicicleta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Bicicleta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#CarroAlugado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#CarroAlugado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClienteOdeiaAviao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClienteOdeiaAviao">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#odeiaTransporte"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#prefereTransporte"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#prefereTransporte"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Continente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Continente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel1Estrela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel2Estrelas"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel3Estrelas"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel5Estrelas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Acomodacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel1Estrela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel1Estrela">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel2Estrelas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel2Estrelas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel3Estrelas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel3Estrelas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel5Estrelas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel5Estrelas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Metro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Metro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Motocicleta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Motocicleta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Navio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Navio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Onibus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Onibus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Pais">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#PontoTuristico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#PontoTuristico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Taxi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Taxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteCidade">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#CarroAlugado"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Metro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Onibus"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Taxi"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Balsa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Motocicleta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Navio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#TransporteViagem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ViagemAmericaEuropa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ViagemAmericaEuropa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#America"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#viagemUsaTransporte"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Motocicleta"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#America -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#America">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Continente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cairo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cairo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Egito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#DisneylandParis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#DisneylandParis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#PontoTuristico"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Paris"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Egito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Egito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EstatuaLiberdade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EstatuaLiberdade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#PontoTuristico"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NewYork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Continente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_NY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_NY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_Washington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_Washington">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Joao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Joao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+        <Exercicio:escolheAcomodacao rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_NY"/>
+        <Exercicio:escolheAcomodacao rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_Washington"/>
+        <Exercicio:fazViagem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#MadridNY"/>
+        <Exercicio:fazViagem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NYWashington"/>
+        <Exercicio:fazViagem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#WashingtonMadrid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Londres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Londres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Madrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Madrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa"/>
+        <Exercicio:temAeroportoPerto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Exercicio:temAeroportoPerto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#MadridNY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#MadridNY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <Exercicio:temDestino rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NewYork"/>
+        <Exercicio:temOrigem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Madrid"/>
+        <Exercicio:temVoo rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho1"/>
+        <Exercicio:distanciaEmMilhas rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</Exercicio:distanciaEmMilhas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NYWashington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NYWashington">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <Exercicio:temDestino rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Washington"/>
+        <Exercicio:temOrigem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NewYork"/>
+        <Exercicio:temVoo rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NewYork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#NewYork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA"/>
+        <Exercicio:temHotel rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_NY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#SanFrancisco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#SanFrancisco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Seattle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Seattle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <Exercicio:usaAviao rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao1"/>
+        <Exercicio:temDataPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-05T00:00:00</Exercicio:temDataPartida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <Exercicio:usaAviao rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao2"/>
+        <Exercicio:temDataPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-11T00:00:00</Exercicio:temDataPartida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        <Exercicio:usaAviao rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao3"/>
+        <Exercicio:temDataPartida rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-15T00:00:00</Exercicio:temDataPartida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Washington -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Washington">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+        <Exercicio:localizadoEm rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#EUA"/>
+        <Exercicio:temHotel rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#HolidayInn_Washington"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#WashingtonMadrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#WashingtonMadrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+        <Exercicio:temDestino rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Madrid"/>
+        <Exercicio:temOrigem rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Washington"/>
+        <Exercicio:temVoo rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trecho3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Acomodacao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#AgenciaViagem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Local"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#LocomocaoCidade"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Quarto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Transporte"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Viagem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Voo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Aviao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Balsa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Carro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Motocicleta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Navio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Trem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#CarroAlugado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Metro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Onibus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Taxi"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Continente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#PontoTuristico"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel1Estrela"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel2Estrelas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel3Estrelas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel4Estrelas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Hotel5Estrelas"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>DestinoSemTransporteMilhas</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmMilhas"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>OrigemSemTransporteKm</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmKm"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">643.7</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1287.4</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>OrigemSemTransporteMilhas</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temOrigem"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/orig"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmMilhas"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>DestinoSemTransporteKm</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cliente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#fazViagem"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temDestino"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#Cidade"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#temAeroportoPerto"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dest"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#distanciaEmKm"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/v"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">643.7</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/dist"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1287.4</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio#ClientePrefereTerrestre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/7/Exercicio/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
