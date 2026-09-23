@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02/"
+     xml:base="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Aula02="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#drives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#drives">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#lê -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#lê">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temBase">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Massa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temPet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temPet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Adulto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Adulto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#AmigoDosAnimais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#AmigoDosAnimais">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temPet"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#BusDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#BusDriver">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#drives"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Carne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Carne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Cerebro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Cerebro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#CoisaBranca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#CoisaBranca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Driver">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#drives"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Adulto"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Gato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Gato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Grama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Grama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Planta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Massa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Massa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#MotoristaVanBranca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#MotoristaVanBranca">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#drives"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#CoisaBranca"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Van"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#lê"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tabloide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Ovelha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Ovelha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Grama"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Peixe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Peixe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temBase"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#PizzaMarg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#PizzaMarg">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Queijo"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tomate"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Queijo"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tomate"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#PizzaVeg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#PizzaVeg">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Carne"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temCobertura"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Peixe"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Planta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Planta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Queijo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Queijo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tabloide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tabloide"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tomate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tomate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vaca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vaca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetariano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#VacaLouca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#VacaLouca">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vaca"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Cerebro"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Ovelha"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Van -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Van"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetariano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetariano">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#come"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Velhinha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Velhinha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temPet"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#temPet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Gato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#DailyMirror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#DailyMirror"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Dewey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Dewey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Huey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Huey"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Louie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Louie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Mick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Mick">
+        <Aula02:drives rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Q123"/>
+        <Aula02:lê rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#DailyMirror"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Minnie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Minnie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Velhinha"/>
+        <Aula02:temPet rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Q123 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Q123">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#CoisaBranca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Van"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Walt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Walt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Person"/>
+        <Aula02:temPet rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Dewey"/>
+        <Aula02:temPet rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Huey"/>
+        <Aula02:temPet rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Louie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Carne"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Massa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Peixe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Queijo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Tomate"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Animal"/>
+            </owl:Restriction>
+        </owl:unionOf>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#parteDe"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Vegetal"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#DailyMirror"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Dewey"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Huey"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Louie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Mick"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Q123"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/Aula02#Walt"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
