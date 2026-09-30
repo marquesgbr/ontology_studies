@@ -1,0 +1,21 @@
+# Consulta que responde a CQ1: Quantos algoritmos tem cada assunto matemático
+
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#> 
+
+SELECT ?teoriaMatematica (COUNT(DISTINCT ?algoritmo) AS ?totalUsos)
+WHERE {
+  ?algoritmo ont:usesMathematicalFoundation ?teoriaMatematica .
+}
+GROUP BY ?teoriaMatematica
+ORDER BY DESC(?totalUsos)
+
+
+# Consulta quais aplicações são resolvidas por K-Means
+
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#> 
+
+SELECT ?aplicacao 
+WHERE {
+  ?aplicacao ont:isSolvedBy ?algoritmo .
+  ?algoritmo a ont:KMeans .
+}
