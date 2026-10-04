@@ -146,6 +146,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIC -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIC">
@@ -158,6 +166,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIRCH">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HierarchicalClustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
     </owl:Class>
     
 
@@ -320,10 +336,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Contrastive -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Contrastive">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepLearningClustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
     </owl:Class>
     
 
@@ -410,6 +442,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex">
@@ -434,6 +474,22 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientDescent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
     </owl:Class>
     
 
@@ -468,10 +524,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClusterValidityIndices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EarlyStopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EarlyStopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
     </owl:Class>
     
 
@@ -481,6 +553,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MatrixOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ElasticNet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ElasticNet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
     </owl:Class>
     
 
@@ -574,6 +654,14 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GaussianDistribution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
     </owl:Class>
     
 
@@ -899,6 +987,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L1_Reg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L1_Reg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay"/>
+        <rdfs:comment>Also known as Lasso Regression.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L2_Reg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L2_Reg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay"/>
+        <rdfs:comment>Also known as Ridge Regression.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LIMBO -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LIMBO">
@@ -933,6 +1047,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MathematicalFoundations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
     </owl:Class>
     
 
@@ -995,6 +1117,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultivariableCalculus -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultivariableCalculus">
@@ -1029,6 +1159,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OptimizationTheories">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MathematicalFoundations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
     </owl:Class>
     
 
@@ -1090,6 +1228,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MathematicalFoundations"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning">
@@ -1124,6 +1270,14 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
     </owl:Class>
     
 
@@ -1168,10 +1322,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SphericalKMeans -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SphericalKMeans">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KMeans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
     </owl:Class>
     
 
@@ -1192,6 +1362,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning">
@@ -1204,6 +1390,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VaDE">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepLearningClustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
     </owl:Class>
     
 
@@ -1227,6 +1421,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveletTransform">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SignalProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
     </owl:Class>
     
 
@@ -1616,12 +1818,35 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIC"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Calinski-Harabasz"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Inertia"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SilhouetteScore"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EarlyStopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ElasticNet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1664,6 +1889,20 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OptimizationTheories"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ProbabilityAndStatistics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SignalProcessing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Calculus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DistanceAndSimilarityMetrics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GraphTheory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#InformationTheory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OptimizationTheories"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ProbabilityAndStatistics"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SignalProcessing"/>
         </owl:members>
     </rdf:Description>
@@ -1673,6 +1912,18 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ChurnPrediction"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CustomerSegmentation"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FraudDetection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
