@@ -1351,6 +1351,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:comment>Also known as Kohonen Networks, Self-Organizing Maps (SOMs) are biologically inspired neural networks that perform unsupervised learning and dimensionality reduction. The input layer is fully connected to a low-dimensional grid (typically 2D) of output neurons. During training, the network self-organizes through an iterative competitive learning process, mapping input patterns to the Best Matching Unit (BMU) while preserving the topological relationships of the data through neighborhood adaptation. Functionally, SOMs act similarly to spatial clustering algorithms and can also serve as feature extractors for supervised or reinforcement learning pipelines.</rdfs:comment>
     </owl:Class>
     
 
@@ -1789,6 +1790,17 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning">
         <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps"/>
+        <MLOntology:utilizesMLType rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning"/>
+        <MLOntology:utilizesMLType rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SupervisedLearning"/>
+        <MLOntology:utilizesMLType rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning"/>
     </owl:NamedIndividual>
     
 
