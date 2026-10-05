@@ -146,10 +146,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -363,7 +371,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -494,10 +502,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks -->
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork"/>
     </owl:Class>
     
 
@@ -694,7 +702,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1023,7 +1031,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1095,7 +1103,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1169,7 +1177,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1269,6 +1277,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RadialBasisFunctionNet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RadialBasisFunctionNet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest">
@@ -1331,11 +1347,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps -->
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
-        <rdfs:comment>Also known as Kohonen Networks, Self-Organizing Maps (SOMs) are biologically inspired neural networks that perform unsupervised learning and dimensionality reduction. The input layer is fully connected to a low-dimensional grid (typically 2D) of output neurons. During training, the network self-organizes through an iterative competitive learning process, mapping input patterns to the Best Matching Unit (BMU) while preserving the topological relationships of the data through neighborhood adaptation. Functionally, SOMs act similarly to spatial clustering algorithms and can also serve as feature extractors for supervised or reinforcement learning pipelines.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1423,7 +1438,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
     </owl:Class>
     
 
@@ -1797,7 +1812,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap">
-        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap"/>
         <MLOntology:utilizesMLType rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning"/>
     </owl:NamedIndividual>
     
@@ -1871,6 +1886,21 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap">
+        <rdfs:comment>Also known as Kohonen Networks, Self-Organizing Maps (SOMs) are biologically inspired neural networks that perform unsupervised learning and dimensionality reduction. The input layer is fully connected to a low-dimensional grid (typically 2D) of output neurons. During training, the network self-organizes through an iterative competitive learning process, mapping input patterns to the Best Matching Unit (BMU) while preserving the topological relationships of the data through neighborhood adaptation. Functionally, SOMs act similarly to spatial clustering algorithms and can also serve as feature extractors for supervised or reinforcement learning pipelines.</rdfs:comment>
+        <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Self-organizing_map</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1914,7 +1944,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMaps"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers"/>
         </owl:members>
     </rdf:Description>
@@ -2018,7 +2048,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClusteringAlgorithms"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased"/>
         </owl:members>
