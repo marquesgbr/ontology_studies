@@ -170,14 +170,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Bagging -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Bagging">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization">
@@ -275,7 +267,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CategoricalBoosting -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CategoricalBoosting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting"/>
     </owl:Class>
     
 
@@ -625,7 +617,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtraTrees -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtraTrees">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Bagging"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest"/>
     </owl:Class>
     
@@ -634,7 +626,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtremeGB -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtremeGB">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting"/>
     </owl:Class>
     
 
@@ -703,14 +695,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetworks"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased"/>
     </owl:Class>
     
 
@@ -1095,7 +1079,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LightGBMachine -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LightGBMachine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting"/>
     </owl:Class>
     
 
@@ -1177,7 +1161,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MorphBoost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MorphBoost">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting"/>
     </owl:Class>
     
 
@@ -1288,7 +1272,7 @@
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Bagging"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging"/>
     </owl:Class>
     
 
@@ -1444,10 +1428,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased"/>
     </owl:Class>
     
 
@@ -1932,14 +1932,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Bagging"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DecisionTree"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientBoosting"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout"/>
@@ -2072,6 +2064,14 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HDBSCAN"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MeanShift"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OPTICS"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DecisionTree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
