@@ -1,0 +1,1434 @@
+@prefix : <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix MLOntology: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#> .
+@base <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology/> .
+
+<http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology> rdf:type owl:Ontology .
+
+################################################################# 
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#IsMathematicalUsedBy
+MLOntology:IsMathematicalUsedBy rdf:type owl:ObjectProperty ;
+                                owl:inverseOf MLOntology:usesMathematicalFoundation ;
+                                rdf:type owl:AsymmetricProperty ,
+                                         owl:IrreflexiveProperty .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#hasEvaluationMetric
+MLOntology:hasEvaluationMetric rdf:type owl:ObjectProperty ;
+                               owl:inverseOf MLOntology:isMetricOf ;
+                               rdf:type owl:AsymmetricProperty ,
+                                        owl:IrreflexiveProperty ;
+                               rdfs:domain MLOntology:Algorithms ;
+                               rdfs:range MLOntology:EvaluationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#isMetricOf
+MLOntology:isMetricOf rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#isSolvedBy
+MLOntology:isSolvedBy rdf:type owl:ObjectProperty ;
+                      owl:inverseOf MLOntology:isUsedInApplication ;
+                      rdf:type owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain MLOntology:Applications ;
+                      rdfs:range MLOntology:Algorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#isUsedInApplication
+MLOntology:isUsedInApplication rdf:type owl:ObjectProperty ,
+                                        owl:AsymmetricProperty ,
+                                        owl:IrreflexiveProperty .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#usesMathematicalFoundation
+MLOntology:usesMathematicalFoundation rdf:type owl:ObjectProperty ,
+                                               owl:AsymmetricProperty ,
+                                               owl:IrreflexiveProperty ;
+                                      rdfs:domain MLOntology:Algorithms ;
+                                      rdfs:range MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#utilizesMLType
+MLOntology:utilizesMLType rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain MLOntology:Algorithms ;
+                          rdfs:range MLOntology:MLTypes .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Accuracy
+MLOntology:Accuracy rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:ClassificationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AdjustedRandIndex
+MLOntology:AdjustedRandIndex rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:ClusterMatchingMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Agglomerative
+MLOntology:Agglomerative rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Algorithms
+MLOntology:Algorithms rdf:type owl:Class ;
+                      owl:disjointWith MLOntology:EvaluationMetrics ,
+                                       MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Applications
+MLOntology:Applications rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork
+MLOntology:ArtificialNeuralNetwork rdf:type owl:Class ;
+                                   rdfs:subClassOf MLOntology:Algorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders
+MLOntology:AutoEncoders rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIC
+MLOntology:BIC rdf:type owl:Class ;
+               rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIRCH
+MLOntology:BIRCH rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization
+MLOntology:BatchNormalization rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BayesianInference
+MLOntology:BayesianInference rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:ProbabilityAndStatistics ;
+                             owl:disjointWith MLOntology:ProbabilityDistributions .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CACTUS
+MLOntology:CACTUS rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:CategoricalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CHAMELEON
+MLOntology:CHAMELEON rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:HierarchicalClustering ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:GraphTheory
+                                     ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CLIQUE
+MLOntology:CLIQUE rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:DensityClustering ,
+                                  MLOntology:GridClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#COBWEB
+MLOntology:COBWEB rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:ModelClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#COOLCAT
+MLOntology:COOLCAT rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:CategoricalClustering ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                     owl:someValuesFrom MLOntology:Entropy
+                                   ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CURE
+MLOntology:CURE rdf:type owl:Class ;
+                rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Calculus
+MLOntology:Calculus rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Calinski-Harabasz
+MLOntology:Calinski-Harabasz rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CategoricalBoosting
+MLOntology:CategoricalBoosting rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:TreeGradientBoosting .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CategoricalClustering
+MLOntology:CategoricalClustering rdf:type owl:Class ;
+                                 rdfs:subClassOf MLOntology:ClusteringAlgorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ChainRule
+MLOntology:ChainRule rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:MultivariableCalculus ;
+                     owl:disjointWith MLOntology:PartialDerivatives .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ChurnPrediction
+MLOntology:ChurnPrediction rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:Applications .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClassificationMetrics
+MLOntology:ClassificationMetrics rdf:type owl:Class ;
+                                 rdfs:subClassOf MLOntology:GroundTruthDependentMetrics ;
+                                 owl:disjointWith MLOntology:ClusterMatchingMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClusterMatchingMetrics
+MLOntology:ClusterMatchingMetrics rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:GroundTruthDependentMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClusterValidityIndices
+MLOntology:ClusterValidityIndices rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:GroundTruthIndependentMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ClusteringAlgorithms
+MLOntology:ClusteringAlgorithms rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:Algorithms ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:ClusterValidityIndices
+                                                ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CompleteLinkage
+MLOntology:CompleteLinkage rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE
+MLOntology:ContractiveAE rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Contrastive
+MLOntology:Contrastive rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN
+MLOntology:ConvolutionalNN rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CosineSimilarity
+MLOntology:CosineSimilarity rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:DistanceAndSimilarityMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CustomerSegmentation
+MLOntology:CustomerSegmentation rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:Applications .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DBCLASD
+MLOntology:DBCLASD rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:DensityClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DBSCAN
+MLOntology:DBSCAN rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:DensityClustering ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                    owl:someValuesFrom MLOntology:EuclideanDistance
+                                  ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DCEC
+MLOntology:DCEC rdf:type owl:Class ;
+                rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DCN
+MLOntology:DCN rdf:type owl:Class ;
+               rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DEC
+MLOntology:DEC rdf:type owl:Class ;
+               rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DENCLUE
+MLOntology:DENCLUE rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:DensityClustering ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                     owl:someValuesFrom MLOntology:GradientDescent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                     owl:someValuesFrom MLOntology:PartialDerivatives
+                                   ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation
+MLOntology:DataAugmentation rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex
+MLOntology:DaviesBouldinIndex rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DecisionTree
+MLOntology:DecisionTree rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:TreeBased .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepLearningClustering
+MLOntology:DeepLearningClustering rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:ClusteringAlgorithms ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:ChainRule
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:GradientDescent
+                                                  ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork
+MLOntology:DeepNeuralNetwork rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE
+MLOntology:DenoisingAE rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DensityClustering
+MLOntology:DensityClustering rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:ClusteringAlgorithms ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:OptimizationTheories
+                                             ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DistanceAndSimilarityMetrics
+MLOntology:DistanceAndSimilarityMetrics rdf:type owl:Class ;
+                                        rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Divisive
+MLOntology:Divisive rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout
+MLOntology:Dropout rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex
+MLOntology:DunnsIndex rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EarlyStopping
+MLOntology:EarlyStopping rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors
+MLOntology:EigenvaluesAndEigenvectors rdf:type owl:Class ;
+                                      rdfs:subClassOf MLOntology:LinearAlgebra ;
+                                      owl:disjointWith MLOntology:MatrixOperations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ElasticNet
+MLOntology:ElasticNet rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Entropy
+MLOntology:Entropy rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:InformationTheory .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EuclideanDistance
+MLOntology:EuclideanDistance rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:DistanceAndSimilarityMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EvaluationMetrics
+MLOntology:EvaluationMetrics rdf:type owl:Class ;
+                             owl:disjointWith MLOntology:MLTypes ,
+                                              MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExpectationMaximization
+MLOntology:ExpectationMaximization rdf:type owl:Class ;
+                                   rdfs:subClassOf MLOntology:ModelClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtraTrees
+MLOntology:ExtraTrees rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:TreeBagging ;
+                      owl:disjointWith MLOntology:RandomForest .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ExtremeGB
+MLOntology:ExtremeGB rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:TreeGradientBoosting .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#F1Score
+MLOntology:F1Score rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:ClassificationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FowlkesMallowsIndex
+MLOntology:FowlkesMallowsIndex rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:ClusterMatchingMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FraudDetection
+MLOntology:FraudDetection rdf:type owl:Class ;
+                          rdfs:subClassOf MLOntology:Applications .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FuzzyKMeans
+MLOntology:FuzzyKMeans rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:KMeans ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                         owl:someValuesFrom MLOntology:LagrangeMultipliers
+                                       ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GaussianDistribution
+MLOntology:GaussianDistribution rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:ProbabilityDistributions .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GaussianMixtureModels
+MLOntology:GaussianMixtureModels rdf:type owl:Class ;
+                                 rdfs:subClassOf MLOntology:ModelClustering ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                   owl:someValuesFrom MLOntology:GaussianDistribution
+                                                 ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet
+MLOntology:GenerativeAdversarialNet rdf:type owl:Class ;
+                                    rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientDescent
+MLOntology:GradientDescent rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:OptimizationTheories ;
+                           owl:disjointWith MLOntology:LagrangeMultipliers .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GraphTheory
+MLOntology:GraphTheory rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GridClustering
+MLOntology:GridClustering rdf:type owl:Class ;
+                          rdfs:subClassOf MLOntology:ClusteringAlgorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GridDBSCAN
+MLOntology:GridDBSCAN rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:GridClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GroundTruthDependentMetrics
+MLOntology:GroundTruthDependentMetrics rdf:type owl:Class ;
+                                       rdfs:subClassOf MLOntology:EvaluationMetrics ;
+                                       owl:disjointWith MLOntology:GroundTruthIndependentMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GroundTruthIndependentMetrics
+MLOntology:GroundTruthIndependentMetrics rdf:type owl:Class ;
+                                         rdfs:subClassOf MLOntology:EvaluationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HDBSCAN
+MLOntology:HDBSCAN rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:DensityClustering ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                     owl:someValuesFrom MLOntology:EuclideanDistance
+                                   ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HardKMeans
+MLOntology:HardKMeans rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:KMeans .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HiddenMarkovModels
+MLOntology:HiddenMarkovModels rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:ModelClustering ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                owl:someValuesFrom MLOntology:ProbabilityDistributions
+                                              ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#HierarchicalClustering
+MLOntology:HierarchicalClustering rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:ClusteringAlgorithms ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:DistanceAndSimilarityMetrics
+                                                  ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#IDEC
+MLOntology:IDEC rdf:type owl:Class ;
+                rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Inertia
+MLOntology:Inertia rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#InformationTheory
+MLOntology:InformationTheory rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_F
+MLOntology:KCM_F rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:KernelHardKMeans ;
+                 owl:disjointWith MLOntology:KCM_K .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_F_GH
+MLOntology:KCM_F_GH rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KCM_F ;
+                    owl:disjointWith MLOntology:KCM_F_LH .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_F_LH
+MLOntology:KCM_F_LH rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KCM_F .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_K
+MLOntology:KCM_K rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:KernelHardKMeans .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_K_GH
+MLOntology:KCM_K_GH rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KCM_K ;
+                    owl:disjointWith MLOntology:KCM_K_LH .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KCM_K_LH
+MLOntology:KCM_K_LH rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KCM_K .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_Ew
+MLOntology:KFCM_Ew rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:KFCM_K ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                     owl:someValuesFrom MLOntology:Entropy
+                                   ] ;
+                   owl:disjointWith MLOntology:KFCM_W .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_Ew1
+MLOntology:KFCM_Ew1 rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KFCM_Ew ;
+                    owl:disjointWith MLOntology:KFCM_Ew2 .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_Ew2
+MLOntology:KFCM_Ew2 rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:KFCM_Ew .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_K
+MLOntology:KFCM_K rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:KernelFuzzyKMeans .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_W
+MLOntology:KFCM_W rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:KFCM_K .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_W1
+MLOntology:KFCM_W1 rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:KFCM_W .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_W2
+MLOntology:KFCM_W2 rdf:type owl:Class ;
+                   rdfs:subClassOf MLOntology:KFCM_W .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KMeans
+MLOntology:KMeans rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:PartitionClustering ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                    owl:someValuesFrom MLOntology:EuclideanDistance
+                                  ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KMedoids
+MLOntology:KMedoids rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:PartitionClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KModes
+MLOntology:KModes rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:CategoricalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KPrototype
+MLOntology:KPrototype rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:PartitionClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KernelFunctions
+MLOntology:KernelFunctions rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:DistanceAndSimilarityMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KernelFuzzyKMeans
+MLOntology:KernelFuzzyKMeans rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:KernelKMeans ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:LagrangeMultipliers
+                                             ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KernelHardKMeans
+MLOntology:KernelHardKMeans rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:KernelKMeans .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KernelKMeans
+MLOntology:KernelKMeans rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:KMeans ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:KernelFunctions
+                                        ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet
+MLOntology:Kolmogorov-ArnoldNet rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L1_Reg
+MLOntology:L1_Reg rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:WeightDecay ;
+                  rdfs:comment "Also known as Lasso Regression." .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L2_Reg
+MLOntology:L2_Reg rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:WeightDecay ;
+                  rdfs:comment "Also known as Ridge Regression." .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LIMBO
+MLOntology:LIMBO rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:CategoricalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LagrangeMultipliers
+MLOntology:LagrangeMultipliers rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:OptimizationTheories .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LatentDirichletAllocation
+MLOntology:LatentDirichletAllocation rdf:type owl:Class ;
+                                     rdfs:subClassOf MLOntology:ModelClustering ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                       owl:someValuesFrom MLOntology:BayesianInference
+                                                     ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LightGBMachine
+MLOntology:LightGBMachine rdf:type owl:Class ;
+                          rdfs:subClassOf MLOntology:TreeGradientBoosting .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra
+MLOntology:LinearAlgebra rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet
+MLOntology:LongShort-TermMemoryNet rdf:type owl:Class ;
+                                   rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MLTypes
+MLOntology:MLTypes rdf:type owl:Class ;
+                   owl:disjointWith MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ManhattanDistance
+MLOntology:ManhattanDistance rdf:type owl:Class ;
+                             rdfs:subClassOf MLOntology:DistanceAndSimilarityMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MathematicalFoundations
+MLOntology:MathematicalFoundations rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MatrixOperations
+MLOntology:MatrixOperations rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:LinearAlgebra .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MeanShift
+MLOntology:MeanShift rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:DensityClustering ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:GradientDescent
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:PartialDerivatives
+                                     ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ModelClustering
+MLOntology:ModelClustering rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:ClusteringAlgorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MorphBoost
+MLOntology:MorphBoost rdf:type owl:Class ;
+                      rdfs:subClassOf MLOntology:TreeGradientBoosting .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron
+MLOntology:MultiLayerPerceptron rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultivariableCalculus
+MLOntology:MultivariableCalculus rdf:type owl:Class ;
+                                 rdfs:subClassOf MLOntology:Calculus .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#NormalizedMutualInformation
+MLOntology:NormalizedMutualInformation rdf:type owl:Class ;
+                                       rdfs:subClassOf MLOntology:ClusterMatchingMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OPTICS
+MLOntology:OPTICS rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:DensityClustering ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                    owl:someValuesFrom MLOntology:EuclideanDistance
+                                  ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OptimizationTheories
+MLOntology:OptimizationTheories rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE
+MLOntology:OverCompleteAE rdf:type owl:Class ;
+                          rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#PartialDerivatives
+MLOntology:PartialDerivatives rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:MultivariableCalculus .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#PartitionClustering
+MLOntology:PartitionClustering rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:ClusteringAlgorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Precision
+MLOntology:Precision rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:ClassificationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ProbabilityAndStatistics
+MLOntology:ProbabilityAndStatistics rdf:type owl:Class ;
+                                    rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ProbabilityDistributions
+MLOntology:ProbabilityDistributions rdf:type owl:Class ;
+                                    rdfs:subClassOf MLOntology:ProbabilityAndStatistics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ROCK
+MLOntology:ROCK rdf:type owl:Class ;
+                rdfs:subClassOf MLOntology:CategoricalClustering ,
+                                MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RadialBasisFunctionNet
+MLOntology:RadialBasisFunctionNet rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest
+MLOntology:RandomForest rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:TreeBagging .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Recall
+MLOntology:Recall rdf:type owl:Class ;
+                  rdfs:subClassOf MLOntology:ClassificationMetrics .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RegularizationTechniques
+MLOntology:RegularizationTechniques rdf:type owl:Class ;
+                                    rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning
+MLOntology:ReinforcementLearning rdf:type owl:Class ;
+                                 rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#STDBSCAN
+MLOntology:STDBSCAN rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:GridClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#STING
+MLOntology:STING rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:GridClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#STIRR
+MLOntology:STIRR rdf:type owl:Class ;
+                 rdfs:subClassOf MLOntology:CategoricalClustering ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                   owl:someValuesFrom MLOntology:EigenvaluesAndEigenvectors
+                                 ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap
+MLOntology:Self-OrganizingMap rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SelfSupervisedLearning
+MLOntology:SelfSupervisedLearning rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SemiSupervisedLearning
+MLOntology:SemiSupervisedLearning rdf:type owl:Class ;
+                                  rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SignalProcessing
+MLOntology:SignalProcessing rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SilhouetteScore
+MLOntology:SilhouetteScore rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:ClusterValidityIndices .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SingleLinkage
+MLOntology:SingleLinkage rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:HierarchicalClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE
+MLOntology:SparseAE rdf:type owl:Class ;
+                    rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SphericalKMeans
+MLOntology:SphericalKMeans rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:KMeans .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE
+MLOntology:StackedAE rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SupervisedLearning
+MLOntology:SupervisedLearning rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TransferLearning
+MLOntology:TransferLearning rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers
+MLOntology:Transformers rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBagging
+MLOntology:TreeBagging rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:TreeBased .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased
+MLOntology:TreeBased rdf:type owl:Class ;
+                     rdfs:subClassOf MLOntology:Algorithms .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeGradientBoosting
+MLOntology:TreeGradientBoosting rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:TreeBased .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE
+MLOntology:UnderCompleteAE rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning
+MLOntology:UnsupervisedLearning rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:MLTypes .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VaDE
+MLOntology:VaDE rdf:type owl:Class ;
+                rdfs:subClassOf MLOntology:DeepLearningClustering .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE
+MLOntology:VariationalAE rdf:type owl:Class ;
+                         rdfs:subClassOf MLOntology:AutoEncoders .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveCluster
+MLOntology:WaveCluster rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:DensityClustering ,
+                                       MLOntology:GridClustering ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                         owl:someValuesFrom MLOntology:WaveletTransform
+                                       ] .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveletTransform
+MLOntology:WaveletTransform rdf:type owl:Class ;
+                            rdfs:subClassOf MLOntology:SignalProcessing .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay
+MLOntology:WeightDecay rdf:type owl:Class ;
+                       rdfs:subClassOf MLOntology:RegularizationTechniques .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Accuracy
+MLOntology:Accuracy rdf:type owl:NamedIndividual ,
+                             MLOntology:Accuracy .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AdjustedRandIndex
+MLOntology:AdjustedRandIndex rdf:type owl:NamedIndividual ,
+                                      MLOntology:AdjustedRandIndex .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BIC
+MLOntology:BIC rdf:type owl:NamedIndividual ,
+                        MLOntology:BIC .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BayesianInference
+MLOntology:BayesianInference rdf:type owl:NamedIndividual ,
+                                      MLOntology:BayesianInference .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#COOLCAT
+MLOntology:COOLCAT rdf:type owl:NamedIndividual ,
+                            MLOntology:COOLCAT ;
+                   MLOntology:usesMathematicalFoundation MLOntology:Entropy .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Calinski-Harabasz
+MLOntology:Calinski-Harabasz rdf:type owl:NamedIndividual ,
+                                      MLOntology:Calinski-Harabasz .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ChainRule
+MLOntology:ChainRule rdf:type owl:NamedIndividual ,
+                              MLOntology:ChainRule .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CosineSimilarity
+MLOntology:CosineSimilarity rdf:type owl:NamedIndividual ,
+                                     MLOntology:CosineSimilarity .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex
+MLOntology:DaviesBouldinIndex rdf:type owl:NamedIndividual ,
+                                       MLOntology:DaviesBouldinIndex .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex
+MLOntology:DunnsIndex rdf:type owl:NamedIndividual ,
+                               MLOntology:DunnsIndex .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors
+MLOntology:EigenvaluesAndEigenvectors rdf:type owl:NamedIndividual ,
+                                               MLOntology:EigenvaluesAndEigenvectors .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Entropy
+MLOntology:Entropy rdf:type owl:NamedIndividual ,
+                            MLOntology:Entropy .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EuclideanDistance
+MLOntology:EuclideanDistance rdf:type owl:NamedIndividual ,
+                                      MLOntology:EuclideanDistance .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#F1Score
+MLOntology:F1Score rdf:type owl:NamedIndividual ,
+                            MLOntology:F1Score .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FowlkesMallowsIndex
+MLOntology:FowlkesMallowsIndex rdf:type owl:NamedIndividual ,
+                                        MLOntology:FowlkesMallowsIndex .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#FuzzyKMeans
+MLOntology:FuzzyKMeans rdf:type owl:NamedIndividual ,
+                                MLOntology:FuzzyKMeans ;
+                       MLOntology:usesMathematicalFoundation MLOntology:LagrangeMultipliers .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GaussianDistribution
+MLOntology:GaussianDistribution rdf:type owl:NamedIndividual ,
+                                         MLOntology:GaussianDistribution .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GradientDescent
+MLOntology:GradientDescent rdf:type owl:NamedIndividual ,
+                                    MLOntology:GradientDescent .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GraphTheory
+MLOntology:GraphTheory rdf:type owl:NamedIndividual ,
+                                MLOntology:GraphTheory .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Inertia
+MLOntology:Inertia rdf:type owl:NamedIndividual ,
+                            MLOntology:Inertia .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_Ew1
+MLOntology:KFCM_Ew1 rdf:type owl:NamedIndividual ,
+                             MLOntology:KFCM_Ew1 ;
+                    MLOntology:usesMathematicalFoundation MLOntology:Entropy ,
+                                                          MLOntology:KernelFunctions .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_Ew2
+MLOntology:KFCM_Ew2 rdf:type owl:NamedIndividual ,
+                             MLOntology:KFCM_Ew2 .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_W1
+MLOntology:KFCM_W1 rdf:type owl:NamedIndividual ,
+                            MLOntology:KFCM_W1 .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KFCM_W2
+MLOntology:KFCM_W2 rdf:type owl:NamedIndividual ,
+                            MLOntology:KFCM_W2 .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KernelFunctions
+MLOntology:KernelFunctions rdf:type owl:NamedIndividual ,
+                                    MLOntology:KernelFunctions .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LagrangeMultipliers
+MLOntology:LagrangeMultipliers rdf:type owl:NamedIndividual ,
+                                        MLOntology:LagrangeMultipliers .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ManhattanDistance
+MLOntology:ManhattanDistance rdf:type owl:NamedIndividual ,
+                                      MLOntology:ManhattanDistance .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MatrixOperations
+MLOntology:MatrixOperations rdf:type owl:NamedIndividual ,
+                                     MLOntology:MatrixOperations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#NormalizedMutualInformation
+MLOntology:NormalizedMutualInformation rdf:type owl:NamedIndividual ,
+                                                MLOntology:NormalizedMutualInformation .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#PartialDerivatives
+MLOntology:PartialDerivatives rdf:type owl:NamedIndividual ,
+                                       MLOntology:PartialDerivatives .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Precision
+MLOntology:Precision rdf:type owl:NamedIndividual ,
+                              MLOntology:Precision .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Recall
+MLOntology:Recall rdf:type owl:NamedIndividual ,
+                           MLOntology:Recall .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ReinforcementLearning
+MLOntology:ReinforcementLearning rdf:type owl:NamedIndividual ,
+                                          MLOntology:ReinforcementLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap
+MLOntology:Self-OrganizingMap rdf:type owl:NamedIndividual ,
+                                       MLOntology:Self-OrganizingMap ;
+                              MLOntology:utilizesMLType MLOntology:UnsupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SelfSupervisedLearning
+MLOntology:SelfSupervisedLearning rdf:type owl:NamedIndividual ,
+                                           MLOntology:SelfSupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SemiSupervisedLearning
+MLOntology:SemiSupervisedLearning rdf:type owl:NamedIndividual ,
+                                           MLOntology:SemiSupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SilhouetteScore
+MLOntology:SilhouetteScore rdf:type owl:NamedIndividual ,
+                                    MLOntology:SilhouetteScore .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SupervisedLearning
+MLOntology:SupervisedLearning rdf:type owl:NamedIndividual ,
+                                       MLOntology:SupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TransferLearning
+MLOntology:TransferLearning rdf:type owl:NamedIndividual ,
+                                     MLOntology:TransferLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning
+MLOntology:UnsupervisedLearning rdf:type owl:NamedIndividual ,
+                                         MLOntology:UnsupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveletTransform
+MLOntology:WaveletTransform rdf:type owl:NamedIndividual ,
+                                     MLOntology:WaveletTransform .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_segmentacao_varejo
+MLOntology:inst_segmentacao_varejo rdf:type owl:NamedIndividual ,
+                                            MLOntology:CustomerSegmentation ;
+                                   MLOntology:isSolvedBy MLOntology:KFCM_Ew1 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+MLOntology:Self-OrganizingMap rdfs:comment "Also known as Kohonen Networks, Self-Organizing Maps (SOMs) are biologically inspired neural networks that perform unsupervised learning and dimensionality reduction. The input layer is fully connected to a low-dimensional grid (typically 2D) of output neurons. During training, the network self-organizes through an iterative competitive learning process, mapping input patterns to the Best Matching Unit (BMU) while preserving the topological relationships of the data through neighborhood adaptation. Functionally, SOMs act similarly to spatial clustering algorithms and can also serve as feature extractors for supervised or reinforcement learning pipelines." ;
+                              rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Self-organizing_map" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:Accuracy
+                MLOntology:F1Score
+                MLOntology:Precision
+                MLOntology:Recall
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:AdjustedRandIndex
+                MLOntology:FowlkesMallowsIndex
+                MLOntology:NormalizedMutualInformation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:Agglomerative
+                MLOntology:BIRCH
+                MLOntology:CHAMELEON
+                MLOntology:CURE
+                MLOntology:CompleteLinkage
+                MLOntology:Divisive
+                MLOntology:ROCK
+                MLOntology:SingleLinkage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:AutoEncoders
+                MLOntology:ConvolutionalNN
+                MLOntology:GenerativeAdversarialNet
+                MLOntology:Kolmogorov-ArnoldNet
+                MLOntology:LongShort-TermMemoryNet
+                MLOntology:Self-OrganizingMap
+                MLOntology:Transformers
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:BIC
+                MLOntology:Calinski-Harabasz
+                MLOntology:DaviesBouldinIndex
+                MLOntology:DunnsIndex
+                MLOntology:Inertia
+                MLOntology:SilhouetteScore
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:BatchNormalization
+                MLOntology:DataAugmentation
+                MLOntology:Dropout
+                MLOntology:EarlyStopping
+                MLOntology:ElasticNet
+                MLOntology:WeightDecay
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:CACTUS
+                MLOntology:COOLCAT
+                MLOntology:KModes
+                MLOntology:LIMBO
+                MLOntology:STIRR
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:CLIQUE
+                MLOntology:GridDBSCAN
+                MLOntology:STDBSCAN
+                MLOntology:STING
+                MLOntology:WaveCluster
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:COBWEB
+                MLOntology:ExpectationMaximization
+                MLOntology:GaussianMixtureModels
+                MLOntology:HiddenMarkovModels
+                MLOntology:LatentDirichletAllocation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:Calculus
+                MLOntology:DistanceAndSimilarityMetrics
+                MLOntology:GraphTheory
+                MLOntology:InformationTheory
+                MLOntology:LinearAlgebra
+                MLOntology:OptimizationTheories
+                MLOntology:ProbabilityAndStatistics
+                MLOntology:RegularizationTechniques
+                MLOntology:SignalProcessing
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:Calculus
+                MLOntology:DistanceAndSimilarityMetrics
+                MLOntology:GraphTheory
+                MLOntology:InformationTheory
+                MLOntology:LinearAlgebra
+                MLOntology:OptimizationTheories
+                MLOntology:ProbabilityAndStatistics
+                MLOntology:SignalProcessing
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:CategoricalBoosting
+                MLOntology:ExtremeGB
+                MLOntology:LightGBMachine
+                MLOntology:MorphBoost
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ChurnPrediction
+                MLOntology:CustomerSegmentation
+                MLOntology:FraudDetection
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ClusteringAlgorithms
+                MLOntology:DeepNeuralNetwork
+                MLOntology:MultiLayerPerceptron
+                MLOntology:TreeBased
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ContractiveAE
+                MLOntology:DenoisingAE
+                MLOntology:OverCompleteAE
+                MLOntology:SparseAE
+                MLOntology:StackedAE
+                MLOntology:UnderCompleteAE
+                MLOntology:VariationalAE
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:Contrastive
+                MLOntology:DCEC
+                MLOntology:DCN
+                MLOntology:DEC
+                MLOntology:IDEC
+                MLOntology:VaDE
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:CosineSimilarity
+                MLOntology:EuclideanDistance
+                MLOntology:KernelFunctions
+                MLOntology:ManhattanDistance
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:DBCLASD
+                MLOntology:DBSCAN
+                MLOntology:DENCLUE
+                MLOntology:HDBSCAN
+                MLOntology:MeanShift
+                MLOntology:OPTICS
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:DecisionTree
+                MLOntology:TreeBagging
+                MLOntology:TreeGradientBoosting
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:FuzzyKMeans
+                MLOntology:HardKMeans
+                MLOntology:KernelKMeans
+                MLOntology:SphericalKMeans
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:KMeans
+                MLOntology:KMedoids
+                MLOntology:KPrototype
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ReinforcementLearning
+                MLOntology:SelfSupervisedLearning
+                MLOntology:SemiSupervisedLearning
+                MLOntology:SupervisedLearning
+                MLOntology:TransferLearning
+                MLOntology:UnsupervisedLearning
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

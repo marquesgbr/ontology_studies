@@ -1,0 +1,2983 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ranin/ontologies/2026/3/untitled-ontology-16"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ranin/ontologies/2026/3/untitled-ontology-16">
+    <Prefix name="" IRI="http://www.semanticweb.org/ranin/ontologies/2026/3/untitled-ontology-16/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology is a master&apos;s thesis project aimed at classifying neglected infectious and parasitic diseases in Brazil.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AbdominalPain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AedesAegypti"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amebiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmericanCutaneousLeishmaniasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmoebicDysentery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnatomicalLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnatomicalStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AncylostomaBraziliense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ascariasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AscarisLumbricoides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BauruUlcer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BiologicalProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CapuchinMosquito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CervicalLymphadenopathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChagasCardiomyopathy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChagasDisease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chronic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClinicalDiagnosticMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CutaneousLarvaMigrans"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DefinitiveHost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dengue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Denv14"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiagnosticMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diarrhea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiseaseStage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiseaseVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dysentery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elephantiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EliminationOfProglottidsInFeces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EliminationOfWormsInFeces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EntamoebaHistolytica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Enterobiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnterobiusVermicularis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EtiologicalAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvolutionaryForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiardiaLamblia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Giardiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroovesInTheSkin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Headache"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Helminthiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Helminths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HepatoSplenomegaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hepatomegaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HookwormDisease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Host"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HouseMosquito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InfectiousDiseases"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InsectBarber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntenseChillsAndSweating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntermediateHost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IronDeficiencyAnemia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Itch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LaboratoryDiagnosticMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LarvaCurrens"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Larvae"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeishmaniaBraziliensis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeishmaniaInfantum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LifeCycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingBeing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LymphaticFilariasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MalariaFalciparum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalConfusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MigratorySerpentineLesion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MigratorySerpiginousLesion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NecatorAmericanus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neurocysticercosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NocturnalAnalItching"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotChronic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parasite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParasiteHostRelationship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parasitism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PathologicalProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PinwormInfection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlasmodiumFalciparum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlasmodiumVivax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protozoa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProtozoanDiseases"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RetroorbitalPain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Roe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RomanasSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SarcoptesScabiei"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scabies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SchistosomaMansoni"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Schistosomiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Seizures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snails"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Splenomegaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Steatorrhea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrawMosquito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrongyloidesStercoralis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strongyloidiasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaeniaSaginata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaeniaSoliumLarva"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Taeniasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ToxocaraCanis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Toxocariasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ToxoplasmaGondii"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Toxoplasmosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransmissionProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Treatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrypanosomaCruzi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UlceratedSkinLesion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisceralLeishmaniasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VivaxMalaria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weakness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WuchereriaBancrofti"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cause"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causesIllness"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causesSymptoms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependsOnTheHost"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#entersThrough"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEtiologicAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetabolism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPossibleDisease"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelaton"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSymptom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haslifeStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inducesSymptoms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#infectedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#invade"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isdetectedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#istreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occursIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transformsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transmits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transmittedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#transmittedIn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#abdominalpain1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aedesaegypti1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#amebiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#americancutaneousleishmaniasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#amoebicdysentery1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ancylostomabraziliense1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ascariasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ascarislumbricoides1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bauruulcer1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#capuchinmosquito1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cervicallymphadenopathy1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chagascardiomyopathy1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chagasdisease1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cutaneouslarvamigrans1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dengue1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#diarrhea1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#diseasevector1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dysentery1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elephantiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eliminationofproglottidsinfeces1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eliminationofwormsinfeces1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#entamoebahistolytica1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#enterobiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#enterobiusvermicularis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fever1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fredfreitas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#giardialamblia1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#giardiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#groovesintheskin1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#headache1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hepatomegaly1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hepatosplenomegaly1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hookwormdisease1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#housemosquito1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#insectbarber1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#intensechillsandsweating1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#irondeficiencyanemia1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#itch1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#larvacurrens1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#leishmaniabraziliensise1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#leishmaniainfantum1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lymphaticfilariasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#malariafalciparum1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#marinho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mentalconfusion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#migratoryserpentinelesion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#migratoryserpiginouslesion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#necatoramericanus1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#neurocysticercosis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nocturnalanalitching1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pinworminfection1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#plasmodiumfalciparum1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#plasmodiumvivax1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rani"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#retroorbitalpain1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#romanassign1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarcoptesscabiei1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scabies1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#schistosomamansoni1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#schistosomiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#seizures1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#snails1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#splenomegaly1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#steatorrhea1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strawmosquito1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strongyloidesstercoralis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strongyloidiasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#taeniasaginata1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#taeniasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#taeniasoliumlarva1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toxocaracanis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toxocariasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toxoplasmagondii1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toxoplasmosis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#trypanosomacruzi1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ulceratedskinlesion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#visceralleishmaniasis1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vivaxmalaria1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weakness1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#wuchereriabancrofti1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Amebiasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AbdominalPain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AmoebicDysentery"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AmericanCutaneousLeishmaniasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#BauruUlcer"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#UlceratedSkinLesion"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ascariasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AbdominalPain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#EliminationOfWormsInFeces"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChagasDisease"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#ChagasDisease"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasEtiologicAgent"/>
+                <Class IRI="#TrypanosomaCruzi"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChagasDisease"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <ObjectUnionOf>
+                    <Class IRI="#ChagasCardiomyopathy"/>
+                    <Class IRI="#RomanasSign"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Fever"/>
+                    <Class IRI="#Headache"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CutaneousLarvaMigrans"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Itch"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#MigratorySerpentineLesion"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dengue"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#RetroorbitalPain"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Enterobiasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AbdominalPain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#NocturnalAnalItching"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EtiologicalAgent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#cause"/>
+            <Class IRI="#InfectiousDiseases"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EvolutionaryForm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelaton"/>
+            <Class IRI="#LifeCycle"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Giardiasis"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <Class IRI="#Dysentery"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#causesSymptoms"/>
+                    <Class IRI="#Diarrhea"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Steatorrhea"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HookwormDisease"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#IronDeficiencyAnemia"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Weakness"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Human"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Human"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMetabolism"/>
+                <Class IRI="#BiologicalProcess"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InfectiousDiseases"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#transmittedBy"/>
+            <Class IRI="#EtiologicalAgent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LivingBeing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetabolism"/>
+            <Class IRI="#BiologicalProcess"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LymphaticFilariasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Elephantiasis"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MalariaFalciparum"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#MentalConfusion"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Neurocysticercosis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Headache"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Seizures"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parasite"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Parasite"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasRelaton"/>
+                <Class IRI="#Host"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parasitism"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelaton"/>
+            <Class IRI="#LivingBeing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PinwormInfection"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Itch"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#MigratorySerpiginousLesion"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Scabies"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#GroovesInTheSkin"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Itch"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Schistosomiasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Diarrhea"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#HepatoSplenomegaly"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Strongyloidiasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AbdominalPain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#LarvaCurrens"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Taeniasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#AbdominalPain"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#EliminationOfProglottidsInFeces"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Toxocariasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Hepatomegaly"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Toxoplasmosis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#CervicalLymphadenopathy"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TransmissionProcess"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dependsOnTheHost"/>
+            <Class IRI="#Parasitism"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vector"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#transmits"/>
+            <ObjectUnionOf>
+                <Class IRI="#EtiologicalAgent"/>
+                <Class IRI="#InfectiousDiseases"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VisceralLeishmaniasis"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Splenomegaly"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VivaxMalaria"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#Fever"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#causesSymptoms"/>
+                <Class IRI="#IntenseChillsAndSweating"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AbdominalPain"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adult"/>
+        <Class IRI="#EvolutionaryForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AedesAegypti"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amebiasis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmericanCutaneousLeishmaniasis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmoebicDysentery"/>
+        <Class IRI="#Dysentery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AncylostomaBraziliense"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ascariasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AscarisLumbricoides"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BauruUlcer"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BiologicalProcess"/>
+        <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CapuchinMosquito"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CervicalLymphadenopathy"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChagasCardiomyopathy"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChagasDisease"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chronic"/>
+        <Class IRI="#DiseaseStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClinicalDiagnosticMethod"/>
+        <Class IRI="#DiagnosticMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CutaneousLarvaMigrans"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DefinitiveHost"/>
+        <Class IRI="#Host"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dengue"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Denv14"/>
+        <Class IRI="#LivingBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiagnosticMethod"/>
+        <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diarrhea"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiseaseVector"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dysentery"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elephantiasis"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EliminationOfProglottidsInFeces"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EliminationOfWormsInFeces"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EntamoebaHistolytica"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Enterobiasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnterobiusVermicularis"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fever"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GiardiaLamblia"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Giardiasis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroovesInTheSkin"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Headache"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Helminthiasis"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Helminths"/>
+        <Class IRI="#LivingBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HepatoSplenomegaly"/>
+        <Class IRI="#LarvaCurrens"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hepatomegaly"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HookwormDisease"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Host"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HouseMosquito"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#LivingBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InfectiousDiseases"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsectBarber"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntenseChillsAndSweating"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntermediateHost"/>
+        <Class IRI="#Host"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IronDeficiencyAnemia"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Itch"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LaboratoryDiagnosticMethod"/>
+        <Class IRI="#DiagnosticMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LarvaCurrens"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Larvae"/>
+        <Class IRI="#EvolutionaryForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeishmaniaBraziliensis"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeishmaniaInfantum"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LymphaticFilariasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MalariaFalciparum"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalConfusion"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MigratorySerpentineLesion"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MigratorySerpiginousLesion"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NecatorAmericanus"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neurocysticercosis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NocturnalAnalItching"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotChronic"/>
+        <Class IRI="#DiseaseStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parasite"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parasitism"/>
+        <Class IRI="#BiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PathologicalProcess"/>
+        <Class IRI="#BiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PinwormInfection"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlasmodiumFalciparum"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlasmodiumVivax"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protozoa"/>
+        <Class IRI="#LivingBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProtozoanDiseases"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RetroorbitalPain"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Roe"/>
+        <Class IRI="#EvolutionaryForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RomanasSign"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SarcoptesScabiei"/>
+        <Class IRI="#LivingBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scabies"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SchistosomaMansoni"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Schistosomiasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Seizures"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Snails"/>
+        <Class IRI="#IntermediateHost"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Splenomegaly"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Steatorrhea"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrawMosquito"/>
+        <Class IRI="#Vector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrongyloidesStercoralis"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strongyloidiasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaeniaSaginata"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaeniaSoliumLarva"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Taeniasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ToxocaraCanis"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Toxocariasis"/>
+        <Class IRI="#Helminthiasis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ToxoplasmaGondii"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Toxoplasmosis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransmissionProcess"/>
+        <Class IRI="#BiologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrypanosomaCruzi"/>
+        <Class IRI="#Protozoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UlceratedSkinLesion"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vector"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisceralLeishmaniasis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VivaxMalaria"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weakness"/>
+        <Class IRI="#PathologicalProcess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WuchereriaBancrofti"/>
+        <Class IRI="#Helminths"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Dengue"/>
+        <Class IRI="#Helminthiasis"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dengue"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dengue"/>
+        <Class IRI="#Scabies"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Helminthiasis"/>
+        <Class IRI="#ProtozoanDiseases"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Helminthiasis"/>
+        <Class IRI="#Scabies"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ProtozoanDiseases"/>
+        <Class IRI="#Scabies"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#AbdominalPain"/>
+        <NamedIndividual IRI="#abdominalpain1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AedesAegypti"/>
+        <NamedIndividual IRI="#aedesaegypti1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Amebiasis"/>
+        <NamedIndividual IRI="#amebiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AmericanCutaneousLeishmaniasis"/>
+        <NamedIndividual IRI="#americancutaneousleishmaniasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AmoebicDysentery"/>
+        <NamedIndividual IRI="#amoebicdysentery1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AncylostomaBraziliense"/>
+        <NamedIndividual IRI="#ancylostomabraziliense1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ascariasis"/>
+        <NamedIndividual IRI="#ascariasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AscarisLumbricoides"/>
+        <NamedIndividual IRI="#ascarislumbricoides1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BauruUlcer"/>
+        <NamedIndividual IRI="#bauruulcer1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CapuchinMosquito"/>
+        <NamedIndividual IRI="#capuchinmosquito1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CervicalLymphadenopathy"/>
+        <NamedIndividual IRI="#cervicallymphadenopathy1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChagasCardiomyopathy"/>
+        <NamedIndividual IRI="#chagascardiomyopathy1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChagasDisease"/>
+        <NamedIndividual IRI="#chagasdisease1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CutaneousLarvaMigrans"/>
+        <NamedIndividual IRI="#cutaneouslarvamigrans1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dengue"/>
+        <NamedIndividual IRI="#dengue1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diarrhea"/>
+        <NamedIndividual IRI="#diarrhea1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DiseaseVector"/>
+        <NamedIndividual IRI="#diseasevector1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dysentery"/>
+        <NamedIndividual IRI="#dysentery1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Elephantiasis"/>
+        <NamedIndividual IRI="#elephantiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EliminationOfProglottidsInFeces"/>
+        <NamedIndividual IRI="#eliminationofproglottidsinfeces1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EliminationOfWormsInFeces"/>
+        <NamedIndividual IRI="#eliminationofwormsinfeces1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EntamoebaHistolytica"/>
+        <NamedIndividual IRI="#entamoebahistolytica1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Enterobiasis"/>
+        <NamedIndividual IRI="#enterobiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EnterobiusVermicularis"/>
+        <NamedIndividual IRI="#enterobiusvermicularis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fever"/>
+        <NamedIndividual IRI="#fever1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#fredfreitas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiardiaLamblia"/>
+        <NamedIndividual IRI="#giardialamblia1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Giardiasis"/>
+        <NamedIndividual IRI="#giardiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GroovesInTheSkin"/>
+        <NamedIndividual IRI="#groovesintheskin1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Headache"/>
+        <NamedIndividual IRI="#headache1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hepatomegaly"/>
+        <NamedIndividual IRI="#hepatomegaly1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HepatoSplenomegaly"/>
+        <NamedIndividual IRI="#hepatosplenomegaly1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HookwormDisease"/>
+        <NamedIndividual IRI="#hookwormdisease1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HouseMosquito"/>
+        <NamedIndividual IRI="#housemosquito1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InsectBarber"/>
+        <NamedIndividual IRI="#insectbarber1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntenseChillsAndSweating"/>
+        <NamedIndividual IRI="#intensechillsandsweating1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IronDeficiencyAnemia"/>
+        <NamedIndividual IRI="#irondeficiencyanemia1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Itch"/>
+        <NamedIndividual IRI="#itch1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LarvaCurrens"/>
+        <NamedIndividual IRI="#larvacurrens1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LeishmaniaBraziliensis"/>
+        <NamedIndividual IRI="#leishmaniabraziliensise1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LeishmaniaInfantum"/>
+        <NamedIndividual IRI="#leishmaniainfantum1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LymphaticFilariasis"/>
+        <NamedIndividual IRI="#lymphaticfilariasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MalariaFalciparum"/>
+        <NamedIndividual IRI="#malariafalciparum1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#marinho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MentalConfusion"/>
+        <NamedIndividual IRI="#mentalconfusion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MigratorySerpentineLesion"/>
+        <NamedIndividual IRI="#migratoryserpentinelesion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MigratorySerpiginousLesion"/>
+        <NamedIndividual IRI="#migratoryserpiginouslesion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NecatorAmericanus"/>
+        <NamedIndividual IRI="#necatoramericanus1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neurocysticercosis"/>
+        <NamedIndividual IRI="#neurocysticercosis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NocturnalAnalItching"/>
+        <NamedIndividual IRI="#nocturnalanalitching1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PinwormInfection"/>
+        <NamedIndividual IRI="#pinworminfection1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlasmodiumFalciparum"/>
+        <NamedIndividual IRI="#plasmodiumfalciparum1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlasmodiumVivax"/>
+        <NamedIndividual IRI="#plasmodiumvivax1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#rani"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RetroorbitalPain"/>
+        <NamedIndividual IRI="#retroorbitalpain1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RomanasSign"/>
+        <NamedIndividual IRI="#romanassign1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SarcoptesScabiei"/>
+        <NamedIndividual IRI="#sarcoptesscabiei1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scabies"/>
+        <NamedIndividual IRI="#scabies1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SchistosomaMansoni"/>
+        <NamedIndividual IRI="#schistosomamansoni1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Schistosomiasis"/>
+        <NamedIndividual IRI="#schistosomiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Seizures"/>
+        <NamedIndividual IRI="#seizures1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Snails"/>
+        <NamedIndividual IRI="#snails1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Splenomegaly"/>
+        <NamedIndividual IRI="#splenomegaly1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Steatorrhea"/>
+        <NamedIndividual IRI="#steatorrhea1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StrawMosquito"/>
+        <NamedIndividual IRI="#strawmosquito1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StrongyloidesStercoralis"/>
+        <NamedIndividual IRI="#strongyloidesstercoralis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strongyloidiasis"/>
+        <NamedIndividual IRI="#strongyloidiasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TaeniaSaginata"/>
+        <NamedIndividual IRI="#taeniasaginata1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Taeniasis"/>
+        <NamedIndividual IRI="#taeniasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TaeniaSoliumLarva"/>
+        <NamedIndividual IRI="#taeniasoliumlarva1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ToxocaraCanis"/>
+        <NamedIndividual IRI="#toxocaracanis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Toxocariasis"/>
+        <NamedIndividual IRI="#toxocariasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ToxoplasmaGondii"/>
+        <NamedIndividual IRI="#toxoplasmagondii1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Toxoplasmosis"/>
+        <NamedIndividual IRI="#toxoplasmosis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrypanosomaCruzi"/>
+        <NamedIndividual IRI="#trypanosomacruzi1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UlceratedSkinLesion"/>
+        <NamedIndividual IRI="#ulceratedskinlesion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisceralLeishmaniasis"/>
+        <NamedIndividual IRI="#visceralleishmaniasis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VivaxMalaria"/>
+        <NamedIndividual IRI="#vivaxmalaria1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Weakness"/>
+        <NamedIndividual IRI="#weakness1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WuchereriaBancrofti"/>
+        <NamedIndividual IRI="#wuchereriabancrofti1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#fredfreitas"/>
+        <NamedIndividual IRI="#diarrhea1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#fredfreitas"/>
+        <NamedIndividual IRI="#hepatosplenomegaly1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#marinho"/>
+        <NamedIndividual IRI="#fever1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#marinho"/>
+        <NamedIndividual IRI="#romanassign1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#rani"/>
+        <NamedIndividual IRI="#fever1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <NamedIndividual IRI="#rani"/>
+        <NamedIndividual IRI="#retroorbitalpain1"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#cause"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#transmittedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasRelaton"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasRelaton"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affects"/>
+        <Class IRI="#Parasite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causedBy"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causesIllness"/>
+        <Class IRI="#EtiologicalAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causesSymptoms"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dependsOnTheHost"/>
+        <Class IRI="#Parasitism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEtiologicAgent"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPossibleDisease"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVector"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inducesSymptoms"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infectedBy"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isdetectedBy"/>
+        <Class IRI="#DiagnosticMethod"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#presentsSymptoms"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transformsIn"/>
+        <Class IRI="#LifeCycle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#transmittedBy"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affects"/>
+        <Class IRI="#Host"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cause"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causedBy"/>
+        <Class IRI="#Parasite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causesIllness"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependsOnTheHost"/>
+        <Class IRI="#Host"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEtiologicAgent"/>
+        <Class IRI="#EtiologicalAgent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPossibleDisease"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <Class IRI="#PathologicalProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVector"/>
+        <Class IRI="#Vector"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haslifeStage"/>
+        <Class IRI="#Host"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#infectedBy"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isdetectedBy"/>
+        <Class IRI="#InfectiousDiseases"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occursIn"/>
+        <Class IRI="#Human"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transformsIn"/>
+        <Class IRI="#Parasite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#transmittedBy"/>
+        <Class IRI="#Vector"/>
+    </ObjectPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Amebiasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AbdominalPain"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AmoebicDysentery"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#amebiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Taeniasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AbdominalPain"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#EliminationOfProglottidsInFeces"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#taeniasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Ascariasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AbdominalPain"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#EliminationOfWormsInFeces"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#ascariasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Strongyloidiasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AbdominalPain"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#LarvaCurrens"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#strongyloidiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Enterobiasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#AbdominalPain"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#NocturnalAnalItching"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#enterobiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>AmericanCutaneousLeishmaniasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#BauruUlcer"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UlceratedSkinLesion"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#americancutaneousleishmaniasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Toxoplasmosis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#CervicalLymphadenopathy"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#toxoplasmosis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Schistosomiasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Diarrhea"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#HepatoSplenomegaly"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#schistosomiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Giardiasis (regra 1)</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Steatorrhea"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Diarrhea"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#giardiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Giardiasis (regra 2)</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Steatorrhea"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Dysentery"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#giardiasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>LymphaticFilariasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Elephantiasis"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#lymphaticfilariasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Toxocariasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Hepatomegaly"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#toxocariasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>VivaxMalaria</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#IntenseChillsAndSweating"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#vivaxmalaria1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>MalariaFalciparum</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#MentalConfusion"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#malariafalciparum1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Dengue</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#RetroorbitalPain"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#dengue1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>VisceralLeishmaniasis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Splenomegaly"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#visceralleishmaniasis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ChagasDisease</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#RomanasSign"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fever"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#chagasdisease1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Scabies</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#GroovesInTheSkin"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Itch"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#scabies1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Neurocysticercosis</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Headache"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Seizures"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#neurocysticercosis1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HookwormDisease</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#IronDeficiencyAnemia"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Weakness"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#hookwormdisease1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CutaneousLarvaMigrans</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Itch"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#MigratorySerpentineLesion"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#cutaneouslarvamigrans1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>PinwormInfection</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Itch"/>
+                <Variable IRI="/s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#presentsSymptoms"/>
+                <Variable IRI="/p"/>
+                <Variable IRI="/s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#MigratorySerpiginousLesion"/>
+                <Variable IRI="/s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Patient"/>
+                <Variable IRI="/p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPossibleDisease"/>
+                <Variable IRI="/p"/>
+                <NamedIndividual IRI="#pinworminfection1"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EtiologicalAgent</IRI>
+        <Literal>The etiological agent is the organism or factor that causes a disease or infection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parasite</IRI>
+        <Literal>Every parasite is an etiological agent if it transmits a disease or infection to its host.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vector</IRI>
+        <Literal>It is an organism (arthropod) that carries and transmits pathogenic agents—viruses, bacteria, or parasites—from an infected host to another, causing disease.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

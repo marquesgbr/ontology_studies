@@ -1,6 +1,16 @@
-# Consulta que responde a CQ1: Quantos algoritmos tem cada assunto matemático
+# ==============================================================================
+# OntoML-Mod — Consultas SPARQL de Validação (Ciclo 1 + Data Properties + Ciclo 2)
+# Vocabulário base: Ontology_02.ttl
+# Nota de execução: Consultas com cláusula de classe superior (a ont:KMeans,
+# a ont:TreeBased) assumem raciocinador ativo no Protégé (Snap SPARQL + HermiT)
+# ou inferência RDFS/OWL; alternativamente, pode-se substituir "a" por
+# "rdf:type/rdfs:subClassOf*" em motores SPARQL 1.1 sem raciocinador OWL.
+# ==============================================================================
 
-PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#> 
+# ------------------------------------------------------------------------------
+# Consulta 1 (QC2): Quantos algoritmos utilizam cada assunto matemático (ABox)
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
 SELECT ?teoriaMatematica (COUNT(DISTINCT ?algoritmo) AS ?totalUsos)
 WHERE {
@@ -10,12 +20,70 @@ GROUP BY ?teoriaMatematica
 ORDER BY DESC(?totalUsos)
 
 
-# Consulta quais aplicações são resolvidas por K-Means
+# ------------------------------------------------------------------------------
+# Consulta 2 (QC4): Quais aplicações são resolvidas pela família K-Means
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
-PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#> 
-
-SELECT ?aplicacao 
+SELECT ?aplicacao
 WHERE {
   ?aplicacao ont:isSolvedBy ?algoritmo .
   ?algoritmo a ont:KMeans .
 }
+
+
+# ------------------------------------------------------------------------------
+# Consulta 3 (QC6 — Data Properties / Agrupamento): Algoritmos que não exigem
+# definição prévia de k e lidam com ruído/outliers
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?algoritmo
+WHERE {
+  ?algoritmo ont:requiresClusterCountK "false"^^xsd:boolean ;
+             ont:handlesNoiseOutliers  "true"^^xsd:boolean .
+}
+ORDER BY ?algoritmo
+
+
+# ------------------------------------------------------------------------------
+# Consulta 4 (QC7 — Data Properties / Métricas): Direção ótima de otimização
+# ("maximize" vs. "minimize") das métricas de avaliação axiomatizadas
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?metrica ?direcao
+WHERE {
+  ?metrica ont:hasOptimalDirection ?direcao .
+}
+ORDER BY ?direcao ?metrica
+
+
+# ------------------------------------------------------------------------------
+# Consulta 5 (QC8 — Ciclo 2 / TreeBased): Algoritmos baseados em árvores que
+# combinam Expansão de Taylor de segunda ordem e regularização L2
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?algoritmo
+WHERE {
+  ?algoritmo a ont:TreeBased ;
+             ont:usesMathematicalFoundation ont:TaylorExpansion ;
+             ont:usesMathematicalFoundation ont:L2_Reg .
+}
+ORDER BY ?algoritmo
+
+
+# ------------------------------------------------------------------------------
+# Consulta 6 (QC9 — Ciclo 2 / TreeBased): Domínios de aplicação e respectivos
+# modelos baseados em árvores solucionadores
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?aplicacao ?algoritmo
+WHERE {
+  ?aplicacao ont:isSolvedBy ?algoritmo .
+  ?algoritmo a ont:TreeBased .
+}
+ORDER BY ?aplicacao ?algoritmo
