@@ -1,1 +1,8 @@
 owldoc/
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.properties
