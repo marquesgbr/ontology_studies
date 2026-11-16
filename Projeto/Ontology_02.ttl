@@ -8,7 +8,7 @@
 @base <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology/> .
 
 <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology> rdf:type owl:Ontology ;
-    owl:versionInfo "Ciclo 2 - Propriedades de Dados e Modelos Baseados em Arvores (Ontology_02.ttl)" ;
+    owl:versionInfo "Ciclo 3 - Redes Neurais Artificiais (ArtificialNeuralNetwork), Fundamentos Matematicos e Axiomas de Equivalencia (Ontology_02.ttl)" ;
     rdfs:comment "OntoML-Mod: Ontologia Orientada a Modelos e Algoritmos de Aprendizagem de Maquina Contemporaneos (CIn-UFPE)." .
 
 #################################################################
@@ -459,6 +459,12 @@ MLOntology:Calculus rdf:type owl:Class ;
                     rdfs:subClassOf MLOntology:MathematicalFoundations .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ActivationFunctions
+MLOntology:ActivationFunctions rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:Calculus ;
+                               rdfs:comment "Funcoes de ativacao nao-lineares (Sigmoid, Tanh, ReLU, GELU, Softmax) aplicadas camada a camada para aproximacao universal de funcoes e controle de portoes neurais (Goodfellow et al., 2016; Sarker, 2021)." .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultivariableCalculus
 MLOntology:MultivariableCalculus rdf:type owl:Class ;
                                  rdfs:subClassOf MLOntology:Calculus .
@@ -470,9 +476,21 @@ MLOntology:ChainRule rdf:type owl:Class ;
                      owl:disjointWith MLOntology:PartialDerivatives .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#JacobianMatrix
+MLOntology:JacobianMatrix rdf:type owl:Class ;
+                          rdfs:subClassOf MLOntology:MultivariableCalculus ;
+                          rdfs:comment "Matriz de derivadas parciais de primeira ordem de funcoes vetoriais cuja norma de Frobenius penaliza variacoes locais no Contractive Autoencoder (Rifai et al., 2011; Goodfellow et al., 2016)." .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#PartialDerivatives
 MLOntology:PartialDerivatives rdf:type owl:Class ;
                               rdfs:subClassOf MLOntology:MultivariableCalculus .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SplineFunctions
+MLOntology:SplineFunctions rdf:type owl:Class ;
+                           rdfs:subClassOf MLOntology:Calculus ;
+                           rdfs:comment "Funcoes polinomiais por partes (B-splines) empregadas como ativacoes univariadas aprendiveis nas arestas de Kolmogorov-Arnold Networks (Liu et al., 2024)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TaylorExpansion
@@ -529,6 +547,12 @@ MLOntology:InformationTheory rdf:type owl:Class ;
                              rdfs:subClassOf MLOntology:MathematicalFoundations .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CrossEntropy
+MLOntology:CrossEntropy rdf:type owl:Class ;
+                        rdfs:subClassOf MLOntology:InformationTheory ;
+                        rdfs:comment "Entropia cruzada H(p,q) entre distribuicoes de probabilidade alvo e predita, usada como funcao objetivo em classificacao neural e discriminadores adversariais (Goodfellow et al., 2014; Goodfellow et al., 2016; Liu et al., 2023)." .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Entropy
 MLOntology:Entropy rdf:type owl:Class ;
                    rdfs:subClassOf MLOntology:InformationTheory .
@@ -546,9 +570,21 @@ MLOntology:InformationGain rdf:type owl:Class ;
                            rdfs:comment "Reducao esperada na entropia de Shannon usada como criterio de divisao no algoritmo ID3 (Quinlan, 1993)." .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KullbackLeiblerDivergence
+MLOntology:KullbackLeiblerDivergence rdf:type owl:Class ;
+                                     rdfs:subClassOf MLOntology:InformationTheory ;
+                                     rdfs:comment "Divergencia de Kullback-Leibler (entropia relativa D_KL) entre distribuicoes de probabilidade, central no limite inferior da evidencia (ELBO) do Variational Autoencoder e em restricoes de esparsidade (Kingma & Welling, 2014; Liu et al., 2023; Yin et al., 2026)." .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LinearAlgebra
 MLOntology:LinearAlgebra rdf:type owl:Class ;
                          rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AttentionMechanism
+MLOntology:AttentionMechanism rdf:type owl:Class ;
+                              rdfs:subClassOf MLOntology:LinearAlgebra ;
+                              rdfs:comment "Mecanismo de atencao por produto escalar ponderado (Scaled Dot-Product e Multi-Head Attention) baseado em projecoes matriciais Query, Key e Value em arquiteturas Transformers (Vaswani et al., 2017; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors
@@ -576,6 +612,12 @@ MLOntology:GradientDescent rdf:type owl:Class ;
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LagrangeMultipliers
 MLOntology:LagrangeMultipliers rdf:type owl:Class ;
                                rdfs:subClassOf MLOntology:OptimizationTheories .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MinimaxOptimization
+MLOntology:MinimaxOptimization rdf:type owl:Class ;
+                               rdfs:subClassOf MLOntology:OptimizationTheories ;
+                               rdfs:comment "Otimizacao de ponto de sela em jogo minimax de dois jogadores (min_G max_D) entre gerador e discriminador em redes adversariais generativas (Goodfellow et al., 2014; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ProbabilityAndStatistics
@@ -673,6 +715,7 @@ MLOntology:WeightDecay rdf:type owl:Class ;
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L1_Reg
 MLOntology:L1_Reg rdf:type owl:Class ;
                   rdfs:subClassOf MLOntology:WeightDecay ;
+                  owl:disjointWith MLOntology:L2_Reg ;
                   rdfs:comment "Also known as Lasso Regression." .
 
 
@@ -685,6 +728,13 @@ MLOntology:L2_Reg rdf:type owl:Class ;
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SignalProcessing
 MLOntology:SignalProcessing rdf:type owl:Class ;
                             rdfs:subClassOf MLOntology:MathematicalFoundations .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionOperation
+MLOntology:ConvolutionOperation rdf:type owl:Class ;
+                                rdfs:subClassOf MLOntology:SignalProcessing ;
+                                owl:disjointWith MLOntology:WaveletTransform ;
+                                rdfs:comment "Operador matematico de convolucao discreta espacial ou temporal com compartilhamento de pesos em filtros locais para extracao de mapas de caracteristicas equivariantes a translacao (LeCun et al., 1998; Sarker, 2021)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveletTransform
@@ -1566,8 +1616,17 @@ MLOntology:VaDE rdf:type owl:Class ;
                 rdfs:subClassOf MLOntology:DeepLearningClustering ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                  owl:someValuesFrom MLOntology:GaussianDistribution
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                  owl:someValuesFrom MLOntology:KullbackLeiblerDivergence
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
                                   owl:someValuesFrom MLOntology:ProbabilityDistributions
-                                ] .
+                                ] ;
+                rdfs:comment "Variational Deep Embedding: combina mistura Gaussiana, inferencia variacional (KL/ELBO) e redes profundas (Yin et al., 2026; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SemiSupervisedClustering
@@ -1635,82 +1694,562 @@ MLOntology:SemiSupervisedFuzzyCMeans rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ArtificialNeuralNetwork
 MLOntology:ArtificialNeuralNetwork rdf:type owl:Class ;
-                                   rdfs:subClassOf MLOntology:Algorithms .
+                                   rdfs:subClassOf MLOntology:Algorithms ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:MatrixOperations
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:OptimizationTheories
+                                                   ] ;
+                                   rdfs:comment "Redes Neurais Artificiais (ANN): modelos computacionais inspirados em redes neurais biologicas baseados em camadas de neuronios interconectados, operacoes matriciais de pesos sinapticos e otimizacao (Sarker, 2021; Goodfellow et al., 2016)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DeepNeuralNetwork
 MLOntology:DeepNeuralNetwork rdf:type owl:Class ;
-                             rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+                             owl:equivalentClass [ owl:intersectionOf ( MLOntology:ArtificialNeuralNetwork
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                          owl:someValuesFrom MLOntology:ChainRule
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                          owl:someValuesFrom MLOntology:GradientDescent
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                          owl:someValuesFrom MLOntology:RegularizationTechniques
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf MLOntology:ArtificialNeuralNetwork ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:ActivationFunctions
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:ChainRule
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:GradientDescent
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:PartialDerivatives
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                               owl:someValuesFrom MLOntology:RegularizationTechniques
+                                             ] ;
+                             rdfs:comment "Redes Neurais Profundas (DNN): arquiteturas neurais com multiplas camadas ocultas de aprendizado de representacao treinadas via backpropagation (regra da cadeia, derivadas parciais e descida de gradiente) combinadas a tecnicas de regularizacao (Goodfellow et al., 2016; Sarker, 2021; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoEncoders
 MLOntology:AutoEncoders rdf:type owl:Class ;
-                        rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                        owl:equivalentClass [ owl:intersectionOf ( MLOntology:DeepNeuralNetwork
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                                     owl:someValuesFrom MLOntology:MSE
+                                                                   ]
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty MLOntology:utilizesMLType ;
+                                                                     owl:someValuesFrom MLOntology:UnsupervisedLearning
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:hasEvaluationMetric ;
+                                          owl:someValuesFrom MLOntology:MSE
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:hasEvaluationMetric ;
+                                          owl:someValuesFrom MLOntology:RMSE
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:utilizesMLType ;
+                                          owl:someValuesFrom MLOntology:SelfSupervisedLearning
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:utilizesMLType ;
+                                          owl:someValuesFrom MLOntology:UnsupervisedLearning
+                                        ] ;
+                        rdfs:comment "Autoencoders (AE): redes neurais encoder-decoder que aprendem representacoes latentes de forma nao-supervisionada e auto-supervisionada generativa mediante minimizacao do erro de reconstrucao (Baldi, 2012; Sarker, 2021; Zhuang et al., 2021; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE
 MLOntology:ContractiveAE rdf:type owl:Class ;
-                         rdfs:subClassOf MLOntology:AutoEncoders .
+                         owl:equivalentClass [ owl:intersectionOf ( MLOntology:AutoEncoders
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                      owl:someValuesFrom MLOntology:JacobianMatrix
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf MLOntology:AutoEncoders ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:JacobianMatrix
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:L2_Reg
+                                         ] ;
+                         rdfs:comment "Contractive Autoencoder (CAE): autoencoder regularizado pela norma de Frobenius da matriz Jacobiana das ativacoes do codificador em relacao a entrada, promovendo invariancia local na variedade aprendida (Rifai et al., 2011; Goodfellow et al., 2016)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE
 MLOntology:DenoisingAE rdf:type owl:Class ;
-                       rdfs:subClassOf MLOntology:AutoEncoders .
+                       owl:equivalentClass [ owl:intersectionOf ( MLOntology:AutoEncoders
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                    owl:someValuesFrom MLOntology:DataAugmentation
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf MLOntology:AutoEncoders ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                         owl:someValuesFrom MLOntology:DataAugmentation
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                         owl:someValuesFrom MLOntology:GaussianDistribution
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                         owl:someValuesFrom MLOntology:ProbabilityDistributions
+                                       ] ;
+                       rdfs:comment "Denoising Autoencoder (DAE): autoencoder treinado para reconstruir a entrada limpa original a partir de versoes estocasticamente corrompidas por ruido Gaussiano ou mascaramento (Vincent et al., 2008; Zhuang et al., 2021; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE
 MLOntology:OverCompleteAE rdf:type owl:Class ;
-                          rdfs:subClassOf MLOntology:AutoEncoders .
+                          rdfs:subClassOf MLOntology:AutoEncoders ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                            owl:someValuesFrom MLOntology:Dropout
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                            owl:someValuesFrom MLOntology:EarlyStopping
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                            owl:someValuesFrom MLOntology:L2_Reg
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                            owl:someValuesFrom MLOntology:WeightDecay
+                                          ] ;
+                          rdfs:comment "Overcomplete Autoencoder: autoencoder com camada oculta de dimensao igual ou superior a entrada, exigindo regularizacao explicita (Weight Decay L2, Dropout e Early Stopping) para evitar a funcao identidade trivial (Goodfellow et al., 2016; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE
 MLOntology:SparseAE rdf:type owl:Class ;
-                    rdfs:subClassOf MLOntology:AutoEncoders .
+                    owl:equivalentClass [ owl:intersectionOf ( MLOntology:AutoEncoders
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                 owl:someValuesFrom MLOntology:L1_Reg
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf MLOntology:AutoEncoders ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                      owl:someValuesFrom MLOntology:KullbackLeiblerDivergence
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                      owl:someValuesFrom MLOntology:L1_Reg
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                      owl:someValuesFrom MLOntology:WeightDecay
+                                    ] ;
+                    rdfs:comment "Sparse Autoencoder (SAE): autoencoder que impoe penalidade de esparsidade sobre as ativacoes ocultas via regularizacao L1 ou divergencia de Kullback-Leibler em relacao a uma taxa de ativacao alvo baixa (Ng, 2011; Zhuang et al., 2021; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE
 MLOntology:StackedAE rdf:type owl:Class ;
-                     rdfs:subClassOf MLOntology:AutoEncoders .
+                     rdfs:subClassOf MLOntology:AutoEncoders ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:Dropout
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:EarlyStopping
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                       owl:someValuesFrom MLOntology:WeightDecay
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MLOntology:utilizesMLType ;
+                                       owl:someValuesFrom MLOntology:TransferLearning
+                                     ] ;
+                     rdfs:comment "Stacked Autoencoder (SAE profundo): composicao hierarquica de multiplos autoencoders treinados camada a camada (greedy layer-wise pre-training) e ajustados via backpropagation para extracao de caracteristicas e Transfer Learning (Bengio et al., 2007; Vincent et al., 2010; Zhuang et al., 2021)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE
 MLOntology:UnderCompleteAE rdf:type owl:Class ;
-                           rdfs:subClassOf MLOntology:AutoEncoders .
+                           owl:equivalentClass [ owl:intersectionOf ( MLOntology:AutoEncoders
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                        owl:someValuesFrom MLOntology:EigenvaluesAndEigenvectors
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf MLOntology:AutoEncoders ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:EarlyStopping
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:EigenvaluesAndEigenvectors
+                                           ] ;
+                           rdfs:comment "Undercomplete Autoencoder: autoencoder cuja camada latente possui dimensao estritamente menor que a entrada para reducao de dimensionalidade, recuperando o subespaco principal de autovalores/autovetores (PCA) no caso linear sob MSE (Baldi, 2012; Goodfellow et al., 2016; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE
 MLOntology:VariationalAE rdf:type owl:Class ;
-                         rdfs:subClassOf MLOntology:AutoEncoders .
+                         owl:equivalentClass [ owl:intersectionOf ( MLOntology:AutoEncoders
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                      owl:someValuesFrom MLOntology:BayesianInference
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                      owl:someValuesFrom MLOntology:KullbackLeiblerDivergence
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf MLOntology:AutoEncoders ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:BayesianInference
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:GaussianDistribution
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:KullbackLeiblerDivergence
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                           owl:someValuesFrom MLOntology:ProbabilityDistributions
+                                         ] ;
+                         rdfs:comment "Variational Autoencoder (VAE): modelo generativo direcionado probabilistico que aproxima a distribuicao posterior latente via inferencia variacional Bayesiana, truque de reparametrizacao Gaussiana e divergencia de Kullback-Leibler maximizando o ELBO (Kingma & Welling, 2014; Liu et al., 2023; Yin et al., 2026)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN
 MLOntology:ConvolutionalNN rdf:type owl:Class ;
-                           rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                           owl:equivalentClass [ owl:intersectionOf ( MLOntology:DeepNeuralNetwork
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                        owl:someValuesFrom MLOntology:ConvolutionOperation
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:Accuracy
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:F1Score
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:LogLoss
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:Precision
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:ROC_AUC
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:hasEvaluationMetric ;
+                                             owl:someValuesFrom MLOntology:Recall
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:BatchNormalization
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:ConvolutionOperation
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:CrossEntropy
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:DataAugmentation
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:Dropout
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                             owl:someValuesFrom MLOntology:WeightDecay
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:utilizesMLType ;
+                                             owl:someValuesFrom MLOntology:SupervisedLearning
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty MLOntology:utilizesMLType ;
+                                             owl:someValuesFrom MLOntology:TransferLearning
+                                           ] ;
+                           rdfs:comment "Convolutional Neural Network (CNN / ConvNet): arquitetura profunda baseada em operadores de convolucao discreta, pooling, normalizacao em lote (Batch Normalization), Dropout e aumento de dados para extracao hierarquica de caracteristicas espaciais e visuais (LeCun et al., 1998; Sarker, 2021; Zhuang et al., 2021)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet
 MLOntology:GenerativeAdversarialNet rdf:type owl:Class ;
-                                    rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                                    owl:equivalentClass [ owl:intersectionOf ( MLOntology:DeepNeuralNetwork
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                                 owl:someValuesFrom MLOntology:MinimaxOptimization
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                      owl:someValuesFrom MLOntology:LogLoss
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                      owl:someValuesFrom MLOntology:BatchNormalization
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                      owl:someValuesFrom MLOntology:CrossEntropy
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                      owl:someValuesFrom MLOntology:KullbackLeiblerDivergence
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                      owl:someValuesFrom MLOntology:MinimaxOptimization
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                      owl:someValuesFrom MLOntology:ProbabilityDistributions
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:utilizesMLType ;
+                                                      owl:someValuesFrom MLOntology:SelfSupervisedLearning
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty MLOntology:utilizesMLType ;
+                                                      owl:someValuesFrom MLOntology:UnsupervisedLearning
+                                                    ] ;
+                                    rdfs:comment "Generative Adversarial Network (GAN): arquitetura generativa-contrastiva composta por gerador e discriminador treinados em jogo minimax de dois jogadores sobre distribuicoes de probabilidade e divergencia informacional (Goodfellow et al., 2014; Sarker, 2021; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet
 MLOntology:Kolmogorov-ArnoldNet rdf:type owl:Class ;
-                                rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                                owl:equivalentClass [ owl:intersectionOf ( MLOntology:DeepNeuralNetwork
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                             owl:someValuesFrom MLOntology:SplineFunctions
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:Accuracy
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:MSE
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:RMSE
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:EntropyRegularization
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:L1_Reg
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:SplineFunctions
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:utilizesMLType ;
+                                                  owl:someValuesFrom MLOntology:SupervisedLearning
+                                                ] ;
+                                rdfs:comment "Kolmogorov-Arnold Network (KAN): rede neural fundamentada no teorema de representacao de Kolmogorov-Arnold que substitui pesos lineares fixos por funcoes univariadas aprendiveis parametrizadas por B-splines nas arestas com regularizacao L1 e de entropia (Liu et al., 2024)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet
 MLOntology:LongShort-TermMemoryNet rdf:type owl:Class ;
-                                   rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                                   rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                     owl:someValuesFrom MLOntology:Accuracy
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                     owl:someValuesFrom MLOntology:F1Score
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                     owl:someValuesFrom MLOntology:MAE
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                     owl:someValuesFrom MLOntology:MSE
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                     owl:someValuesFrom MLOntology:RMSE
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:CrossEntropy
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:Dropout
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:EarlyStopping
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                     owl:someValuesFrom MLOntology:WeightDecay
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty MLOntology:utilizesMLType ;
+                                                     owl:someValuesFrom MLOntology:SupervisedLearning
+                                                   ] ;
+                                   rdfs:comment "Long Short-Term Memory (LSTM): rede neural recorrente profunda (RNN) dotada de celulas de memoria e portoes multiplicativos (input, forget e output gates) treinada via Backpropagation Through Time (BPTT) para modelagem de dados sequenciais e series temporais (Hochreiter & Schmidhuber, 1997; Sarker, 2021)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron
 MLOntology:MultiLayerPerceptron rdf:type owl:Class ;
-                                rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+                                rdfs:subClassOf MLOntology:ArtificialNeuralNetwork ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:Accuracy
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:F1Score
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:MSE
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:Precision
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                  owl:someValuesFrom MLOntology:Recall
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:ActivationFunctions
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:ChainRule
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:CrossEntropy
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:GradientDescent
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                  owl:someValuesFrom MLOntology:PartialDerivatives
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MLOntology:utilizesMLType ;
+                                                  owl:someValuesFrom MLOntology:SupervisedLearning
+                                                ] ;
+                                rdfs:comment "Multilayer Perceptron (MLP): rede neural feed-forward totalmente conectada composta por camadas de entrada, ocultas e de saida com funcoes de ativacao nao-lineares e treinamento supervisionado via backpropagation (Rumelhart et al., 1986; Sarker, 2021; El Massari et al., 2022)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RadialBasisFunctionNet
 MLOntology:RadialBasisFunctionNet rdf:type owl:Class ;
-                                  rdfs:subClassOf MLOntology:ArtificialNeuralNetwork .
+                                  owl:equivalentClass [ owl:intersectionOf ( MLOntology:ArtificialNeuralNetwork
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                               owl:someValuesFrom MLOntology:GaussianKernel
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf MLOntology:ArtificialNeuralNetwork ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                    owl:someValuesFrom MLOntology:Accuracy
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                    owl:someValuesFrom MLOntology:MSE
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                    owl:someValuesFrom MLOntology:RMSE
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:EuclideanDistance
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:GaussianKernel
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                    owl:someValuesFrom MLOntology:KernelFunctions
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty MLOntology:utilizesMLType ;
+                                                    owl:someValuesFrom MLOntology:SupervisedLearning
+                                                  ] ;
+                                  rdfs:comment "Radial Basis Function Network (RBFN): rede neural de tres camadas que utiliza funcoes de base radial (Kernel Gaussiano sobre distancia Euclidiana a prototipos) na camada oculta e combinacao linear matricial na saida (Broomhead & Lowe, 1988; Sarker, 2021)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap
@@ -1718,14 +2257,79 @@ MLOntology:Self-OrganizingMap rdf:type owl:Class ;
                               rdfs:subClassOf MLOntology:ArtificialNeuralNetwork ,
                                               MLOntology:ModelClustering ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty MLOntology:hasEvaluationMetric ;
+                                                owl:someValuesFrom MLOntology:SilhouetteScore
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty MLOntology:usesMathematicalFoundation ;
                                                 owl:someValuesFrom MLOntology:EuclideanDistance
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty MLOntology:handlesNoiseOutliers ;
+                                                owl:hasValue "false"^^xsd:boolean
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty MLOntology:requiresClusterCountK ;
+                                                owl:hasValue "true"^^xsd:boolean
                                               ] .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers
 MLOntology:Transformers rdf:type owl:Class ;
-                        rdfs:subClassOf MLOntology:DeepNeuralNetwork .
+                        owl:equivalentClass [ owl:intersectionOf ( MLOntology:DeepNeuralNetwork
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                                                     owl:someValuesFrom MLOntology:AttentionMechanism
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:subClassOf MLOntology:DeepNeuralNetwork ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:hasEvaluationMetric ;
+                                          owl:someValuesFrom MLOntology:Accuracy
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:hasEvaluationMetric ;
+                                          owl:someValuesFrom MLOntology:F1Score
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:hasEvaluationMetric ;
+                                          owl:someValuesFrom MLOntology:LogLoss
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:AttentionMechanism
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:CrossEntropy
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:Dropout
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:ProbabilityDistributions
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:usesMathematicalFoundation ;
+                                          owl:someValuesFrom MLOntology:WeightDecay
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:utilizesMLType ;
+                                          owl:someValuesFrom MLOntology:SelfSupervisedLearning
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:utilizesMLType ;
+                                          owl:someValuesFrom MLOntology:SupervisedLearning
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty MLOntology:utilizesMLType ;
+                                          owl:someValuesFrom MLOntology:TransferLearning
+                                        ] ;
+                        rdfs:comment "Transformers: arquitetura neural profunda baseada em mecanismos de autoatencao em produto escalar ponderado (Scaled Dot-Product e Multi-Head Attention), projecoes matriciais, Dropout e Weight Decay para modelagem contextual e pre-treinamento (Vaswani et al., 2017; Liu et al., 2023)." .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreeBased
@@ -2031,6 +2635,11 @@ MLOntology:Accuracy rdf:type owl:NamedIndividual ,
                     MLOntology:hasOptimalDirection "maximize" .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ActivationFunctions
+MLOntology:ActivationFunctions rdf:type owl:NamedIndividual ,
+                                        MLOntology:ActivationFunctions .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AdaBoost
 MLOntology:AdaBoost rdf:type owl:NamedIndividual ,
                              MLOntology:AdaBoost ;
@@ -2057,6 +2666,11 @@ MLOntology:Agglomerative rdf:type owl:NamedIndividual ,
                          MLOntology:requiresClusterCountK "false"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AttentionMechanism
+MLOntology:AttentionMechanism rdf:type owl:NamedIndividual ,
+                                       MLOntology:AttentionMechanism .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#AutoClass
 MLOntology:AutoClass rdf:type owl:NamedIndividual ,
                               MLOntology:AutoClass ;
@@ -2079,6 +2693,11 @@ MLOntology:BIRCH rdf:type owl:NamedIndividual ,
                  MLOntology:utilizesMLType MLOntology:UnsupervisedLearning ;
                  MLOntology:handlesNoiseOutliers "true"^^xsd:boolean ;
                  MLOntology:requiresClusterCountK "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BatchNormalization
+MLOntology:BatchNormalization rdf:type owl:NamedIndividual ,
+                                       MLOntology:BatchNormalization .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#BayesianInference
@@ -2182,9 +2801,61 @@ MLOntology:Contrastive rdf:type owl:NamedIndividual ,
                        MLOntology:requiresClusterCountK "true"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ContractiveAE
+MLOntology:ContractiveAE rdf:type owl:NamedIndividual ,
+                                  MLOntology:ContractiveAE ;
+                         MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                               MLOntology:ChainRule ,
+                                                               MLOntology:GradientDescent ,
+                                                               MLOntology:JacobianMatrix ,
+                                                               MLOntology:L2_Reg ,
+                                                               MLOntology:MatrixOperations ,
+                                                               MLOntology:OptimizationTheories ,
+                                                               MLOntology:PartialDerivatives ;
+                         MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                        MLOntology:RMSE ;
+                         MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                   MLOntology:UnsupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionalNN
+MLOntology:ConvolutionalNN rdf:type owl:NamedIndividual ,
+                                    MLOntology:ConvolutionalNN ;
+                           MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                 MLOntology:BatchNormalization ,
+                                                                 MLOntology:ChainRule ,
+                                                                 MLOntology:ConvolutionOperation ,
+                                                                 MLOntology:CrossEntropy ,
+                                                                 MLOntology:DataAugmentation ,
+                                                                 MLOntology:Dropout ,
+                                                                 MLOntology:GradientDescent ,
+                                                                 MLOntology:MatrixOperations ,
+                                                                 MLOntology:OptimizationTheories ,
+                                                                 MLOntology:PartialDerivatives ,
+                                                                 MLOntology:WeightDecay ;
+                           MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                          MLOntology:F1Score ,
+                                                          MLOntology:LogLoss ,
+                                                          MLOntology:Precision ,
+                                                          MLOntology:ROC_AUC ,
+                                                          MLOntology:Recall ;
+                           MLOntology:utilizesMLType MLOntology:SupervisedLearning ,
+                                                     MLOntology:TransferLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ConvolutionOperation
+MLOntology:ConvolutionOperation rdf:type owl:NamedIndividual ,
+                                         MLOntology:ConvolutionOperation .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CosineSimilarity
 MLOntology:CosineSimilarity rdf:type owl:NamedIndividual ,
                                      MLOntology:CosineSimilarity .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#CrossEntropy
+MLOntology:CrossEntropy rdf:type owl:NamedIndividual ,
+                                 MLOntology:CrossEntropy .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DBSCAN
@@ -2208,10 +2879,33 @@ MLOntology:DEC rdf:type owl:NamedIndividual ,
                MLOntology:requiresClusterCountK "true"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DataAugmentation
+MLOntology:DataAugmentation rdf:type owl:NamedIndividual ,
+                                     MLOntology:DataAugmentation .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DaviesBouldinIndex
 MLOntology:DaviesBouldinIndex rdf:type owl:NamedIndividual ,
                                        MLOntology:DaviesBouldinIndex ;
                               MLOntology:hasOptimalDirection "minimize" .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DenoisingAE
+MLOntology:DenoisingAE rdf:type owl:NamedIndividual ,
+                                MLOntology:DenoisingAE ;
+                       MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                             MLOntology:ChainRule ,
+                                                             MLOntology:DataAugmentation ,
+                                                             MLOntology:GaussianDistribution ,
+                                                             MLOntology:GradientDescent ,
+                                                             MLOntology:MatrixOperations ,
+                                                             MLOntology:OptimizationTheories ,
+                                                             MLOntology:PartialDerivatives ,
+                                                             MLOntology:ProbabilityDistributions ;
+                       MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                      MLOntology:RMSE ;
+                       MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                 MLOntology:UnsupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DistanceAndSimilarityMetrics
@@ -2219,10 +2913,20 @@ MLOntology:DistanceAndSimilarityMetrics rdf:type owl:NamedIndividual ,
                                                  MLOntology:DistanceAndSimilarityMetrics .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Dropout
+MLOntology:Dropout rdf:type owl:NamedIndividual ,
+                            MLOntology:Dropout .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#DunnsIndex
 MLOntology:DunnsIndex rdf:type owl:NamedIndividual ,
                                MLOntology:DunnsIndex ;
                       MLOntology:hasOptimalDirection "maximize" .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EarlyStopping
+MLOntology:EarlyStopping rdf:type owl:NamedIndividual ,
+                                  MLOntology:EarlyStopping .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#EigenvaluesAndEigenvectors
@@ -2352,6 +3056,25 @@ MLOntology:GaussianMixtureModels rdf:type owl:NamedIndividual ,
                                  MLOntology:requiresClusterCountK "true"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GenerativeAdversarialNet
+MLOntology:GenerativeAdversarialNet rdf:type owl:NamedIndividual ,
+                                             MLOntology:GenerativeAdversarialNet ;
+                                    MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                          MLOntology:BatchNormalization ,
+                                                                          MLOntology:ChainRule ,
+                                                                          MLOntology:CrossEntropy ,
+                                                                          MLOntology:GradientDescent ,
+                                                                          MLOntology:KullbackLeiblerDivergence ,
+                                                                          MLOntology:MatrixOperations ,
+                                                                          MLOntology:MinimaxOptimization ,
+                                                                          MLOntology:OptimizationTheories ,
+                                                                          MLOntology:PartialDerivatives ,
+                                                                          MLOntology:ProbabilityDistributions ;
+                                    MLOntology:hasEvaluationMetric MLOntology:LogLoss ;
+                                    MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                              MLOntology:UnsupervisedLearning .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#GiniImpurity
 MLOntology:GiniImpurity rdf:type owl:NamedIndividual ,
                                  MLOntology:GiniImpurity .
@@ -2429,6 +3152,11 @@ MLOntology:InformationGain rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#InformationTheory
 MLOntology:InformationTheory rdf:type owl:NamedIndividual ,
                                       MLOntology:InformationTheory .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#JacobianMatrix
+MLOntology:JacobianMatrix rdf:type owl:NamedIndividual ,
+                                   MLOntology:JacobianMatrix .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#JaccardCoefficient
@@ -2652,6 +3380,29 @@ MLOntology:KernelFunctions rdf:type owl:NamedIndividual ,
                                     MLOntology:KernelFunctions .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Kolmogorov-ArnoldNet
+MLOntology:Kolmogorov-ArnoldNet rdf:type owl:NamedIndividual ,
+                                         MLOntology:Kolmogorov-ArnoldNet ;
+                                MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                      MLOntology:ChainRule ,
+                                                                      MLOntology:EntropyRegularization ,
+                                                                      MLOntology:GradientDescent ,
+                                                                      MLOntology:L1_Reg ,
+                                                                      MLOntology:MatrixOperations ,
+                                                                      MLOntology:OptimizationTheories ,
+                                                                      MLOntology:PartialDerivatives ,
+                                                                      MLOntology:SplineFunctions ;
+                                MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                               MLOntology:MSE ,
+                                                               MLOntology:RMSE ;
+                                MLOntology:utilizesMLType MLOntology:SupervisedLearning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#KullbackLeiblerDivergence
+MLOntology:KullbackLeiblerDivergence rdf:type owl:NamedIndividual ,
+                                               MLOntology:KullbackLeiblerDivergence .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#L1_Reg
 MLOntology:L1_Reg rdf:type owl:NamedIndividual ,
                            MLOntology:L1_Reg .
@@ -2698,6 +3449,27 @@ MLOntology:LogLoss rdf:type owl:NamedIndividual ,
                    MLOntology:hasOptimalDirection "minimize" .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#LongShort-TermMemoryNet
+MLOntology:LongShort-TermMemoryNet rdf:type owl:NamedIndividual ,
+                                             MLOntology:LongShort-TermMemoryNet ;
+                                    MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                          MLOntology:ChainRule ,
+                                                                          MLOntology:CrossEntropy ,
+                                                                          MLOntology:Dropout ,
+                                                                          MLOntology:EarlyStopping ,
+                                                                          MLOntology:GradientDescent ,
+                                                                          MLOntology:MatrixOperations ,
+                                                                          MLOntology:OptimizationTheories ,
+                                                                          MLOntology:PartialDerivatives ,
+                                                                          MLOntology:WeightDecay ;
+                                    MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                                   MLOntology:F1Score ,
+                                                                   MLOntology:MAE ,
+                                                                   MLOntology:MSE ,
+                                                                   MLOntology:RMSE ;
+                                    MLOntology:utilizesMLType MLOntology:SupervisedLearning .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MAE
 MLOntology:MAE rdf:type owl:NamedIndividual ,
                         MLOntology:MAE ;
@@ -2730,10 +3502,33 @@ MLOntology:MeanShift rdf:type owl:NamedIndividual ,
                      MLOntology:requiresClusterCountK "false"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MinimaxOptimization
+MLOntology:MinimaxOptimization rdf:type owl:NamedIndividual ,
+                                        MLOntology:MinimaxOptimization .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#ModifiedPartitionCoefficient
 MLOntology:ModifiedPartitionCoefficient rdf:type owl:NamedIndividual ,
                                                  MLOntology:ModifiedPartitionCoefficient ;
                                         MLOntology:hasOptimalDirection "maximize" .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#MultiLayerPerceptron
+MLOntology:MultiLayerPerceptron rdf:type owl:NamedIndividual ,
+                                         MLOntology:MultiLayerPerceptron ;
+                                MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                      MLOntology:ChainRule ,
+                                                                      MLOntology:CrossEntropy ,
+                                                                      MLOntology:GradientDescent ,
+                                                                      MLOntology:MatrixOperations ,
+                                                                      MLOntology:OptimizationTheories ,
+                                                                      MLOntology:PartialDerivatives ;
+                                MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                               MLOntology:F1Score ,
+                                                               MLOntology:MSE ,
+                                                               MLOntology:Precision ,
+                                                               MLOntology:Recall ;
+                                MLOntology:utilizesMLType MLOntology:SupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#NormalizedMutualInformation
@@ -2754,6 +3549,25 @@ MLOntology:OPTICS rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OptimizationTheories
 MLOntology:OptimizationTheories rdf:type owl:NamedIndividual ,
                                          MLOntology:OptimizationTheories .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#OverCompleteAE
+MLOntology:OverCompleteAE rdf:type owl:NamedIndividual ,
+                                   MLOntology:OverCompleteAE ;
+                          MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                MLOntology:ChainRule ,
+                                                                MLOntology:Dropout ,
+                                                                MLOntology:EarlyStopping ,
+                                                                MLOntology:GradientDescent ,
+                                                                MLOntology:L2_Reg ,
+                                                                MLOntology:MatrixOperations ,
+                                                                MLOntology:OptimizationTheories ,
+                                                                MLOntology:PartialDerivatives ,
+                                                                MLOntology:WeightDecay ;
+                          MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                         MLOntology:RMSE ;
+                          MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                    MLOntology:UnsupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#PAM
@@ -2797,6 +3611,20 @@ MLOntology:RMSE rdf:type owl:NamedIndividual ,
 MLOntology:ROC_AUC rdf:type owl:NamedIndividual ,
                             MLOntology:ROC_AUC ;
                    MLOntology:hasOptimalDirection "maximize" .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RadialBasisFunctionNet
+MLOntology:RadialBasisFunctionNet rdf:type owl:NamedIndividual ,
+                                           MLOntology:RadialBasisFunctionNet ;
+                                  MLOntology:usesMathematicalFoundation MLOntology:EuclideanDistance ,
+                                                                        MLOntology:GaussianKernel ,
+                                                                        MLOntology:KernelFunctions ,
+                                                                        MLOntology:MatrixOperations ,
+                                                                        MLOntology:OptimizationTheories ;
+                                  MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                                 MLOntology:MSE ,
+                                                                 MLOntology:RMSE ;
+                                  MLOntology:utilizesMLType MLOntology:SupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#RandomForest
@@ -2858,8 +3686,14 @@ MLOntology:STIRR rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Self-OrganizingMap
 MLOntology:Self-OrganizingMap rdf:type owl:NamedIndividual ,
                                        MLOntology:Self-OrganizingMap ;
+                              MLOntology:usesMathematicalFoundation MLOntology:EuclideanDistance ,
+                                                                    MLOntology:MatrixOperations ,
+                                                                    MLOntology:OptimizationTheories ,
+                                                                    MLOntology:ProbabilityAndStatistics ;
+                              MLOntology:hasEvaluationMetric MLOntology:SilhouetteScore ;
                               MLOntology:utilizesMLType MLOntology:UnsupervisedLearning ;
-                              MLOntology:usesMathematicalFoundation MLOntology:EuclideanDistance .
+                              MLOntology:handlesNoiseOutliers "false"^^xsd:boolean ;
+                              MLOntology:requiresClusterCountK "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SelfSupervisedLearning
@@ -2891,6 +3725,24 @@ MLOntology:SilhouetteScore rdf:type owl:NamedIndividual ,
                            MLOntology:hasOptimalDirection "maximize" .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SparseAE
+MLOntology:SparseAE rdf:type owl:NamedIndividual ,
+                             MLOntology:SparseAE ;
+                    MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                          MLOntology:ChainRule ,
+                                                          MLOntology:GradientDescent ,
+                                                          MLOntology:KullbackLeiblerDivergence ,
+                                                          MLOntology:L1_Reg ,
+                                                          MLOntology:MatrixOperations ,
+                                                          MLOntology:OptimizationTheories ,
+                                                          MLOntology:PartialDerivatives ,
+                                                          MLOntology:WeightDecay ;
+                    MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                   MLOntology:RMSE ;
+                    MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                              MLOntology:UnsupervisedLearning .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SphericalKMeans
 MLOntology:SphericalKMeans rdf:type owl:NamedIndividual ,
                                     MLOntology:SphericalKMeans ;
@@ -2899,6 +3751,30 @@ MLOntology:SphericalKMeans rdf:type owl:NamedIndividual ,
                            MLOntology:utilizesMLType MLOntology:UnsupervisedLearning ;
                            MLOntology:handlesNoiseOutliers "false"^^xsd:boolean ;
                            MLOntology:requiresClusterCountK "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SplineFunctions
+MLOntology:SplineFunctions rdf:type owl:NamedIndividual ,
+                                    MLOntology:SplineFunctions .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#StackedAE
+MLOntology:StackedAE rdf:type owl:NamedIndividual ,
+                              MLOntology:StackedAE ;
+                     MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                           MLOntology:ChainRule ,
+                                                           MLOntology:Dropout ,
+                                                           MLOntology:EarlyStopping ,
+                                                           MLOntology:GradientDescent ,
+                                                           MLOntology:MatrixOperations ,
+                                                           MLOntology:OptimizationTheories ,
+                                                           MLOntology:PartialDerivatives ,
+                                                           MLOntology:WeightDecay ;
+                     MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                    MLOntology:RMSE ;
+                     MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                               MLOntology:TransferLearning ,
+                                               MLOntology:UnsupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#SupervisedLearning
@@ -2916,9 +3792,48 @@ MLOntology:TransferLearning rdf:type owl:NamedIndividual ,
                                      MLOntology:TransferLearning .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#Transformers
+MLOntology:Transformers rdf:type owl:NamedIndividual ,
+                                 MLOntology:Transformers ;
+                        MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                              MLOntology:AttentionMechanism ,
+                                                              MLOntology:ChainRule ,
+                                                              MLOntology:CrossEntropy ,
+                                                              MLOntology:Dropout ,
+                                                              MLOntology:GradientDescent ,
+                                                              MLOntology:MatrixOperations ,
+                                                              MLOntology:OptimizationTheories ,
+                                                              MLOntology:PartialDerivatives ,
+                                                              MLOntology:ProbabilityDistributions ,
+                                                              MLOntology:WeightDecay ;
+                        MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
+                                                       MLOntology:F1Score ,
+                                                       MLOntology:LogLoss ;
+                        MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                  MLOntology:SupervisedLearning ,
+                                                  MLOntology:TransferLearning .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#TreePruning
 MLOntology:TreePruning rdf:type owl:NamedIndividual ,
                                 MLOntology:TreePruning .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnderCompleteAE
+MLOntology:UnderCompleteAE rdf:type owl:NamedIndividual ,
+                                    MLOntology:UnderCompleteAE ;
+                           MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                                 MLOntology:ChainRule ,
+                                                                 MLOntology:EarlyStopping ,
+                                                                 MLOntology:EigenvaluesAndEigenvectors ,
+                                                                 MLOntology:GradientDescent ,
+                                                                 MLOntology:MatrixOperations ,
+                                                                 MLOntology:OptimizationTheories ,
+                                                                 MLOntology:PartialDerivatives ;
+                           MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                          MLOntology:RMSE ;
+                           MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                     MLOntology:UnsupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#UnsupervisedLearning
@@ -2930,7 +3845,9 @@ MLOntology:UnsupervisedLearning rdf:type owl:NamedIndividual ,
 MLOntology:VaDE rdf:type owl:NamedIndividual ,
                          MLOntology:VaDE ;
                 MLOntology:usesMathematicalFoundation MLOntology:ChainRule ,
+                                                      MLOntology:GaussianDistribution ,
                                                       MLOntology:GradientDescent ,
+                                                      MLOntology:KullbackLeiblerDivergence ,
                                                       MLOntology:ProbabilityDistributions ;
                 MLOntology:hasEvaluationMetric MLOntology:Accuracy ,
                                                MLOntology:NormalizedMutualInformation ;
@@ -2941,6 +3858,25 @@ MLOntology:VaDE rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VarianceReduction
 MLOntology:VarianceReduction rdf:type owl:NamedIndividual ,
                                       MLOntology:VarianceReduction .
+
+
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#VariationalAE
+MLOntology:VariationalAE rdf:type owl:NamedIndividual ,
+                                  MLOntology:VariationalAE ;
+                         MLOntology:usesMathematicalFoundation MLOntology:ActivationFunctions ,
+                                                               MLOntology:BayesianInference ,
+                                                               MLOntology:ChainRule ,
+                                                               MLOntology:GaussianDistribution ,
+                                                               MLOntology:GradientDescent ,
+                                                               MLOntology:KullbackLeiblerDivergence ,
+                                                               MLOntology:MatrixOperations ,
+                                                               MLOntology:OptimizationTheories ,
+                                                               MLOntology:PartialDerivatives ,
+                                                               MLOntology:ProbabilityDistributions ;
+                         MLOntology:hasEvaluationMetric MLOntology:MSE ,
+                                                        MLOntology:RMSE ;
+                         MLOntology:utilizesMLType MLOntology:SelfSupervisedLearning ,
+                                                   MLOntology:UnsupervisedLearning .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WaveCluster
@@ -2957,6 +3893,11 @@ MLOntology:WaveletTransform rdf:type owl:NamedIndividual ,
                                      MLOntology:WaveletTransform .
 
 
+###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#WeightDecay
+MLOntology:WeightDecay rdf:type owl:NamedIndividual ,
+                                MLOntology:WeightDecay .
+
+
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_analise_redes
 MLOntology:inst_analise_redes rdf:type owl:NamedIndividual ,
                                        MLOntology:NetworkAnalysis ;
@@ -2971,7 +3912,9 @@ MLOntology:inst_bioinformatica rdf:type owl:NamedIndividual ,
                                MLOntology:isSolvedBy MLOntology:Agglomerative ,
                                                      MLOntology:DEC ,
                                                      MLOntology:KCM_F_GH ,
-                                                     MLOntology:KFCM_W1 .
+                                                     MLOntology:KFCM_W1 ,
+                                                     MLOntology:Transformers ,
+                                                     MLOntology:VariationalAE .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_ciberseguranca
@@ -2979,6 +3922,9 @@ MLOntology:inst_ciberseguranca rdf:type owl:NamedIndividual ,
                                         MLOntology:Cybersecurity ;
                                MLOntology:isSolvedBy MLOntology:CART ,
                                                      MLOntology:ExtremeGB ,
+                                                     MLOntology:GenerativeAdversarialNet ,
+                                                     MLOntology:LongShort-TermMemoryNet ,
+                                                     MLOntology:MultiLayerPerceptron ,
                                                      MLOntology:RandomForest .
 
 
@@ -2988,7 +3934,11 @@ MLOntology:inst_deteccao_anomalias rdf:type owl:NamedIndividual ,
                                    MLOntology:isSolvedBy MLOntology:DBSCAN ,
                                                          MLOntology:ExtremeGB ,
                                                          MLOntology:HDBSCAN ,
-                                                         MLOntology:RandomForest .
+                                                         MLOntology:LongShort-TermMemoryNet ,
+                                                         MLOntology:RandomForest ,
+                                                         MLOntology:SparseAE ,
+                                                         MLOntology:UnderCompleteAE ,
+                                                         MLOntology:VariationalAE .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_deteccao_fraudes
@@ -3004,7 +3954,9 @@ MLOntology:inst_diagnostico_saude rdf:type owl:NamedIndividual ,
                                            MLOntology:HealthcareDiagnosis ;
                                   MLOntology:isSolvedBy MLOntology:C4_5 ,
                                                         MLOntology:CART ,
+                                                        MLOntology:ConvolutionalNN ,
                                                         MLOntology:ExtremeGB ,
+                                                        MLOntology:MultiLayerPerceptron ,
                                                         MLOntology:RandomForest .
 
 
@@ -3019,8 +3971,12 @@ MLOntology:inst_mineracao_dados rdf:type owl:NamedIndividual ,
                                                       MLOntology:GradientBoostingMachine ,
                                                       MLOntology:HDBSCAN ,
                                                       MLOntology:HardKMeans ,
+                                                      MLOntology:Kolmogorov-ArnoldNet ,
                                                       MLOntology:LightGBMachine ,
-                                                      MLOntology:RandomForest .
+                                                      MLOntology:MultiLayerPerceptron ,
+                                                      MLOntology:RandomForest ,
+                                                      MLOntology:StackedAE ,
+                                                      MLOntology:UnderCompleteAE .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_reconhecimento_padroes
@@ -3028,28 +3984,45 @@ MLOntology:inst_reconhecimento_padroes rdf:type owl:NamedIndividual ,
                                                 MLOntology:PatternRecognition ;
                                        MLOntology:isSolvedBy MLOntology:AdaBoost ,
                                                              MLOntology:Agglomerative ,
+                                                             MLOntology:ContractiveAE ,
+                                                             MLOntology:ConvolutionalNN ,
+                                                             MLOntology:DenoisingAE ,
+                                                             MLOntology:GenerativeAdversarialNet ,
                                                              MLOntology:HardKMeans ,
                                                              MLOntology:KCM_F_LH ,
                                                              MLOntology:KCM_K_LH ,
                                                              MLOntology:KFCM_Ew2 ,
-                                                             MLOntology:RandomForest .
+                                                             MLOntology:Kolmogorov-ArnoldNet ,
+                                                             MLOntology:LongShort-TermMemoryNet ,
+                                                             MLOntology:MultiLayerPerceptron ,
+                                                             MLOntology:OverCompleteAE ,
+                                                             MLOntology:RadialBasisFunctionNet ,
+                                                             MLOntology:RandomForest ,
+                                                             MLOntology:SparseAE ,
+                                                             MLOntology:StackedAE ,
+                                                             MLOntology:Transformers .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_recuperacao_informacao
 MLOntology:inst_recuperacao_informacao rdf:type owl:NamedIndividual ,
                                                 MLOntology:InformationRetrieval ;
                                        MLOntology:isSolvedBy MLOntology:DBSCAN ,
+                                                             MLOntology:DenoisingAE ,
                                                              MLOntology:HardKMeans ,
-                                                             MLOntology:SphericalKMeans .
+                                                             MLOntology:SphericalKMeans ,
+                                                             MLOntology:Transformers .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_segmentacao_imagens
 MLOntology:inst_segmentacao_imagens rdf:type owl:NamedIndividual ,
                                              MLOntology:ImageSegmentation ;
-                                    MLOntology:isSolvedBy MLOntology:FuzzyKMeans ,
+                                    MLOntology:isSolvedBy MLOntology:ConvolutionalNN ,
+                                                          MLOntology:FuzzyKMeans ,
+                                                          MLOntology:GenerativeAdversarialNet ,
                                                           MLOntology:KCM_K_GH ,
                                                           MLOntology:KFCM_Ew1 ,
-                                                          MLOntology:MeanShift .
+                                                          MLOntology:MeanShift ,
+                                                          MLOntology:VariationalAE .
 
 
 ###  http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#inst_segmentacao_varejo
@@ -3225,6 +4198,7 @@ MLOntology:Self-OrganizingMap rdfs:comment "Also known as Kohonen Networks, Self
   owl:members ( MLOntology:ClusteringAlgorithms
                 MLOntology:DeepNeuralNetwork
                 MLOntology:MultiLayerPerceptron
+                MLOntology:RadialBasisFunctionNet
                 MLOntology:TreeBased
               )
 ] .
@@ -3321,16 +4295,20 @@ MLOntology:Self-OrganizingMap rdfs:comment "Also known as Kohonen Networks, Self
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( MLOntology:MultivariableCalculus
+  owl:members ( MLOntology:ActivationFunctions
+                MLOntology:MultivariableCalculus
+                MLOntology:SplineFunctions
                 MLOntology:TaylorExpansion
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( MLOntology:Entropy
+  owl:members ( MLOntology:CrossEntropy
+                MLOntology:Entropy
                 MLOntology:GainRatio
                 MLOntology:InformationGain
+                MLOntology:KullbackLeiblerDivergence
               )
 ] .
 
@@ -3384,5 +4362,52 @@ MLOntology:Self-OrganizingMap rdfs:comment "Also known as Kohonen Networks, Self
                 MLOntology:SupervisedLearning
                 MLOntology:TransferLearning
                 MLOntology:UnsupervisedLearning
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:DeepNeuralNetwork
+                MLOntology:MultiLayerPerceptron
+                MLOntology:RadialBasisFunctionNet
+                MLOntology:Self-OrganizingMap
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ChainRule
+                MLOntology:JacobianMatrix
+                MLOntology:PartialDerivatives
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:AttentionMechanism
+                MLOntology:EigenvaluesAndEigenvectors
+                MLOntology:MatrixOperations
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:GradientDescent
+                MLOntology:LagrangeMultipliers
+                MLOntology:MinimaxOptimization
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:ConvolutionOperation
+                MLOntology:WaveletTransform
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MLOntology:L1_Reg
+                MLOntology:L2_Reg
               )
 ] .
