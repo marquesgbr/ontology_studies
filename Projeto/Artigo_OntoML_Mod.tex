@@ -3,7 +3,7 @@
 % ==============================================================================
 % Segundo Relatório / Artigo Científico — Estritamente conforme template_de_prompt_para_artigo.md
 % Projeto: OntoML-Mod (Ontologia de Machine Learning) — CIn / UFPE (2026.2)
-% Base Ontológica Consolidada: Projeto/Ontology_02.ttl (Ciclos 1 e 2)
+% Base Ontológica Consolidada: Projeto/Ontology_02.ttl (Ciclos 1, 2 e 3)
 % ==============================================================================
 \documentclass[11pt,a4paper]{article}
 
@@ -21,9 +21,13 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{enumitem}
+\usepackage{url}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
+
+% Previne estouro de margem em termos tecnicos longos e identificadores CamelCase
+\emergencystretch=1.8em
 
 % Cores sóbrias institucionais
 \definecolor{cinblue}{HTML}{1B365D}
@@ -58,7 +62,7 @@
 \vspace{-0.4cm}
 
 \begin{abstract}
-\noindent\textbf{Resumo.} O avanço acelerado do Aprendizado de Máquina (\emph{Machine Learning} -- ML) produziu uma ampla diversidade de famílias algorítmicas, formulações matemáticas e métricas de validação frequentemente documentadas de modo fragmentado na literatura. Este artigo apresenta a \textbf{OntoML-Mod}, uma ontologia de domínio em OWL~2~DL e Lógicas Descritivas desenvolvida no ambiente Protégé segundo a metodologia \emph{Methontology}. Diferentemente de esquemas voltados apenas a registros de execução experimental ou catálogos de bibliotecas, a OntoML-Mod articula cinco eixos conceituais --- \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications} --- por meio de propriedades de objeto inversas, propriedades de dados funcionais e axiomas em Lógica Descritiva validados na literatura científica para algoritmos de agrupamento e modelos baseados em árvores.
+\noindent\textbf{Resumo.} O avanço acelerado do Aprendizado de Máquina (\emph{Machine Learning} -- ML) produziu uma ampla diversidade de famílias algorítmicas, formulações matemáticas e métricas de validação frequentemente documentadas de modo fragmentado na literatura. Este artigo apresenta a \textbf{OntoML-Mod}, uma ontologia de domínio em OWL~2~DL e Lógicas Descritivas desenvolvida no ambiente Protégé segundo a metodologia \emph{Methontology}. Diferentemente de esquemas voltados apenas a registros de execução experimental ou catálogos de bibliotecas, a OntoML-Mod articula cinco eixos conceituais --- \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications} --- por meio de propriedades de objeto inversas, propriedades de dados funcionais e axiomas em Lógica Descritiva validados na literatura científica para algoritmos de agrupamento, modelos baseados em árvores e redes neurais artificiais.
 
 \smallskip
 \noindent\textbf{Palavras-chave:} Ontologia de Domínio; Aprendizado de Máquina; OWL~2~DL; Lógicas Descritivas; Methontology; Protégé.
@@ -66,7 +70,7 @@
 
 \begin{otherlanguage}{english}
 \begin{abstract}
-\noindent\textbf{Abstract.} The rapid growth of Machine Learning (ML) has generated a wide diversity of algorithmic families, mathematical formulations, and validation metrics that often remain scattered across the literature. This paper presents \textbf{OntoML-Mod}, a domain ontology in OWL~2~DL and Description Logics developed in Protégé following the \emph{Methontology} methodology. Unlike schemas restricted to experimental run logs or software library catalogs, OntoML-Mod connects five core axes---\onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics}, and \onto{Applications}---through inverse object properties, functional datatype properties, and Description Logic axioms grounded in peer-reviewed literature across clustering and tree-based models.
+\noindent\textbf{Abstract.} The rapid growth of Machine Learning (ML) has generated a wide diversity of algorithmic families, mathematical formulations, and validation metrics that often remain scattered across the literature. This paper presents \textbf{OntoML-Mod}, a domain ontology in OWL~2~DL and Description Logics developed in Protégé following the \emph{Methontology} methodology. Unlike schemas restricted to experimental run logs or software library catalogs, OntoML-Mod connects five core axes---\onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics}, and \onto{Applications}---through inverse object properties, functional datatype properties, and Description Logic axioms grounded in peer-reviewed literature across clustering, tree-based models, and artificial neural networks.
 
 \smallskip
 \noindent\textbf{Keywords:} Domain Ontology; Machine Learning; OWL~2~DL; Description Logics; Methontology; Protégé.
@@ -117,68 +121,148 @@ Embora os trabalhos relacionados ofereçam contribuições consolidadas, persist
 
 A construção da \textbf{OntoML-Mod} fundamentou-se na metodologia \textbf{Methontology}~\cite{fernandez1997methontology}, amplamente adotada na Engenharia Ontológica por estruturar o ciclo de vida por protótipos evolutivos através das atividades de especificação, aquisição de conhecimento, conceitualização, formalização, implementação, avaliação e documentação. Dessa forma, a aplicação da Methontology proporcionou maior rigor metodológico e semântico durante a construção da ontologia. Diferentemente de ontologias exaustivas de infraestrutura, o escopo foi planejado para modelar os tipos de algoritmos de ML em nível conceitual e estrutural, conectando-os às suas aplicações práticas, métricas e bases matemáticas. Para assegurar evolução controlada e rastreabilidade bibliográfica estrita ao longo do desenvolvimento no Protégé, a equipe estabeleceu e executou o seguinte \emph{pipeline} geral iterativo em quatro etapas:
 \begin{enumerate}[leftmargin=*,nosep]
-  \item \textbf{Escolher e focar em uma subclasse de algoritmos:} delimitação modular da subárvore-alvo a cada ciclo evolutivo (Ciclo~1 concluído sobre \onto{MLTypes} e \onto{ClusteringAlgorithms}; Ciclo~2 concluído sobre propriedades de dados operacionais e a subárvore \onto{TreeBased}; mantendo \onto{ArtificialNeuralNetwork} delimitada para o ciclo subsequente);
+  \item \textbf{Escolher e focar em uma subclasse de algoritmos:} delimitação modular da subárvore-alvo a cada ciclo evolutivo (Ciclo~1 sobre \onto{MLTypes} e \onto{ClusteringAlgorithms}; Ciclo~2 sobre propriedades operacionais e a subárvore \onto{TreeBased}; e Ciclo~3 sobre a subárvore \onto{ArtificialNeuralNetwork}, abrangendo arquiteturas rasas, profundas e autocodificadores);
   \item \textbf{Pesquisar artigos científicos que embasarão os assuntos matemáticos, aplicações, etc.:} seleção criteriosa de obras seminais e revisões sistemáticas para validar cada classe, restrição matemática, métrica e domínio de aplicação, podando conceitos sem respaldo nas fontes selecionadas;
-  \item \textbf{Atualizar o Protégé:} codificação e saneamento de classes, propriedades de objeto e de dados, axiomas de disjunção, restrições existenciais/de valor e indivíduos na ontologia (\texttt{Ontology\_02.ttl});
+  \item \textbf{Atualizar o Protégé:} codificação e saneamento de classes, propriedades de objeto e de dados, axiomas de disjunção, restrições semânticas e indivíduos na ontologia;
   \item \textbf{Atualizar o relatório:} documentação formal das decisões de modelagem, métricas estruturais e resultados de validação.
 \end{enumerate}
 
 \subsection{3.2. Aquisição do Conhecimento}
 
-A aquisição do conhecimento ocorreu de forma contínua ao longo dos ciclos do \emph{pipeline} e baseou-se em artigos científicos revisados por pares e obras clássicas extraídos predominantemente do \textbf{Google Scholar}, além da análise estrutural das ontologias correlatas~\cite{publio2018mlschema,braga2020mlonto,elmassari2022diabetes,humm2026industry}. Para fundamentar a divisão de \onto{MLTypes} em seis paradigmas disjuntos, utilizaram-se três artigos-base: Sarker~\cite{sarker2021ml}, Zhuang et al.~\cite{zhuang2021transfer} e Liu et al.~\cite{liu2023self}. Para a subárvore \onto{ClusteringAlgorithms} e suas propriedades de dados intrínsecas, o conhecimento foi extraído de quatro revisões e artigos de referência --- Nagpal, Jatain e Gaur~\cite{nagpal2013review}, Yin et al.~\cite{yin2026rapid}, de~Carvalho et al.~\cite{decarvalho2018gaussian} e Simões e de~Carvalho~\cite{simoes2023gaussian} --- complementados pelas fontes primárias de Gibson, Kleinberg e Raghavan~\cite{gibson1998clustering} para \onto{STIRR} e de Dhillon e Modha~\cite{dhillon2001concept} para \onto{SphericalKMeans}. Por fim, para o ciclo de algoritmos baseados em árvores (\onto{TreeBased}), selecionaram-se exatamente seis novas obras de alta densidade conceitual e tradição teórica --- Breiman et al.~\cite{breiman1984cart} (\onto{CART}), Quinlan~\cite{quinlan1993c45} (\onto{ID3} e \onto{C4\_5}), Freund e Schapire~\cite{freund1997decision} (\onto{AdaBoost}), Breiman~\cite{breiman2001random} (\onto{RandomForest}), Geurts, Ernst e Wehenkel~\cite{geurts2006extremely} (\onto{ExtraTrees}) e Bentéjac, Csörgő e Martínez-Muñoz~\cite{bentejac2021comparative} (\onto{GradientBoostingMachine}, \onto{ExtremeGB}, \onto{LightGBMachine} e \onto{CategoricalBoosting}) --- somadas a Sarker~\cite{sarker2021ml} e El~Massari et al.~\cite{elmassari2022diabetes}.
+A aquisição do conhecimento ocorreu de forma contínua ao longo dos três ciclos do \emph{pipeline} e baseou-se em artigos científicos revisados por pares e obras clássicas extraídos predominantemente do \textbf{Google Scholar}, além da análise estrutural das ontologias correlatas~\cite{publio2018mlschema,braga2020mlonto,elmassari2022diabetes,humm2026industry}. Para fundamentar a divisão de \onto{MLTypes} em paradigmas disjuntos no Ciclo~1, utilizaram-se três artigos-base: Sarker~\cite{sarker2021ml}, Zhuang et al.~\cite{zhuang2021transfer} e Liu et al.~\cite{liu2023self}. Para a subárvore \onto{ClusteringAlgorithms} e suas propriedades de dados intrínsecas, o conhecimento foi extraído de quatro revisões e artigos de referência --- Nagpal, Jatain e Gaur~\cite{nagpal2013review}, Yin et al.~\cite{yin2026rapid}, de~Carvalho et al.~\cite{decarvalho2018gaussian} e Simões e de~Carvalho~\cite{simoes2023gaussian} --- complementados pelas fontes primárias de Gibson, Kleinberg e Raghavan~\cite{gibson1998clustering} para \onto{STIRR} e de Dhillon e Modha~\cite{dhillon2001concept} para \onto{SphericalKMeans}. No Ciclo~2, dedicado aos algoritmos baseados em árvores (\onto{TreeBased}), selecionaram-se seis novas obras de alta densidade conceitual e tradição teórica --- Breiman et al.~\cite{breiman1984cart} (\onto{CART}), Quinlan~\cite{quinlan1993c45} (\onto{ID3} e \onto{C4\_5}), Freund e Schapire~\cite{freund1997decision} (\onto{AdaBoost}), Breiman~\cite{breiman2001random} (\onto{RandomForest}), Geurts, Ernst e Wehenkel~\cite{geurts2006extremely} (\onto{ExtraTrees}) e Bentéjac, Csörgő e Martínez-Muñoz~\cite{bentejac2021comparative} (\onto{GradientBoostingMachine}, \onto{ExtremeGB}, \onto{LightGBMachine} e \onto{CategoricalBoosting}) --- somadas a Sarker~\cite{sarker2021ml} e El~Massari et al.~\cite{elmassari2022diabetes}.
+
+No Ciclo~3, voltado à consolidação completa da subárvore de redes neurais artificiais (\onto{ArtificialNeuralNetwork}) e à expansão correspondente dos fundamentos matemáticos, métricas e aplicações, incorporaram-se quinze referências científicas centrais da literatura de aprendizado profundo e conexionista. A base conceitual geral e as estratégias de regularização apoiaram-se na obra de referência de Goodfellow, Bengio e Courville~\cite{goodfellow2016deep}, articulada aos artigos seminais das arquiteturas clássicas e recorrentes/convolucionais: Rumelhart, Hinton e Williams~\cite{rumelhart1986learning} (retropropagação em redes multicamadas), Broomhead e Lowe~\cite{broomhead1988multivariable} (redes de base radial), LeCun et al.~\cite{lecun1998gradient} (redes neurais convolucionais) e Hochreiter e Schmidhuber~\cite{hochreiter1997lstm} (memória de longo e curto prazo). Para a subfamília especializada de autocodificadores (\onto{AutoEncoders}), utilizaram-se a formulação teórica de Baldi~\cite{baldi2012autoencoders}, os estudos de pré-treinamento em camadas e versões empilhadas de Bengio et al.~\cite{bengio2007greedy} e Vincent et al.~\cite{vincent2010stacked}, a variante de remoção de ruído de Vincent et al.~\cite{vincent2008extracting}, a regularização contrativa de Rifai et al.~\cite{rifai2011contractive}, a esparsidade via divergência estatística de Ng~\cite{ng2011sparse} e a formulação variacional de Kingma e Welling~\cite{kingma2014vae}. Por fim, arquiteturas generativas, baseadas em atenção e em funções \emph{spline} foram embasadas em Goodfellow et al.~\cite{goodfellow2014generative}, Vaswani et al.~\cite{vaswani2017attention} e Liu et al.~\cite{liu2024kan}.
 
 \subsection{3.3. Conceitualização}
 
-Na etapa de conceitualização, o conhecimento adquirido foi organizado segundo uma estratégia \emph{middle-out}~\cite{fernandez1997methontology} em cinco superclasses de topo mutuamente disjuntas: \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications}. Os modelos algorítmicos foram estruturados separando sua identidade arquitetural (\onto{ClusteringAlgorithms}, \onto{TreeBased} e \onto{ArtificialNeuralNetwork}) do paradigma de aprendizado acionado via propriedade relacional (\onto{utilizesMLType}). Em \onto{ClusteringAlgorithms}, modelaram-se oito subfamílias não disjuntas (partição, hierárquica, densidade, grade, categórica, baseada em modelo, profunda e semi-supervisionada) para acomodar algoritmos híbridos, mapeando-os às suas funções de distância, teoria de grafos, cálculo e regularização por entropia~\cite{nagpal2013review,decarvalho2018gaussian,simoes2023gaussian,yin2026rapid}. Em \onto{TreeBased}, organizaram-se árvores individuais (\onto{DecisionTree}), comitês paralelos (\onto{ParallelTreeEnsemble}, separando \onto{ExtraTrees} de \onto{TreeBagging} por ausência de \emph{bootstrap} padrão~\cite{geurts2006extremely}) e comitês sequenciais (\onto{TreeBoosting}, divididos entre \onto{AdaBoost} e \onto{TreeGradientBoosting}~\cite{freund1997decision,bentejac2021comparative}). Adicionalmente, conceituaram-se três atributos operacionais intrínsecos: exigência prévia de $k$, robustez a ruído/\emph{outliers} e sentido ótimo das métricas.
+Na etapa de conceitualização, adotou-se uma estratégia \emph{middle-out}~\cite{fernandez1997methontology}, partindo dos conceitos centrais mais representativos do aprendizado de máquina para consolidar cinco superclasses de topo mutuamente disjuntas: \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications}. A partir desse núcleo, realizou-se simultaneamente a generalização para os termos mais abrangentes e a especialização em subfamílias conceituais, construindo o glossário controlado do domínio e os diagramas conceituais de relacionamento.
+
+Sob essa perspectiva, os algoritmos foram organizados separando-se sua identidade arquitetural do paradigma de aprendizado empregado, permitindo que métodos híbridos ou de fronteira se associem a múltiplos paradigmas de forma consistente. As famílias algorítmicas estruturaram-se conceitualmente em três grandes blocos evolutivos: técnicas de agrupamento (cobrindo abordagens por partição, hierarquia, densidade, grade, dados categóricos, modelos probabilísticos, agrupamento profundo e aprendizado semi-supervisionado)~\cite{nagpal2013review,decarvalho2018gaussian,simoes2023gaussian,yin2026rapid}, algoritmos baseados em árvores (distinguindo modelos individuais de estratégias paralelas e sequenciais em comitê)~\cite{breiman1984cart,quinlan1993c45,freund1997decision,breiman2001random,geurts2006extremely,bentejac2021comparative} e redes neurais artificiais (diferenciando modelos clássicos e profundos, arquiteturas convolucionais, recorrentes, generativas, baseadas em atenção, fundamentadas em \emph{splines} e autocodificadores)~\cite{goodfellow2016deep,rumelhart1986learning,lecun1998gradient,hochreiter1997lstm,vaswani2017attention,liu2024kan}. Paralelamente, organizaram-se as bases matemáticas em áreas clássicas (como cálculo, álgebra linear, otimização, probabilidade, teoria da informação, processamento de sinais e regularização), as métricas conforme a dependência de gabarito e três atributos operacionais referentes à exigência prévia do número de grupos, à robustez a ruído ou valores atípicos e ao sentido de otimização dos indicadores.
 
 \subsection{3.4. Formalização}
 
-Na etapa de formalização, o modelo conceitual foi convertido para representação lógica decidível em \textbf{OWL~2~DL} sob a semântica das Lógicas Descritivas ($\mathcal{SROIQ}(\mathcal{D})$). As dependências entre algoritmos, temas matemáticos, paradigmas e métricas foram expressas na TBox por restrições existenciais (\onto{owl:someValuesFrom}, $\exists R.C$), enquanto invariantes booleanos e enumerados foram formalizados por restrições de valor (\onto{owl:hasValue}) sobre propriedades de dados funcionais (\onto{owl:FunctionalProperty}) com contradomínio restrito via \onto{xsd:boolean} e \onto{owl:oneOf}. As propriedades de objeto receberam declarações explícitas de domínio (\onto{rdfs:domain}), contradomínio (\onto{rdfs:range}), inversibilidade (\onto{owl:inverseOf}), assimetria (\onto{owl:AsymmetricProperty}) e irreflexividade (\onto{owl:IrreflexiveProperty}). Adotou-se o mecanismo de \emph{punning} do OWL~2 para espelhar classes folha/intermediárias como indivíduos na ABox, mantendo axiomas de equivalência complexos (\onto{owl:equivalentClass}, como a caracterização suficiente de retropropagação por regra da cadeia e gradiente descendente) em \emph{standby} para evitar inferências falso-positivas antes da axiomatização neural completa.
+Na etapa de formalização, o modelo conceitual foi convertido em uma representação formal computacional baseada na linguagem ontológica padrão da Web Semântica e fundamentada em Lógicas Descritivas decidíveis. As relações taxonômicas foram especificadas por hierarquias estritas de generalização e especialização, complementadas por axiomas explícitos de disjunção entre ramos semanticamente excludentes, preservando a herança múltipla exclusivamente nos casos de modelos híbridos ou conceitos matemáticos transversais.
+
+As conexões interdomínio foram formalizadas mediante propriedades de objeto dotadas de restrições explícitas de domínio, contradomínio, relações inversas, assimetria e irreflexividade. De modo complementar, as características operacionais dos algoritmos e das métricas foram codificadas por meio de propriedades de dados funcionais associadas a valores booleanos e a domínios enumerados controlados. As definições conceituais foram enriquecidas com restrições existenciais, restrições de valor e axiomas de equivalência definidos ao longo dos ciclos evolutivos --- incluindo a caracterização formal de processos baseados em cálculo multivariável e otimização por gradiente --- além da adoção de dualidade entre classes e instâncias para viabilizar consultas analíticas uniformes entre o nível terminológico e o nível assertivo.
 
 \subsection{3.5. Implementação}
 
-A implementação técnica foi conduzida na ferramenta \textbf{Protégé}, adotando sintaxe Manchester e serialização no artefato consolidado \texttt{Ontology\_02.ttl} em sintaxe RDF/Turtle. Foram implementadas \textbf{205 classes} (\onto{owl:Class}, sendo 5 raízes e 200 subclasses estritas, das quais 153 são classes-folha), \textbf{8 propriedades de objeto} (4 pares inversos), \textbf{3 propriedades de dados funcionais} (\onto{requiresClusterCountK}, \onto{handlesNoiseOutliers} e \onto{hasOptimalDirection}), \textbf{184 restrições TBox} distribuídas em 94 classes (\textbf{120} restrições existenciais \onto{owl:someValuesFrom} e \textbf{64} restrições de valor \onto{owl:hasValue}), \textbf{31 blocos \onto{owl:AllDisjointClasses}} somados a \textbf{25 axiomas diretos \onto{owl:disjointWith}} (totalizando 459 pares distintos de disjunção) e \textbf{120 indivíduos nomeados} (\onto{owl:NamedIndividual}), compostos por 109 classes em \emph{punning} e 11 instâncias puras de aplicação (\onto{inst\_*}), que concentram \textbf{348 triplas de propriedades de objeto} e \textbf{86 triplas de propriedades de dados} na ABox.
+A implementação computacional da ontologia foi executada no editor \textbf{Protégé}, permitindo estruturar classes, subclasses, propriedades de objeto, propriedades de dados, restrições semânticas, axiomas de disjunção e indivíduos representativos de algoritmos, fundamentos matemáticos, métricas e aplicações práticas. Todo o vocabulário foi enriquecido com rótulos bilíngues, comentários descritivos e anotações de proveniência bibliográfica visando à rastreabilidade científica e à transparência semântica.
 
-\subsection{3.6. Validação}
+O artefato resultante foi serializado em arquivo no formato padrão RDF/Turtle, consolidando as extensões incrementais dos sucessivos ciclos evolutivos. Durante o processo de codificação, promoveu-se a verificação contínua da integridade estrutural e da ausência de duplicações conceituais, assegurando conformidade com as convenções de modelagem, coesão modular entre os diferentes ramos temáticos e prontidão para inferência automática e recuperação via consultas semânticas.
 
-A validação interna do modelo seguiu o protocolo de verificação lógica e avaliação baseada em consultas adotado na engenharia de ontologias em OWL~2~DL~\cite{bezerra2013evaluating,potoniec2020dataset}. A consistência lógica e a satisfatibilidade de classes e indivíduos foram estruturadas para inspeção pelo raciocinador \textbf{HermiT} no Protégé e verificadas exaustivamente sobre o arquivo \texttt{Ontology\_02.ttl} por rotinas estáticas de auditoria que comprovaram: (i) 0 classes ou indivíduos insatisfatíveis frente aos 459 pares de disjunção sob herança múltipla (isolando cuidadosamente \onto{ROCK} e \onto{LIMBO} com $k=\onto{true}$ dos métodos de enlace hierárquico com $k=\onto{false}$); (ii) 0 violações de domínio, contradomínio, assimetria ou irreflexividade nas 348 triplas de objeto; (iii) 0 conflitos funcionais ou divergências entre as 64 restrições \onto{owl:hasValue} da TBox e as 86 asserções literais da ABox; e (iv) execução de testes de recuperação em \emph{DL Query} e em seis consultas SPARQL consolidadas em \texttt{SPARQL\_Consultas.txt}.
+\subsection{3.6. Validação e Questões de Competência (CQs)}
 
-\subsection{3.7. Questões de Competência (CQs)}
+A validação da ontologia combinou a verificação de consistência lógica com a avaliação funcional orientada a \textbf{Questões de Competência (CQs)}, seguindo práticas consolidadas na engenharia de ontologias~\cite{bezerra2013evaluating,potoniec2020dataset}. No plano lógico-estrutural, a consistência taxonômica, a satisfatibilidade de todas as 213 classes e a coerência dos indivíduos sob herança múltipla foram avaliadas visando ao uso do raciocinador \textbf{HermiT} no Protégé, verificando-se ausência de classes insatisfatíveis, ausência de conflitos nas propriedades de domínio, contradomínio, inversibilidade, assimetria e irreflexividade, bem como plena concordância entre as restrições conceituais e os atributos operacionais preenchidos nas instâncias.
 
-Para delimitar o escopo e avaliar a capacidade representacional e inferencial da ontologia~\cite{bezerra2013evaluating,potoniec2020dataset}, foram estabelecidas nove Questões de Competência (Quadro~\ref{tab:cqs}), abrangendo desde o Ciclo~1 até o fechamento do Ciclo~2.
+No plano funcional, definiram-se dez Questões de Competência (\textbf{CQ~1} a \textbf{CQ~10}) que atravessam os três ciclos de desenvolvimento, avaliando desde características matemáticas e paradigmas de aprendizado até o uso de atributos booleanos, sentidos ótimos de métricas e aplicabilidade prática. Todas as dez questões foram traduzidas em consultas \textbf{SPARQL} consolidadas no arquivo \texttt{SPARQL\_Consultas.txt}, cujas perguntas e respostas esperadas encontram-se sintetizadas na Tabela~\ref{tab:cqs}.
 
 \begin{table}[htbp]
 \centering
 \caption{Questões de Competência (CQs) definidas e validadas na OntoML-Mod.}
 \label{tab:cqs}
-\scriptsize
-\begin{tabularx}{\textwidth}{@{}p{0.65cm}>{\raggedright\arraybackslash}p{5.5cm}>{\raggedright\arraybackslash}p{4.1cm}>{\raggedright\arraybackslash}X@{}}
+\footnotesize
+{\sloppy
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.05cm}>{\raggedright\arraybackslash}p{5.75cm}>{\raggedright\arraybackslash}X@{}}
 \toprule
-\textbf{CQ} & \textbf{Pergunta de Competência} & \textbf{Conceitos / Propriedades} & \textbf{Resposta Verificada (\texttt{Ontology\_02.ttl})} \\
+\textbf{CQ} & \textbf{Pergunta de Competência} & \textbf{Resposta Esperada} \\
 \midrule
-QC1 & Quais algoritmos (ou famílias) utilizam Regra da Cadeia e Descida do Gradiente? & \onto{Algorithms}, \onto{ChainRule}, \onto{GradientDescent} & 7 classes TBox (\onto{DeepLearningClustering} e 6 subclasses); 3 indivíduos ABox. \\
-QC2 & Quais os 3 fundamentos matemáticos mais utilizados pelos modelos no geral? & \onto{usesMathematicalFoundation}, \onto{MathematicalFoundations} & 1º \onto{PartialDerivatives} (18); 2º \onto{GaussianKernel}, \onto{KernelFunctions}, \onto{LagrangeMultipliers} (11); 3º \onto{EuclideanDistance} (9). \\
-QC3 & Qual o paradigma (\onto{MLTypes}) predominante nos algoritmos modelados? & \onto{Algorithms}, \onto{utilizesMLType}, \onto{MLTypes} & \onto{UnsupervisedLearning} (71 classes), \onto{SupervisedLearning} (16 de \onto{TreeBased}), \onto{SemiSupervised} (3), \onto{SelfSupervised} (1). \\
-QC4 & Quais aplicações são resolvidas por algoritmos da família K-Means? & \onto{Applications}, \onto{isSolvedBy}, \onto{KMeans} & 7 de 11 instâncias de aplicação (via inferência sobre subclasses de \onto{KMeans}). \\
-QC5 & Quais algoritmos exigem conceitos de Entropia ou Regularização por Entropia? & \onto{Entropy}, \onto{EntropyRegularization} & 6 classes TBox (\onto{ID3}, \onto{C4\_5}, \onto{COOLCAT}, \onto{KFCM\_Ew*}) e 5 indivíduos ABox. \\
-QC6 & Quais algoritmos de agrupamento dispensam $k$ prévio e lidam com ruído/\emph{outliers}? & \onto{requiresClusterCountK}, \onto{handlesNoiseOutliers} & 14 classes TBox (\onto{DensityClustering}, \onto{GridClustering}, \onto{BIRCH}, etc.) e 7 indivíduos ABox. \\
-QC7 & Quais métricas de avaliação devem ser maximizadas versus minimizadas? & \onto{EvaluationMetrics}, \onto{hasOptimalDirection} & 23 métricas concretas: 16 \onto{"maximize"} e 7 \onto{"minimize"} (\onto{BIC} sem valor fixo). \\
-QC8 & Quais modelos baseados em árvores combinam Expansão de Taylor de 2ª ordem e regularização $L_2$? & \onto{TreeBased}, \onto{TaylorExpansion}, \onto{L2\_Reg} & 3 classes TBox e 3 indivíduos ABox: \onto{CategoricalBoosting}, \onto{ExtremeGB} e \onto{LightGBMachine}. \\
-QC9 & Quais domínios de aplicação são resolvidos por modelos baseados em árvores? & \onto{Applications}, \onto{isSolvedBy}, \onto{TreeBased} & 6 de 11 instâncias (\onto{Cybersecurity}, \onto{AnomalyDetection}, \onto{FraudDetection}, \onto{HealthcareDiagnosis}, \onto{DataMining}, \onto{PatternRecognition}). \\
+\textbf{CQ 1} & Quais algoritmos de redes neurais artificiais e de agrupamento profundo utilizam simultaneamente regra da cadeia e descida do gradiente? & Lista de 16 algoritmos: ContractiveAE; Contrastive; ConvolutionalNN; DEC; DenoisingAE; GenerativeAdversarialNet; Kolmogorov-ArnoldNet; LongShort-TermMemoryNet; MultiLayerPerceptron; OverCompleteAE; SparseAE; StackedAE; Transformers; UnderCompleteAE; VaDE; VariationalAE. \\
+\addlinespace[3pt]
+\textbf{CQ 2} & Quais são os fundamentos matemáticos mais utilizados pelos algoritmos de aprendizado de máquina, em ordem decrescente? & Espera-se uma lista em ordem decrescente dos 44 fundamentos matemáticos por frequência de uso, liderada por PartialDerivatives (31), OptimizationTheories (22), GradientDescent (21), ChainRule (16) e MatrixOperations (15). \\
+\addlinespace[3pt]
+\textbf{CQ 3} & Qual é a distribuição e a predominância dos paradigmas de aprendizado entre os algoritmos? & UnsupervisedLearning (43); SupervisedLearning (16); SelfSupervisedLearning (10); TransferLearning (3); SemiSupervisedLearning (2). \\
+\addlinespace[3pt]
+\textbf{CQ 4} & Quais domínios de aplicação são resolvidos por algoritmos da família k-médias? & Análise de Redes; Bioinformática; Mineração de Dados; Reconhecimento de Padrões; Recuperação de Informação; Segmentação de Imagens; Segmentação de Varejo (Clientes). \\
+\addlinespace[3pt]
+\textbf{CQ 5} & Quais algoritmos empregam conceitos de entropia ou regularização por entropia? & Entropia: C4\_5; COOLCAT; ID3; KFCM\_Ew1; KFCM\_Ew2. Regularização por Entropia: KFCM\_Ew1; KFCM\_Ew2; Kolmogorov-ArnoldNet. \\
+\addlinespace[3pt]
+\textbf{CQ 6} & Quais algoritmos de agrupamento dispensam a definição prévia do número de grupos e lidam com ruído e valores atípicos? & BIRCH; DBSCAN; HDBSCAN; MeanShift; OPTICS; STING; WaveCluster. \\
+\addlinespace[3pt]
+\textbf{CQ 7} & Quais métricas de avaliação devem ser maximizadas e quais devem ser minimizadas? & Espera-se uma lista das 23 métricas agrupadas por sentido: 16 para maximizar (ex.: Accuracy, F1Score, Precision, Recall, ROC\_AUC, SilhouetteScore, AdjustedRandIndex) e 7 para minimizar (DaviesBouldinIndex; ErrorOfClassification; Inertia; LogLoss; MAE; MSE; RMSE). \\
+\addlinespace[3pt]
+\textbf{CQ 8} & Quais modelos baseados em árvores combinam expansão de Taylor de segunda ordem e regularização $L_2$? & CategoricalBoosting; ExtremeGB; LightGBMachine. \\
+\addlinespace[3pt]
+\textbf{CQ 9} & Quais domínios de aplicação são resolvidos por modelos baseados em árvores e por quais algoritmos? & Espera-se a lista dos 6 domínios (Cibersegurança; Detecção de Anomalias; Detecção de Fraudes; Diagnóstico em Saúde; Mineração de Dados; Reconhecimento de Padrões) pareados aos respectivos algoritmos (CART, RandomForest, ExtremeGB, C4\_5, AdaBoost, LightGBMachine e CategoricalBoosting). \\
+\addlinespace[3pt]
+\textbf{CQ 10} & Quais domínios de aplicação são resolvidos por arquiteturas de redes neurais artificiais e por quais modelos? & Espera-se a lista dos 8 domínios (Bioinformática; Cibersegurança; Detecção de Anomalias; Diagnóstico em Saúde; Mineração de Dados; Reconhecimento de Padrões; Recuperação de Informação; Segmentação de Imagens) pareados às arquiteturas aplicáveis (como ConvolutionalNN, LongShort-TermMemoryNet, Transformers, GenerativeAdversarialNet, VariationalAE e MultiLayerPerceptron). \\
 \bottomrule
 \end{tabularx}
+}
 \end{table}
 
-\subsection{3.8. Modelagem ontológica}
+\subsection{3.7. Modelagem Ontológica}
 
-A organização final de \texttt{Ontology\_02.ttl} articula as \textbf{205 classes} em cinco ramos principais: (i) \onto{Algorithms} (109 classes: 75 em \onto{ClusteringAlgorithms}, 16 em \onto{TreeBased} e 18 em \onto{ArtificialNeuralNetwork}, com \onto{Self-OrganizingMap} compartilhada entre agrupamento baseado em modelo e redes neurais~\cite{nagpal2013review}); (ii) \onto{MathematicalFoundations} (45 classes distribuídas em 9 subáreas disjuntas: \onto{Calculus} [incluindo \onto{PartialDerivatives}, \onto{ChainRule} e \onto{TaylorExpansion}], \onto{DistanceAndSimilarityMetrics} [\onto{EuclideanDistance}, \onto{CosineSimilarity}, \onto{JaccardCoefficient}, \onto{KernelFunctions}/\onto{GaussianKernel}], \onto{GraphTheory}, \onto{InformationTheory} [\onto{Entropy}, \onto{InformationGain}, \onto{GainRatio}], \onto{LinearAlgebra}, \onto{OptimizationTheories} [\onto{GradientDescent}, \onto{LagrangeMultipliers}], \onto{ProbabilityAndStatistics} [\onto{BayesianInference}, \onto{BootstrapResampling}, \onto{ImpurityMeasures}/\onto{GiniImpurity}/\onto{VarianceReduction}, \onto{ProbabilityDistributions}], \onto{RegularizationTechniques} [\onto{EntropyRegularization}, \onto{L1\_Reg}, \onto{L2\_Reg}, \onto{TreePruning}] e \onto{SignalProcessing} [\onto{WaveletTransform}]); (iii) \onto{EvaluationMetrics} (31 classes divididas entre dependentes de gabarito --- \onto{ClassificationMetrics} [\onto{Accuracy}, \onto{ErrorOfClassification}, \onto{F1Score}, \onto{LogLoss}, \onto{Precision}, \onto{ROC\_AUC}, \onto{Recall}], \onto{RegressionMetrics} [\onto{MAE}, \onto{MSE}, \onto{RMSE}] e \onto{ClusterMatchingMetrics} --- e independentes de gabarito, \onto{ClusterValidityIndices}); (iv) \onto{Applications} (13 classes, com 11 instâncias \onto{inst\_*} povoadas); e (v) \onto{MLTypes} (7 classes). As relações semânticas entre os eixos operam pelos quatro pares de propriedades de objeto inversas (\onto{usesMathematicalFoundation} $\leftrightarrow$ \onto{IsMathematicalUsedBy}, \onto{utilizesMLType} $\leftrightarrow$ \onto{isMLTypeOf}, \onto{hasEvaluationMetric} $\leftrightarrow$ \onto{isMetricOf}, e \onto{isUsedInApplication} $\leftrightarrow$ \onto{isSolvedBy}) e pelas três propriedades de dados funcionais, exemplificadas em sintaxe Manchester por axiomas como \onto{ExtremeGB SubClassOf: TreeGradientBoosting, usesMathematicalFoundation some L1\_Reg, L2\_Reg, TaylorExpansion, TreePruning} e \onto{DensityClustering SubClassOf: ClusteringAlgorithms, utilizesMLType some UnsupervisedLearning, requiresClusterCountK value false, handlesNoiseOutliers value true}.
+{\sloppy
+A estrutura consolidada da \textbf{OntoML-Mod} compreende \textbf{213 classes} organizadas hierarquicamente sob cinco superclasses de topo mutuamente disjuntas, interligadas por quatro pares de propriedades de objeto inversas e três propriedades de dados funcionais:
+
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{1. \onto{Algorithms} (109 classes):} concentra a taxonomia arquitetural dos modelos de aprendizado de máquina em três subárvores principais:
+    \begin{itemize}[leftmargin=1.2em,nosep]
+      \item \onto{ClusteringAlgorithms} (75 classes), subdividida em oito subfamílias não disjuntas:
+        \begin{itemize}[leftmargin=1.2em,nosep]
+          \item \onto{PartitionClustering}: inclui \onto{KMeans} (com \onto{HardKMeans}, \onto{FuzzyKMeans}, \onto{SphericalKMeans} e \onto{KernelKMeans}, que abrange \onto{KernelFuzzyKMeans} [\onto{KFCM\_K}, \onto{KFCM\_Ew}, \onto{KFCM\_Ew1}, \onto{KFCM\_Ew2}, \onto{KFCM\_W}, \onto{KFCM\_W1} e \onto{KFCM\_W2}] e \onto{KernelHardKMeans} [\onto{KCM\_F}, \onto{KCM\_F\_GH}, \onto{KCM\_F\_LH}, \onto{KCM\_K}, \onto{KCM\_K\_GH} e \onto{KCM\_K\_LH}]), \onto{KMedoids} (\onto{CLARA}, \onto{CLARANS}, \onto{PAM}), \onto{KModes} e \onto{KPrototype};
+          \item \onto{HierarchicalClustering}: \onto{Agglomerative}, \onto{Divisive}, \onto{SingleLinkage}, \onto{CompleteLinkage}, \onto{AverageLinkage}, \onto{BIRCH}, \onto{CURE}, \onto{CHAMELEON}, \onto{CACTUS}, \onto{ROCK} e \onto{LIMBO};
+          \item \onto{DensityClustering}: \onto{DBSCAN}, \onto{HDBSCAN}, \onto{OPTICS}, \onto{MeanShift}, \onto{DENCLUE}, \onto{DBCLASD}, \onto{CLIQUE} e \onto{WaveCluster};
+          \item \onto{GridClustering}: \onto{STING}, \onto{CLIQUE}, \onto{WaveCluster}, \onto{GridDBSCAN} e \onto{STDBSCAN};
+          \item \onto{CategoricalClustering}: \onto{CACTUS}, \onto{COOLCAT}, \onto{KModes}, \onto{KPrototype}, \onto{LIMBO}, \onto{ROCK} e \onto{STIRR};
+          \item \onto{ModelClustering}: \onto{AutoClass}, \onto{CLASSIT}, \onto{COBWEB}, \onto{ExpectationMaximization}, \onto{GaussianMixtureModels}, \onto{HiddenMarkovModels}, \onto{LatentDirichletAllocation} e \onto{Self-OrganizingMap};
+          \item \onto{DeepLearningClustering}: \onto{DEC}, \onto{IDEC}, \onto{VaDE}, \onto{DCEC}, \onto{DCN} e \onto{Contrastive};
+          \item \onto{SemiSupervisedClustering}: \onto{ConstrainedKMeans} e \onto{SemiSupervisedFuzzyCMeans}.
+        \end{itemize}
+      \item \onto{TreeBased} (16 classes), organizada em três ramos disjuntos:
+        \begin{itemize}[leftmargin=1.2em,nosep]
+          \item \onto{DecisionTree}: \onto{ID3}, \onto{C4\_5} e \onto{CART};
+          \item \onto{ParallelTreeEnsemble}: \onto{ExtraTrees} e \onto{TreeBagging} (que especializa em \onto{RandomForest});
+          \item \onto{TreeBoosting}: \onto{AdaBoost} e \onto{TreeGradientBoosting} (com \onto{GradientBoostingMachine}, \onto{ExtremeGB}, \onto{LightGBMachine} e \onto{CategoricalBoosting}).
+        \end{itemize}
+      \item \onto{ArtificialNeuralNetwork} (18 classes), integrando redes clássicas e profundas:
+        \begin{itemize}[leftmargin=1.2em,nosep]
+          \item Redes clássicas e mapas auto-organizáveis: \onto{MultiLayerPerceptron}, \onto{RadialBasisFunctionNet} e \onto{Self-OrganizingMap} (esta última compartilhada por herança múltipla com \onto{ModelClustering}~\cite{nagpal2013review});
+          \item \onto{DeepNeuralNetwork} (14 classes): \onto{ConvolutionalNN}, \onto{LongShort-TermMemoryNet}, \onto{GenerativeAdversarialNet}, \onto{Transformers}, \onto{Kolmogorov-ArnoldNet} e a subfamília \onto{AutoEncoders} (\onto{ContractiveAE}, \onto{DenoisingAE}, \onto{OverCompleteAE}, \onto{SparseAE}, \onto{StackedAE}, \onto{UnderCompleteAE} e \onto{VariationalAE}).
+        \end{itemize}
+    \end{itemize}
+
+  \item \textbf{2. \onto{MathematicalFoundations} (53 classes):} estruturada em nove subáreas disjuntas:
+    \begin{itemize}[leftmargin=1.2em,nosep]
+      \item \onto{Calculus}: \onto{ActivationFunctions}, \onto{MultivariableCalculus} (\onto{ChainRule}, \onto{JacobianMatrix}, \onto{PartialDerivatives}), \onto{SplineFunctions} e \onto{TaylorExpansion};
+      \item \onto{DistanceAndSimilarityMetrics}: \onto{CosineSimilarity}, \onto{EuclideanDistance}, \onto{JaccardCoefficient}, \onto{ManhattanDistance} e \onto{KernelFunctions} (\onto{GaussianKernel});
+      \item \onto{GraphTheory};
+      \item \onto{InformationTheory}: \onto{CrossEntropy}, \onto{Entropy}, \onto{GainRatio}, \onto{InformationGain} e \onto{KullbackLeiblerDivergence};
+      \item \onto{LinearAlgebra}: \onto{AttentionMechanism}, \onto{EigenvaluesAndEigenvectors} e \onto{MatrixOperations};
+      \item \onto{OptimizationTheories}: \onto{GradientDescent}, \onto{LagrangeMultipliers} e \onto{MinimaxOptimization};
+      \item \onto{ProbabilityAndStatistics}: \onto{BayesianInference}, \onto{BootstrapResampling}, \onto{ImpurityMeasures} (\onto{GiniImpurity}, \onto{VarianceReduction}) e \onto{ProbabilityDistributions} (\onto{GaussianDistribution});
+      \item \onto{RegularizationTechniques}: \onto{BatchNormalization}, \onto{DataAugmentation}, \onto{Dropout}, \onto{EarlyStopping}, \onto{ElasticNet}, \onto{EntropyRegularization}, \onto{TreePruning} e \onto{WeightDecay} (\onto{L1\_Reg}, \onto{L2\_Reg});
+      \item \onto{SignalProcessing}: \onto{ConvolutionOperation} e \onto{WaveletTransform}.
+    \end{itemize}
+
+  \item \textbf{3. \onto{EvaluationMetrics} (31 classes):} dividida segundo a necessidade de rótulos de referência:
+    \begin{itemize}[leftmargin=1.2em,nosep]
+      \item \onto{GroundTruthDependentMetrics}: \onto{ClassificationMetrics} (\onto{Accuracy}, \onto{ErrorOfClassification}, \onto{F1Score}, \onto{LogLoss}, \onto{Precision}, \onto{ROC\_AUC} e \onto{Recall}), \onto{ClusterMatchingMetrics} (\onto{AdjustedRandIndex}, \onto{FowlkesMallowsIndex}, \onto{FuzzyRandIndexFrigui}, \onto{FuzzyRandIndexHullermeier}, \onto{JaccardIndex} e \onto{NormalizedMutualInformation}) e \onto{RegressionMetrics} (\onto{MAE}, \onto{MSE} e \onto{RMSE});
+      \item \onto{GroundTruthIndependentMetrics}: \onto{ClusterValidityIndices} (\onto{BIC}, \onto{Calinski-Harabasz}, \onto{DaviesBouldinIndex}, \onto{DunnsIndex}, \onto{GapStatistic}, \onto{Inertia}, \onto{ModifiedPartitionCoefficient} e \onto{SilhouetteScore}).
+    \end{itemize}
+
+  \item \textbf{4. \onto{Applications} (13 classes):} reúne os domínios de aplicação \onto{AnomalyDetection}, \onto{Bioinformatics}, \onto{ChurnPrediction} (reservada para expansão futura), \onto{CustomerSegmentation}, \onto{Cybersecurity}, \onto{DataMining}, \onto{FraudDetection}, \onto{HealthcareDiagnosis}, \onto{ImageSegmentation}, \onto{InformationRetrieval}, \onto{NetworkAnalysis} e \onto{PatternRecognition}, povoados por onze instâncias nominais interligadas aos algoritmos.
+
+  \item \textbf{5. \onto{MLTypes} (7 classes):} particiona os paradigmas em \onto{SupervisedLearning}, \onto{UnsupervisedLearning}, \onto{SemiSupervisedLearning}, \onto{SelfSupervisedLearning}, \onto{ReinforcementLearning} e \onto{TransferLearning}.
+\end{itemize}
+
+A integração semântica entre esses cinco eixos ocorre por meio de quatro pares de propriedades de objeto inversas --- \onto{usesMathematicalFoundation} e \onto{IsMathematicalUsedBy}; \onto{utilizesMLType} e \onto{isMLTypeOf}; \onto{hasEvaluationMetric} e \onto{isMetricOf}; e \onto{isUsedInApplication} e \onto{isSolvedBy} --- complementados pelas três propriedades de dados funcionais \onto{requiresClusterCountK}, \onto{handlesNoiseOutliers} e \onto{hasOptimalDirection}. Dessa forma, cada algoritmo herda o perfil de sua subárvore e acrescenta assinaturas conceituais próprias, como exemplificado por \onto{ExtremeGB} (que associa árvores com gradiente descendente à expansão de Taylor, regularização $L_1$/$L_2$ e poda) e pelas definições equivalentes introduzidas no Ciclo~3 para caracterizar famílias neurais --- distinguindo, por exemplo, \onto{Transformers} pelo uso de mecanismos de atenção, \onto{GenerativeAdversarialNet} pela otimização minimax, \onto{Kolmogorov-ArnoldNet} por funções \emph{spline} e \onto{VariationalAE} pela combinação de inferência bayesiana e divergência de Kullback-Leibler sobre autocodificadores.
+}
 
 % ==============================================================================
 % Seção 7 numerada estritamente conforme template_de_prompt_para_artigo.md
 % (Seções 4, 5 e 6 reservadas para complementação posterior do artigo)
 % ==============================================================================
 \renewcommand{\refname}{7. REFERÊNCIAS BIBLIOGRÁFICAS}
+{\sloppy
 \begin{thebibliography}{99}\small
+
+\bibitem{baldi2012autoencoders}
+Baldi, P. Autoencoders, Unsupervised Learning, and Deep Architectures. In: \emph{Proceedings of ICML Workshop on Unsupervised and Transfer Learning}, PMLR, v. 27, p. 37--49, 2012.
+
+\bibitem{bengio2007greedy}
+Bengio, Y.; Lamblin, P.; Popovici, D.; Larochelle, H. Greedy Layer-Wise Training of Deep Networks. In: \emph{Advances in Neural Information Processing Systems 19 (NIPS 2006)}, p. 153--160, 2007.
 
 \bibitem{bentejac2021comparative}
 Bentéjac, C.; Csörgő, A.; Martínez-Muñoz, G. A comparative analysis of gradient boosting algorithms. \emph{Artificial Intelligence Review}, v. 54, n. 3, p. 1937--1967, 2021. DOI: \texttt{10.1007/s10462-020-09896-5}.
@@ -194,6 +278,9 @@ Breiman, L.; Friedman, J. H.; Olshen, R. A.; Stone, C. J. \emph{Classification a
 
 \bibitem{breiman2001random}
 Breiman, L. Random Forests. \emph{Machine Learning}, v. 45, n. 1, p. 5--32, 2001. DOI: \texttt{10.1023/A:1010933404324}.
+
+\bibitem{broomhead1988multivariable}
+Broomhead, D. S.; Lowe, D. Multivariable Functional Interpolation and Adaptive Networks. \emph{Complex Systems}, v. 2, n. 3, p. 321--355, 1988.
 
 \bibitem{decarvalho2018gaussian}
 de Carvalho, F. A. T.; Simões, E. C.; Santana, L. V. C.; Ferreira, M. R. P. Gaussian kernel c-means hard clustering algorithms with automated computation of the width hyper-parameters. \emph{Pattern Recognition}, v. 79, p. 370--386, 2018. DOI: \texttt{10.1016/j.patcog.2018.02.018}.
@@ -216,14 +303,35 @@ Geurts, P.; Ernst, D.; Wehenkel, L. Extremely Randomized Trees. \emph{Machine Le
 \bibitem{gibson1998clustering}
 Gibson, D.; Kleinberg, J.; Raghavan, P. Clustering Categorical Data: An Approach Based on Dynamical Systems. In: \emph{Proceedings of the 24th International Conference on Very Large Data Bases (VLDB)}, 1998.
 
+\bibitem{goodfellow2014generative}
+Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A.; Bengio, Y. Generative Adversarial Nets. In: \emph{Advances in Neural Information Processing Systems 27 (NIPS 2014)}, v. 2, p. 2672--2680, 2014.
+
+\bibitem{goodfellow2016deep}
+Goodfellow, I.; Bengio, Y.; Courville, A. \emph{Deep Learning}. MIT Press, 2016. 800 p. ISBN \texttt{978-0262035618}.
+
+\bibitem{hochreiter1997lstm}
+Hochreiter, S.; Schmidhuber, J. Long Short-Term Memory. \emph{Neural Computation}, v. 9, n. 8, p. 1735--1780, 1997. DOI: \texttt{10.1162/neco.1997.9.8.1735}.
+
 \bibitem{humm2026industry}
 Humm, B. G. An Industry-Ready Machine Learning Ontology. \emph{Applied Sciences}, v. 16, n. 2, 843, 2026. DOI: \texttt{10.3390/app16020843}.
+
+\bibitem{kingma2014vae}
+Kingma, D. P.; Welling, M. Auto-Encoding Variational Bayes. In: \emph{2nd International Conference on Learning Representations (ICLR 2014)}, \texttt{arXiv:1312.6114}, 2014.
+
+\bibitem{lecun1998gradient}
+LeCun, Y.; Bottou, L.; Bengio, Y.; Haffner, P. Gradient-Based Learning Applied to Document Recognition. \emph{Proceedings of the IEEE}, v. 86, n. 11, p. 2278--2324, 1998. DOI: \texttt{10.1109/5.726791}.
 
 \bibitem{liu2023self}
 Liu, X.; Zhang, F.; Hou, Z.; Mian, L.; Wang, Z.; Zhang, J.; Tang, J. Self-Supervised Learning: Generative or Contrastive. \emph{IEEE Transactions on Knowledge and Data Engineering}, v. 35, n. 1, p. 857--876, 2023 (versão local consultada: \texttt{arXiv:2006.08218v5}, Mar. 2021). DOI: \texttt{10.1109/TKDE.2021.3090866}.
 
+\bibitem{liu2024kan}
+Liu, Z.; Wang, Y.; Vaidya, S.; Ruehle, F.; Halverson, J.; Soljačić, M.; Hou, T. Y.; Tegmark, M. KAN: Kolmogorov-Arnold Networks. Preprint \texttt{arXiv:2404.19756 [cs.LG]}, 2024.
+
 \bibitem{nagpal2013review}
 Nagpal, A.; Jatain, A.; Gaur, D. Review based on data clustering algorithms. In: \emph{2013 IEEE Conference on Information \& Communication Technologies (ICT)}, p. 298--303, 2013. DOI: \texttt{10.1109/CICT.2013.6558109}.
+
+\bibitem{ng2011sparse}
+Ng, A. Sparse Autoencoder. \emph{CS294A Lecture Notes}, Stanford University, 2011.
 
 \bibitem{potoniec2020dataset}
 Potoniec, J.; Wiśniewski, D.; Ławrynowicz, A.; Keet, C. M. Dataset of ontology competency questions to SPARQL-OWL queries translations. \emph{Data in Brief}, v. 29, 105098, 2020. DOI: \texttt{10.1016/j.dib.2019.105098}.
@@ -234,11 +342,26 @@ Publio, G.; Ławrynowicz, A.; Panov, P.; Soldatova, L.; Soru, T.; Vanschoren, J.
 \bibitem{quinlan1993c45}
 Quinlan, J. R. \emph{C4.5: Programs for Machine Learning}. Morgan Kaufmann, 1993. 302 p. ISBN \texttt{978-1558602380}.
 
+\bibitem{rifai2011contractive}
+Rifai, S.; Vincent, P.; Muller, X.; Glorot, X.; Bengio, Y. Contractive Auto-Encoders: Explicit Invariance During Feature Extraction. In: \emph{Proceedings of the 28th International Conference on Machine Learning (ICML 2011)}, p. 833--840, 2011.
+
+\bibitem{rumelhart1986learning}
+Rumelhart, D. E.; Hinton, G. E.; Williams, R. J. Learning representations by back-propagating errors. \emph{Nature}, v. 323, p. 533--536, 1986. DOI: \texttt{10.1038/323533a0}.
+
 \bibitem{sarker2021ml}
 Sarker, I. H. Machine Learning: Algorithms, Real-World Applications and Research Directions. \emph{SN Computer Science}, v. 2, n. 3, 160, 2021. DOI: \texttt{10.1007/s42979-021-00592-x}.
 
 \bibitem{simoes2023gaussian}
 Simões, E. C.; de Carvalho, F. A. T. Gaussian kernel fuzzy c-means with width parameter computation and regularization. \emph{Pattern Recognition}, v. 143, 109749, 2023. DOI: \texttt{10.1016/j.patcog.2023.109749}.
+
+\bibitem{vaswani2017attention}
+Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; Polosukhin, I. Attention Is All You Need. In: \emph{Advances in Neural Information Processing Systems 30 (NIPS 2017)}, v. 30, p. 5998--6008, 2017.
+
+\bibitem{vincent2008extracting}
+Vincent, P.; Larochelle, H.; Bengio, Y.; Manzagol, P.-A. Extracting and composing robust features with denoising autoencoders. In: \emph{Proceedings of the 25th International Conference on Machine Learning (ICML 2008)}, p. 1096--1103, 2008. DOI: \texttt{10.1145/1390156.1390294}.
+
+\bibitem{vincent2010stacked}
+Vincent, P.; Larochelle, H.; Lajoie, I.; Bengio, Y.; Manzagol, P.-A. Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion. \emph{Journal of Machine Learning Research}, v. 11, p. 3371--3408, 2010.
 
 \bibitem{yin2026rapid}
 Yin, H.; Aryani, A.; Petrie, S.; Nambissan, A.; Astudillo, A.; Cao, S. A rapid review of clustering algorithms. \emph{Array}, v. 30, 100904, 2026. DOI: \texttt{10.1016/j.array.2026.100904}.
@@ -247,5 +370,6 @@ Yin, H.; Aryani, A.; Petrie, S.; Nambissan, A.; Astudillo, A.; Cao, S. A rapid r
 Zhuang, F.; Qi, Z.; Duan, K.; Xi, D.; Zhu, Y.; Zhu, H.; Xiong, H.; He, Q. A Comprehensive Survey on Transfer Learning. \emph{Proceedings of the IEEE}, v. 109, n. 1, p. 43--76, 2021 (versão local consultada: \texttt{arXiv:1911.02685v3}, Jun. 2020). DOI: \texttt{10.1109/JPROC.2020.3004555}.
 
 \end{thebibliography}
+}
 
 \end{document}
