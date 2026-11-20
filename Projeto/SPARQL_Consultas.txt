@@ -1,14 +1,19 @@
 # ==============================================================================
-# OntoML-Mod — Consultas SPARQL de Validação (Ciclo 1 + Data Properties + Ciclo 2)
+# OntoML-Mod — 10 Consultas SPARQL de Validação (10 Competency Questions)
+# Cobertura: Ciclos 1, 2 e 3 (MLTypes, Clustering, TreeBased, Data Properties
+#            e ArtificialNeuralNetwork)
 # Vocabulário base: Ontology_02.ttl
-# Nota de execução: Consultas com cláusula de classe superior (a ont:KMeans,
-# a ont:TreeBased) assumem raciocinador ativo no Protégé (Snap SPARQL + HermiT)
-# ou inferência RDFS/OWL; alternativamente, pode-se substituir "a" por
-# "rdf:type/rdfs:subClassOf*" em motores SPARQL 1.1 sem raciocinador OWL.
+# Nota de execução: Consultas com cláusula de classe superior
+# (a ont:KMeans, a ont:TreeBased, a ont:ArtificialNeuralNetwork,
+#  a ont:RegularizationTechniques) assumem raciocinador ativo no Protégé
+# (Snap SPARQL + HermiT) ou inferência RDFS/OWL; alternativamente, pode-se
+# substituir "a" por "rdf:type/rdfs:subClassOf*" em motores SPARQL 1.1 sem
+# raciocinador OWL.
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# Consulta 1 (QC2): Quantos algoritmos utilizam cada assunto matemático (ABox)
+# Consulta 1 (CQ 1 | QC2): Quais são os fundamentos matemáticos mais utilizados
+# pelos modelos de Machine Learning na base consolidada?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
@@ -17,24 +22,26 @@ WHERE {
   ?algoritmo ont:usesMathematicalFoundation ?teoriaMatematica .
 }
 GROUP BY ?teoriaMatematica
-ORDER BY DESC(?totalUsos)
+ORDER BY DESC(?totalUsos) ?teoriaMatematica
 
 
 # ------------------------------------------------------------------------------
-# Consulta 2 (QC4): Quais aplicações são resolvidas pela família K-Means
+# Consulta 2 (CQ 2 | QC4): Quais aplicações são resolvidas por algoritmos da
+# família K-Means?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
-SELECT ?aplicacao
+SELECT DISTINCT ?aplicacao
 WHERE {
   ?aplicacao ont:isSolvedBy ?algoritmo .
   ?algoritmo a ont:KMeans .
 }
+ORDER BY ?aplicacao
 
 
 # ------------------------------------------------------------------------------
-# Consulta 3 (QC6 — Data Properties / Agrupamento): Algoritmos que não exigem
-# definição prévia de k e lidam com ruído/outliers
+# Consulta 3 (CQ 3 | QC6 — Data Properties / Clustering): Quais algoritmos de
+# agrupamento não exigem definição prévia de k e lidam com ruído/outliers?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -48,8 +55,8 @@ ORDER BY ?algoritmo
 
 
 # ------------------------------------------------------------------------------
-# Consulta 4 (QC7 — Data Properties / Métricas): Direção ótima de otimização
-# ("maximize" vs. "minimize") das métricas de avaliação axiomatizadas
+# Consulta 4 (CQ 4 | QC7 — Data Properties / Métricas): Qual é o sentido ótimo
+# de otimização ("maximize" vs. "minimize") das métricas de avaliação?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
@@ -61,8 +68,8 @@ ORDER BY ?direcao ?metrica
 
 
 # ------------------------------------------------------------------------------
-# Consulta 5 (QC8 — Ciclo 2 / TreeBased): Algoritmos baseados em árvores que
-# combinam Expansão de Taylor de segunda ordem e regularização L2
+# Consulta 5 (CQ 5 | QC8 — TreeBased): Quais algoritmos baseados em árvores
+# combinam Expansão de Taylor de segunda ordem e regularização L2?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
@@ -76,8 +83,8 @@ ORDER BY ?algoritmo
 
 
 # ------------------------------------------------------------------------------
-# Consulta 6 (QC9 — Ciclo 2 / TreeBased): Domínios de aplicação e respectivos
-# modelos baseados em árvores solucionadores
+# Consulta 6 (CQ 6 | QC9 — TreeBased): Quais domínios de aplicação são
+# resolvidos por modelos baseados em árvores e quais algoritmos os resolvem?
 # ------------------------------------------------------------------------------
 PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
 
@@ -85,5 +92,69 @@ SELECT ?aplicacao ?algoritmo
 WHERE {
   ?aplicacao ont:isSolvedBy ?algoritmo .
   ?algoritmo a ont:TreeBased .
+}
+ORDER BY ?aplicacao ?algoritmo
+
+
+# ------------------------------------------------------------------------------
+# Consulta 7 (CQ 7 — ArtificialNeuralNetwork / DeepNeuralNetwork): Quais modelos
+# de Redes Neurais Artificiais combinam Regra da Cadeia, Descida do Gradiente e
+# técnicas de regularização?
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT DISTINCT ?algoritmo ?regularizacao
+WHERE {
+  ?algoritmo a ont:ArtificialNeuralNetwork ;
+             ont:usesMathematicalFoundation ont:ChainRule ;
+             ont:usesMathematicalFoundation ont:GradientDescent ;
+             ont:usesMathematicalFoundation ?regularizacao .
+  ?regularizacao a ont:RegularizationTechniques .
+}
+ORDER BY ?algoritmo ?regularizacao
+
+
+# ------------------------------------------------------------------------------
+# Consulta 8 (CQ 8 — ArtificialNeuralNetwork / MLTypes): Quais algoritmos de
+# Redes Neurais Artificiais operam sob Aprendizado Auto-Supervisionado ou por
+# Transferência?
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?algoritmo ?paradigma
+WHERE {
+  ?algoritmo a ont:ArtificialNeuralNetwork ;
+             ont:utilizesMLType ?paradigma .
+  FILTER (?paradigma = ont:SelfSupervisedLearning || ?paradigma = ont:TransferLearning)
+}
+ORDER BY ?paradigma ?algoritmo
+
+
+# ------------------------------------------------------------------------------
+# Consulta 9 (CQ 9 — ArtificialNeuralNetwork / Avaliação): Quais métricas de
+# avaliação e respectivos sentidos ótimos são recomendados para cada modelo de
+# Rede Neural Artificial?
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?algoritmo ?metrica ?direcao
+WHERE {
+  ?algoritmo a ont:ArtificialNeuralNetwork ;
+             ont:hasEvaluationMetric ?metrica .
+  ?metrica ont:hasOptimalDirection ?direcao .
+}
+ORDER BY ?algoritmo ?direcao ?metrica
+
+
+# ------------------------------------------------------------------------------
+# Consulta 10 (CQ 10 — ArtificialNeuralNetwork / Aplicações): Quais domínios de
+# aplicação são resolvidos por modelos da classe ArtificialNeuralNetwork?
+# ------------------------------------------------------------------------------
+PREFIX ont: <http://www.semanticweb.org/gabrielstamford/ontologies/2026/8/MLOntology#>
+
+SELECT ?aplicacao ?algoritmo
+WHERE {
+  ?aplicacao ont:isSolvedBy ?algoritmo .
+  ?algoritmo a ont:ArtificialNeuralNetwork .
 }
 ORDER BY ?aplicacao ?algoritmo
