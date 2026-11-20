@@ -1,8 +1,8 @@
 % !TEX program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 % ==============================================================================
-% Segundo Relatório / Artigo Científico — Estritamente conforme template_de_prompt_para_artigo.md
-% Projeto: OntoML-Mod (Ontologia de Machine Learning) — CIn / UFPE (2026.2)
+% Artigo Científico — OntoML-Mod (Ontologia de Machine Learning)
+% Centro de Informática — Universidade Federal de Pernambuco (CIn-UFPE)
 % Base Ontológica Consolidada: Projeto/Ontology_02.ttl (Ciclos 1, 2 e 3)
 % ==============================================================================
 \documentclass[11pt,a4paper]{article}
@@ -26,17 +26,17 @@
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 
-% Previne estouro de margem em termos tecnicos longos e identificadores CamelCase
+% Previne estouro de margem em termos técnicos longos e identificadores CamelCase
 \emergencystretch=1.8em
 
-% Cores sóbrias institucionais
+% Cores institucionais
 \definecolor{cinblue}{HTML}{1B365D}
 \definecolor{codebg}{HTML}{F8FAFC}
 
 % Macro para termos ontológicos em fonte monoespaçada
 \newcommand{\onto}[1]{\texttt{\small #1}}
 
-% Formatação enxuta de títulos para respeitar estritamente os limites de página do template
+% Formatação enxuta de títulos
 \titleformat{\section}{\large\bfseries\color{cinblue}}{}{0em}{}
 \titlespacing*{\section}{0pt}{2.0ex plus 0.5ex minus .2ex}{1.0ex plus .2ex}
 \titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
@@ -103,7 +103,7 @@ Desenvolvida por Humm~\cite{humm2026industry} ao longo de mais de cinco anos com
 
 \subsection{2.3. Ontologia para Predição de Diabetes com Machine Learning (El Massari et al.)}
 
-El~Massari et al.~\cite{elmassari2022diabetes} apresentam uma ontologia aplicada ao diagnóstico clínico de diabetes que combina seis algoritmos clássicos de classificação supervisionada (\emph{SVM}, \emph{KNN}, \emph{ANN}, \emph{Naive Bayes}, Regressão Logística e Árvore de Decisão) com raciocínio ontológico em OWL e regras SWRL sobre o conjunto \emph{Pima Indians Diabetes Database} (768 instâncias). No Protégé, os autores modelam classes de domínio clínico (\onto{Patient}, \onto{Diagnostic}, \onto{PatientEvaluationMetrics} com \onto{TP}, \onto{TN}, \onto{FP} e \onto{FN}), importam os registros via plugin \emph{Cellfie} e convertem as regras de decisão induzidas por Árvore de Decisão no Weka em regras lógicas SWRL (\emph{SWRLTab}) processadas pelo raciocinador \emph{Pellet}. A contribuição central reside em demonstrar que o classificador ontológico interpretável atinge acurácia superior (77,5\% em validação cruzada de 10 pastas) e alta precisão (81,2\%) frente aos classificadores isolados avaliados por \onto{Accuracy}, \onto{Precision}, \onto{Recall}, \onto{F-Measure} e \onto{ROC Area}~\cite{elmassari2022diabetes}.
+El~Massari et al.~\cite{elmassari2022diabetes} apresentam uma ontologia aplicada ao diagnóstico clínico de diabetes que combina seis algoritmos clássicos de classificação supervisionada (\emph{SVM}, \emph{KNN}, \emph{ANN}, \emph{Naive Bayes}, Regressão Logística e Árvore de Decisão) com raciocínio ontológico em OWL e regras SWRL sobre o conjunto \emph{Pima Indians Diabetes Database} (768 instâncias). No Protégé, os autores modelam classes de domínio clínico (\onto{Patient}, \onto{Diagnostic}, \onto{PatientEvaluationMetrics} com \onto{TP}, \onto{TN}, \onto{FP} e \onto{FN}), importam os registros via plugin \emph{Cellfie} e convertem as regras de decisão induzidas por Árvore de Decisão no Weka em regras lógicas SWRL (\emph{SWRLTab}) processadas pelo raciocinador \emph{Pellet}. A contribuição central reside em demonstrar que o classificador ontológico interpretável atinge acurácia superior (77,5\% em validação cruzada de 10 pastas) e alta precisão (81,2\%) frente aos classificadores isolados avaliados por \onto{Accuracy}, \onto{Precision}, \onto{Recall}, \onto{F-Measure} e \onto{ROC\_AUC}~\cite{elmassari2022diabetes}.
 
 \subsection{2.4. ML-Schema e Ontologias de Fluxos Experimentais (Publio et al.)}
 
@@ -131,13 +131,13 @@ A construção da \textbf{OntoML-Mod} fundamentou-se na metodologia \textbf{Meth
 
 A aquisição do conhecimento ocorreu de forma contínua ao longo dos três ciclos do \emph{pipeline} e baseou-se em artigos científicos revisados por pares e obras clássicas extraídos predominantemente do \textbf{Google Scholar}, além da análise estrutural das ontologias correlatas~\cite{publio2018mlschema,braga2020mlonto,elmassari2022diabetes,humm2026industry}. Para fundamentar a divisão de \onto{MLTypes} em paradigmas disjuntos no Ciclo~1, utilizaram-se três artigos-base: Sarker~\cite{sarker2021ml}, Zhuang et al.~\cite{zhuang2021transfer} e Liu et al.~\cite{liu2023self}. Para a subárvore \onto{ClusteringAlgorithms} e suas propriedades de dados intrínsecas, o conhecimento foi extraído de quatro revisões e artigos de referência --- Nagpal, Jatain e Gaur~\cite{nagpal2013review}, Yin et al.~\cite{yin2026rapid}, de~Carvalho et al.~\cite{decarvalho2018gaussian} e Simões e de~Carvalho~\cite{simoes2023gaussian} --- complementados pelas fontes primárias de Gibson, Kleinberg e Raghavan~\cite{gibson1998clustering} para \onto{STIRR} e de Dhillon e Modha~\cite{dhillon2001concept} para \onto{SphericalKMeans}. No Ciclo~2, dedicado aos algoritmos baseados em árvores (\onto{TreeBased}), selecionaram-se seis novas obras de alta densidade conceitual e tradição teórica --- Breiman et al.~\cite{breiman1984cart} (\onto{CART}), Quinlan~\cite{quinlan1993c45} (\onto{ID3} e \onto{C4\_5}), Freund e Schapire~\cite{freund1997decision} (\onto{AdaBoost}), Breiman~\cite{breiman2001random} (\onto{RandomForest}), Geurts, Ernst e Wehenkel~\cite{geurts2006extremely} (\onto{ExtraTrees}) e Bentéjac, Csörgő e Martínez-Muñoz~\cite{bentejac2021comparative} (\onto{GradientBoostingMachine}, \onto{ExtremeGB}, \onto{LightGBMachine} e \onto{CategoricalBoosting}) --- somadas a Sarker~\cite{sarker2021ml} e El~Massari et al.~\cite{elmassari2022diabetes}.
 
-No Ciclo~3, voltado à consolidação completa da subárvore de redes neurais artificiais (\onto{ArtificialNeuralNetwork}) e à expansão correspondente dos fundamentos matemáticos, métricas e aplicações, incorporaram-se quinze referências científicas centrais da literatura de aprendizado profundo e conexionista. A base conceitual geral e as estratégias de regularização apoiaram-se na obra de referência de Goodfellow, Bengio e Courville~\cite{goodfellow2016deep}, articulada aos artigos seminais das arquiteturas clássicas e recorrentes/convolucionais: Rumelhart, Hinton e Williams~\cite{rumelhart1986learning} (retropropagação em redes multicamadas), Broomhead e Lowe~\cite{broomhead1988multivariable} (redes de base radial), LeCun et al.~\cite{lecun1998gradient} (redes neurais convolucionais) e Hochreiter e Schmidhuber~\cite{hochreiter1997lstm} (memória de longo e curto prazo). Para a subfamília especializada de autocodificadores (\onto{AutoEncoders}), utilizaram-se a formulação teórica de Baldi~\cite{baldi2012autoencoders}, os estudos de pré-treinamento em camadas e versões empilhadas de Bengio et al.~\cite{bengio2007greedy} e Vincent et al.~\cite{vincent2010stacked}, a variante de remoção de ruído de Vincent et al.~\cite{vincent2008extracting}, a regularização contrativa de Rifai et al.~\cite{rifai2011contractive}, a esparsidade via divergência estatística de Ng~\cite{ng2011sparse} e a formulação variacional de Kingma e Welling~\cite{kingma2014vae}. Por fim, arquiteturas generativas, baseadas em atenção e em funções \emph{spline} foram embasadas em Goodfellow et al.~\cite{goodfellow2014generative}, Vaswani et al.~\cite{vaswani2017attention} e Liu et al.~\cite{liu2024kan}.
+No Ciclo~3, voltado à consolidação completa da subárvore de redes neurais artificiais (\onto{ArtificialNeuralNetwork}) e à expansão correspondente dos fundamentos matemáticos, métricas e aplicações, incorporaram-se seis referências científicas centrais da literatura de aprendizado profundo e conexionista. A base conceitual geral --- abrangendo redes \emph{feedforward} multicamadas, retropropagação, arquiteturas convolucionais, recorrentes, generativas e autocodificadores regularizados --- apoiou-se na obra de referência de Goodfellow, Bengio e Courville~\cite{goodfellow2016deep}, complementada por Srivastava et al.~\cite{srivastava2014dropout} para a regularização estocástica por \emph{dropout} e por Kohonen~\cite{kohonen1982self} para a formação auto-organizável de mapas topológicos (\onto{Self-OrganizingMap}). Para a formulação variacional e inferência probabilística de autocodificadores (\onto{VariationalAE}), empregou-se o trabalho de Kingma e Welling~\cite{kingma2014vae}. Por fim, arquiteturas baseadas em mecanismos de atenção (\onto{Transformers}) e em funções \emph{spline} aprendíveis (\onto{Kolmogorov-ArnoldNet}) foram embasadas em Vaswani et al.~\cite{vaswani2017attention} e Liu et al.~\cite{liu2024kan}.
 
 \subsection{3.3. Conceitualização}
 
-Na etapa de conceitualização, adotou-se uma estratégia \emph{middle-out}~\cite{fernandez1997methontology}, partindo dos conceitos centrais mais representativos do aprendizado de máquina para consolidar cinco superclasses de topo mutuamente disjuntas: \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications}. A partir desse núcleo, realizou-se simultaneamente a generalização para os termos mais abrangentes e a especialização em subfamílias conceituais, construindo o glossário controlado do domínio e os diagramas conceituais de relacionamento.
+Na etapa de conceitualização, adotou-se uma estratégia \emph{middle-out}~\cite{fernandez1997methontology}, partindo dos conceitos centrais mais representativos do aprendizado de máquina para consolidar cinco superclasses de topo mutuamente disjuntas: \onto{Algorithms}, \onto{MLTypes}, \onto{MathematicalFoundations}, \onto{EvaluationMetrics} e \onto{Applications}. A partir desse núcleo, realizou-se simultaneamente a generalização para os termos mais abrangentes e a especialização em subfamílias conceituais, construindo o glossário controlled do domínio e os diagramas conceituais de relacionamento.
 
-Sob essa perspectiva, os algoritmos foram organizados separando-se sua identidade arquitetural do paradigma de aprendizado empregado, permitindo que métodos híbridos ou de fronteira se associem a múltiplos paradigmas de forma consistente. As famílias algorítmicas estruturaram-se conceitualmente em três grandes blocos evolutivos: técnicas de agrupamento (cobrindo abordagens por partição, hierarquia, densidade, grade, dados categóricos, modelos probabilísticos, agrupamento profundo e aprendizado semi-supervisionado)~\cite{nagpal2013review,decarvalho2018gaussian,simoes2023gaussian,yin2026rapid}, algoritmos baseados em árvores (distinguindo modelos individuais de estratégias paralelas e sequenciais em comitê)~\cite{breiman1984cart,quinlan1993c45,freund1997decision,breiman2001random,geurts2006extremely,bentejac2021comparative} e redes neurais artificiais (diferenciando modelos clássicos e profundos, arquiteturas convolucionais, recorrentes, generativas, baseadas em atenção, fundamentadas em \emph{splines} e autocodificadores)~\cite{goodfellow2016deep,rumelhart1986learning,lecun1998gradient,hochreiter1997lstm,vaswani2017attention,liu2024kan}. Paralelamente, organizaram-se as bases matemáticas em áreas clássicas (como cálculo, álgebra linear, otimização, probabilidade, teoria da informação, processamento de sinais e regularização), as métricas conforme a dependência de gabarito e três atributos operacionais referentes à exigência prévia do número de grupos, à robustez a ruído ou valores atípicos e ao sentido de otimização dos indicadores.
+Sob essa perspectiva, os algoritmos foram organizados separando-se sua identidade arquitetural do paradigma de aprendizado empregado, permitindo que métodos híbridos ou de fronteira se associem a múltiplos paradigmas de forma consistente. As famílias algorítmicas estruturaram-se conceitualmente em três grandes blocos evolutivos: técnicas de agrupamento (cobrindo abordagens por partição, hierarquia, densidade, grade, dados categóricos, modelos probabilísticos, agrupamento profundo e aprendizado semi-supervisionado)~\cite{nagpal2013review,decarvalho2018gaussian,simoes2023gaussian,yin2026rapid}, algoritmos baseados em árvores (distinguindo modelos individuais de estratégias paralelas e sequenciais em comitê)~\cite{breiman1984cart,quinlan1993c45,freund1997decision,breiman2001random,geurts2006extremely,bentejac2021comparative} e redes neurais artificiais (diferenciando modelos clássicos e profundos, mapas auto-organizáveis, arquiteturas convolucionais, recorrentes, generativas, baseadas em atenção, fundamentadas em \emph{splines} e autocodificadores)~\cite{goodfellow2016deep,kohonen1982self,srivastava2014dropout,kingma2014vae,vaswani2017attention,liu2024kan}. Paralelamente, organizaram-se as bases matemáticas em áreas clássicas (como cálculo, álgebra linear, otimização, probabilidade, teoria da informação, processamento de sinais e regularização), as métricas conforme a dependência de gabarito e três atributos operacionais referentes à exigência prévia do número de grupos, à robustez a ruído ou valores atípicos e ao sentido de otimização dos indicadores.
 
 \subsection{3.4. Formalização}
 
@@ -251,18 +251,11 @@ A integração semântica entre esses cinco eixos ocorre por meio de quatro pare
 }
 
 % ==============================================================================
-% Seção 7 numerada estritamente conforme template_de_prompt_para_artigo.md
-% (Seções 4, 5 e 6 reservadas para complementação posterior do artigo)
+% Seção 7 numerada estritamente conforme o modelo de artigo
 % ==============================================================================
 \renewcommand{\refname}{7. REFERÊNCIAS BIBLIOGRÁFICAS}
 {\sloppy
 \begin{thebibliography}{99}\small
-
-\bibitem{baldi2012autoencoders}
-Baldi, P. Autoencoders, Unsupervised Learning, and Deep Architectures. In: \emph{Proceedings of ICML Workshop on Unsupervised and Transfer Learning}, PMLR, v. 27, p. 37--49, 2012.
-
-\bibitem{bengio2007greedy}
-Bengio, Y.; Lamblin, P.; Popovici, D.; Larochelle, H. Greedy Layer-Wise Training of Deep Networks. In: \emph{Advances in Neural Information Processing Systems 19 (NIPS 2006)}, p. 153--160, 2007.
 
 \bibitem{bentejac2021comparative}
 Bentéjac, C.; Csörgő, A.; Martínez-Muñoz, G. A comparative analysis of gradient boosting algorithms. \emph{Artificial Intelligence Review}, v. 54, n. 3, p. 1937--1967, 2021. DOI: \texttt{10.1007/s10462-020-09896-5}.
@@ -278,9 +271,6 @@ Breiman, L.; Friedman, J. H.; Olshen, R. A.; Stone, C. J. \emph{Classification a
 
 \bibitem{breiman2001random}
 Breiman, L. Random Forests. \emph{Machine Learning}, v. 45, n. 1, p. 5--32, 2001. DOI: \texttt{10.1023/A:1010933404324}.
-
-\bibitem{broomhead1988multivariable}
-Broomhead, D. S.; Lowe, D. Multivariable Functional Interpolation and Adaptive Networks. \emph{Complex Systems}, v. 2, n. 3, p. 321--355, 1988.
 
 \bibitem{decarvalho2018gaussian}
 de Carvalho, F. A. T.; Simões, E. C.; Santana, L. V. C.; Ferreira, M. R. P. Gaussian kernel c-means hard clustering algorithms with automated computation of the width hyper-parameters. \emph{Pattern Recognition}, v. 79, p. 370--386, 2018. DOI: \texttt{10.1016/j.patcog.2018.02.018}.
@@ -303,14 +293,8 @@ Geurts, P.; Ernst, D.; Wehenkel, L. Extremely Randomized Trees. \emph{Machine Le
 \bibitem{gibson1998clustering}
 Gibson, D.; Kleinberg, J.; Raghavan, P. Clustering Categorical Data: An Approach Based on Dynamical Systems. In: \emph{Proceedings of the 24th International Conference on Very Large Data Bases (VLDB)}, 1998.
 
-\bibitem{goodfellow2014generative}
-Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A.; Bengio, Y. Generative Adversarial Nets. In: \emph{Advances in Neural Information Processing Systems 27 (NIPS 2014)}, v. 2, p. 2672--2680, 2014.
-
 \bibitem{goodfellow2016deep}
 Goodfellow, I.; Bengio, Y.; Courville, A. \emph{Deep Learning}. MIT Press, 2016. 800 p. ISBN \texttt{978-0262035618}.
-
-\bibitem{hochreiter1997lstm}
-Hochreiter, S.; Schmidhuber, J. Long Short-Term Memory. \emph{Neural Computation}, v. 9, n. 8, p. 1735--1780, 1997. DOI: \texttt{10.1162/neco.1997.9.8.1735}.
 
 \bibitem{humm2026industry}
 Humm, B. G. An Industry-Ready Machine Learning Ontology. \emph{Applied Sciences}, v. 16, n. 2, 843, 2026. DOI: \texttt{10.3390/app16020843}.
@@ -318,8 +302,8 @@ Humm, B. G. An Industry-Ready Machine Learning Ontology. \emph{Applied Sciences}
 \bibitem{kingma2014vae}
 Kingma, D. P.; Welling, M. Auto-Encoding Variational Bayes. In: \emph{2nd International Conference on Learning Representations (ICLR 2014)}, \texttt{arXiv:1312.6114}, 2014.
 
-\bibitem{lecun1998gradient}
-LeCun, Y.; Bottou, L.; Bengio, Y.; Haffner, P. Gradient-Based Learning Applied to Document Recognition. \emph{Proceedings of the IEEE}, v. 86, n. 11, p. 2278--2324, 1998. DOI: \texttt{10.1109/5.726791}.
+\bibitem{kohonen1982self}
+Kohonen, T. Self-Organized Formation of Topologically Correct Feature Maps. \emph{Biological Cybernetics}, v. 43, p. 59--69, 1982. DOI: \texttt{10.1007/BF00337288}.
 
 \bibitem{liu2023self}
 Liu, X.; Zhang, F.; Hou, Z.; Mian, L.; Wang, Z.; Zhang, J.; Tang, J. Self-Supervised Learning: Generative or Contrastive. \emph{IEEE Transactions on Knowledge and Data Engineering}, v. 35, n. 1, p. 857--876, 2023 (versão local consultada: \texttt{arXiv:2006.08218v5}, Mar. 2021). DOI: \texttt{10.1109/TKDE.2021.3090866}.
@@ -330,9 +314,6 @@ Liu, Z.; Wang, Y.; Vaidya, S.; Ruehle, F.; Halverson, J.; Soljačić, M.; Hou, T
 \bibitem{nagpal2013review}
 Nagpal, A.; Jatain, A.; Gaur, D. Review based on data clustering algorithms. In: \emph{2013 IEEE Conference on Information \& Communication Technologies (ICT)}, p. 298--303, 2013. DOI: \texttt{10.1109/CICT.2013.6558109}.
 
-\bibitem{ng2011sparse}
-Ng, A. Sparse Autoencoder. \emph{CS294A Lecture Notes}, Stanford University, 2011.
-
 \bibitem{potoniec2020dataset}
 Potoniec, J.; Wiśniewski, D.; Ławrynowicz, A.; Keet, C. M. Dataset of ontology competency questions to SPARQL-OWL queries translations. \emph{Data in Brief}, v. 29, 105098, 2020. DOI: \texttt{10.1016/j.dib.2019.105098}.
 
@@ -342,26 +323,17 @@ Publio, G.; Ławrynowicz, A.; Panov, P.; Soldatova, L.; Soru, T.; Vanschoren, J.
 \bibitem{quinlan1993c45}
 Quinlan, J. R. \emph{C4.5: Programs for Machine Learning}. Morgan Kaufmann, 1993. 302 p. ISBN \texttt{978-1558602380}.
 
-\bibitem{rifai2011contractive}
-Rifai, S.; Vincent, P.; Muller, X.; Glorot, X.; Bengio, Y. Contractive Auto-Encoders: Explicit Invariance During Feature Extraction. In: \emph{Proceedings of the 28th International Conference on Machine Learning (ICML 2011)}, p. 833--840, 2011.
-
-\bibitem{rumelhart1986learning}
-Rumelhart, D. E.; Hinton, G. E.; Williams, R. J. Learning representations by back-propagating errors. \emph{Nature}, v. 323, p. 533--536, 1986. DOI: \texttt{10.1038/323533a0}.
-
 \bibitem{sarker2021ml}
 Sarker, I. H. Machine Learning: Algorithms, Real-World Applications and Research Directions. \emph{SN Computer Science}, v. 2, n. 3, 160, 2021. DOI: \texttt{10.1007/s42979-021-00592-x}.
 
 \bibitem{simoes2023gaussian}
 Simões, E. C.; de Carvalho, F. A. T. Gaussian kernel fuzzy c-means with width parameter computation and regularization. \emph{Pattern Recognition}, v. 143, 109749, 2023. DOI: \texttt{10.1016/j.patcog.2023.109749}.
 
+\bibitem{srivastava2014dropout}
+Srivastava, N.; Hinton, G.; Krizhevsky, A.; Sutskever, I.; Salakhutdinov, R. Dropout: A Simple Way to Prevent Neural Networks from Overfitting. \emph{Journal of Machine Learning Research}, v. 15, p. 1929--1958, 2014.
+
 \bibitem{vaswani2017attention}
 Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; Polosukhin, I. Attention Is All You Need. In: \emph{Advances in Neural Information Processing Systems 30 (NIPS 2017)}, v. 30, p. 5998--6008, 2017.
-
-\bibitem{vincent2008extracting}
-Vincent, P.; Larochelle, H.; Bengio, Y.; Manzagol, P.-A. Extracting and composing robust features with denoising autoencoders. In: \emph{Proceedings of the 25th International Conference on Machine Learning (ICML 2008)}, p. 1096--1103, 2008. DOI: \texttt{10.1145/1390156.1390294}.
-
-\bibitem{vincent2010stacked}
-Vincent, P.; Larochelle, H.; Lajoie, I.; Bengio, Y.; Manzagol, P.-A. Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion. \emph{Journal of Machine Learning Research}, v. 11, p. 3371--3408, 2010.
 
 \bibitem{yin2026rapid}
 Yin, H.; Aryani, A.; Petrie, S.; Nambissan, A.; Astudillo, A.; Cao, S. A rapid review of clustering algorithms. \emph{Array}, v. 30, 100904, 2026. DOI: \texttt{10.1016/j.array.2026.100904}.
